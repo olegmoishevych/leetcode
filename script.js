@@ -27,3 +27,16 @@ var reduce = function (nums, fn, init) {
     }
     return val;
 };
+
+//3
+//Given an integer x, return true if x is a
+// palindrome
+// , and false otherwise.
+
+var isPalindrome = function(x) {
+    const str = x.toString();
+    // Reverse the string
+    const reversedStr = str.split('').reverse().join('');
+    // Compare original string with reversed string
+    return str === reversedStr;
+};
