@@ -40,3 +40,5 @@ var isPalindrome = function(x) {
     // Compare original string with reversed string
     return str === reversedStr;
 };
+
+const a = 10
