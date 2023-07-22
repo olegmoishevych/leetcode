@@ -75,7 +75,6 @@ const twoSum = (nums, target) => {
         }
         return null
     };
-
 console.log(twoSum([2,7,11,15], 2))
 // const arr = [1,2,3,4,5];
 // const index = arr.map((el, index) => index)
