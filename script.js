@@ -151,4 +151,3 @@ const romanToInt = (s) =>{
     return total
 };
 console.log(romanToInt("MCMXCIV")); // Ожидается 1994
-// console.log(romanToInt("MCMXCIV")); // Ожидается 1994
