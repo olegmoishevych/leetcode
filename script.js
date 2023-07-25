@@ -151,3 +151,50 @@ const romanToInt = (s) =>{
     return total
 };
 console.log(romanToInt("MCMXCIV")); // Ожидается 1994
+
+/**
+ * [LeetCode Problem #14](https://leetcode.com/problems/longest-common-prefix/)
+ * Write a function to find the longest common prefix string amongst an array of strings.
+ * If there is no common prefix, return an empty string "".
+ *
+ * For example, if the input array is ["flower","flow","flight"], the output should be "fl". This is because "fl" is the longest common prefix that is shared by all the strings in the array.
+ * If the input array is ["dog","racecar","car"], the output should be "". This is because there is no common prefix among the input strings.
+ *
+ * Example 1:
+ *
+ * Input: strs = ["flower","flow","flight"]
+ * Output: "fl"
+ * Explanation: "fl" is the longest common prefix that is shared by all the strings in the array.
+ * Example 2:
+ *
+ * Input: strs = ["dog","racecar","car"]
+ * Output: ""
+ * Explanation: There is no common prefix among the input strings.
+ *
+ * Constraints:
+ *
+ * 1 <= strs.length <= 200
+ * 0 <= strs[i].length <= 200
+ * strs[i] consists of only lowercase English letters.
+ *
+ * @param {string[]} strs
+ * @return {string}
+ */
+
+const longestCommonPrefix = (strs) => {
+    let prefix = ""
+    for (let i = 0; i < strs[0].length; i++) {
+        let currentChar = strs[0].charAt(i)
+        console.log(currentChar)
+        for (let j = 0; j < strs.length; j++) {
+            console.log(strs[j].charAt(i))
+            if(strs[j].charAt(i) !== currentChar){
+                break
+            }
+        }
+        prefix += currentChar
+        return prefix
+    }
+};
+
+console.log(longestCommonPrefix(["flower","flow","flight"]))
