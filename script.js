@@ -136,21 +136,21 @@
 
 
 
-const romanToInt = (s) =>{
-    const roman = {I:1, V:5, X:10, L:50, C:100, D:500, M:1000};
-
-    let total = 0
-
-    for (let i = 0; i < s.length; i++) {
-        if(roman[s[i]] < roman[s[i + 1]]){
-            total -= roman[s[i]]
-        }else {
-            total += roman[s[i]]
-        }
-    }
-    return total
-};
-console.log(romanToInt("MCMXCIV")); // Ожидается 1994
+// const romanToInt = (s) =>{
+//     const roman = {I:1, V:5, X:10, L:50, C:100, D:500, M:1000};
+//
+//     let total = 0
+//
+//     for (let i = 0; i < s.length; i++) {
+//         if(roman[s[i]] < roman[s[i + 1]]){
+//             total -= roman[s[i]]
+//         }else {
+//             total += roman[s[i]]
+//         }
+//     }
+//     return total
+// };
+// console.log(romanToInt("MCMXCIV")); // Ожидается 1994
 
 /**
  * [LeetCode Problem #14](https://leetcode.com/problems/longest-common-prefix/)
@@ -194,3 +194,42 @@ console.log(romanToInt("MCMXCIV")); // Ожидается 1994
 // };
 //
 // console.log(longestCommonPrefix(["flower","flow","flight"]))
+
+/**
+ * [LeetCode Problem #20](https://leetcode.com/problems/valid-parentheses/)
+ * Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+ *
+ * An input string is valid if:
+ * 1. Open brackets must be closed by the same type of brackets.
+ * 2. Open brackets must be closed in the correct order.
+ * 3. Every close bracket has a corresponding open bracket of the same type.
+ *
+ * For example, if the input string is "()", the output should be true. This is because the string is valid as per the rules.
+ * If the input string is "()[]{}", the output should be true. This is because the string is valid as per the rules.
+ * If the input string is "(]", the output should be false. This is because the string is not valid as per the rules.
+ *
+ * Example 1:
+ *
+ * Input: s = "()"
+ * Output: true
+ * Explanation: The string is valid as per the rules.
+ * Example 2:
+ *
+ * Input: s = "()[]{}"
+ * Output: true
+ * Explanation: The string is valid as per the rules.
+ * Example 3:
+ *
+ * Input: s = "(]"
+ * Output: false
+ * Explanation: The string is not valid as per the rules.
+ *
+ * Constraints:
+ *
+ * 1 <= s.length <= 104
+ * s consists of parentheses only '()[]{}'.
+ *
+ * @param {string} s
+ * @return {boolean}
+ */
+console.log('')
