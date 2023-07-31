@@ -244,11 +244,12 @@ const isValid = (s)=>{
     for (let i = 0; i < s.length; i++) {
         if(validSymbols.has(s[i])){
             stack.push(s[i])
-            console.log(stack)
         }else {
-            validSymbols.clear(s[i])
-            return false
+            if(stack.length === 0 || validSymbols.get(stack.pop()) !== s[i]){
+                return false
+            }
         }
     }
+    return !stack.length
 };
-console.log(isValid('(('))
+console.log(isValid('{}'))
