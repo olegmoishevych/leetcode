@@ -232,4 +232,3 @@
  * @param {string} s
  * @return {boolean}
  */
-console.log('')
