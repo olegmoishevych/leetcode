@@ -232,3 +232,23 @@
  * @param {string} s
  * @return {boolean}
  */
+
+const isValid = (s)=>{
+    const validSymbols = new Map();
+    validSymbols.set('(', ')');
+    validSymbols.set('[', ']');
+    validSymbols.set('{', '}');
+
+    const stack = []
+
+    for (let i = 0; i < s.length; i++) {
+        if(validSymbols.has(s[i])){
+            stack.push(s[i])
+            console.log(stack)
+        }else {
+            validSymbols.clear(s[i])
+            return false
+        }
+    }
+};
+console.log(isValid('(('))
