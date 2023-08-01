@@ -233,23 +233,48 @@
  * @return {boolean}
  */
 
-const isValid = (s)=>{
-    const validSymbols = new Map();
-    validSymbols.set('(', ')');
-    validSymbols.set('[', ']');
-    validSymbols.set('{', '}');
+// const isValid = (s)=>{
+//     const validSymbols = new Map();
+//     validSymbols.set('(', ')');
+//     validSymbols.set('[', ']');
+//     validSymbols.set('{', '}');
+//
+//     const stack = []
+//
+//     for (let i = 0; i < s.length; i++) {
+//         if(validSymbols.has(s[i])){
+//             stack.push(s[i])
+//         }else {
+//             if(stack.length === 0 || validSymbols.get(stack.pop()) !== s[i]){
+//                 return false
+//             }
+//         }
+//     }
+//     return !stack.length
+// };
+// console.log(isValid('{}'))
 
-    const stack = []
+/**
 
-    for (let i = 0; i < s.length; i++) {
-        if(validSymbols.has(s[i])){
-            stack.push(s[i])
-        }else {
-            if(stack.length === 0 || validSymbols.get(stack.pop()) !== s[i]){
-                return false
-            }
-        }
-    }
-    return !stack.length
-};
-console.log(isValid('{}'))
+ LeetCode Problem #121
+ You are given an array prices where prices[i] is the price of a given stock on the ith day.
+ You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+ Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+ For example, if the input array is [7,1,5,3,6,4], the output should be 5. This is because the maximum profit can be achieved by buying on day 2 (price = 1) and selling on day 5 (price = 6), profit = 6-1 = 5.
+ Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+ If the input array is [7,6,4,3,1], the output should be 0. This is because no transactions can be done and the max profit = 0.
+ Example 1:
+ Input: prices = [7,1,5,3,6,4]
+ Output: 5
+ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+ Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+ Example 2:
+ Input: prices = [7,6,4,3,1]
+ Output: 0
+ Explanation: In this case, no transactions are done and the max profit = 0.
+ Constraints:
+ 1 <= prices.length <= 10^5
+ 0 <= prices[i] <= 10^4
+ @param {number[]} prices
+ @return {number}
+ */
