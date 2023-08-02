@@ -315,15 +315,16 @@
 
 const containsDuplicate = (nums) => {
     const actualNums = new Map()
-    // let dublicates = 0
+    let dublicates = 0
     for (let i = 0; i < nums.length; i++) {
-        if(actualNums.has(nums[i])){
-            return true
-        }else {
-            actualNums.set(nums[i], nums[i])
-        }
+        actualNums.set(nums[i], (actualNums.get(nums[i]) || 0) + 1)
     }
-    return false
+    actualNums.forEach(value => {
+        if(value >1){
+         dublicates++
+        }
+    })
+    return dublicates
 };
 
-console.log(containsDuplicate([1,2,3,4,5]))
+console.log(containsDuplicate([1,2,3,4,5,2,3,4]))
