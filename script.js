@@ -278,3 +278,11 @@
  @param {number[]} prices
  @return {number}
  */
+
+const maxProfit = function(prices) {
+    const maxPrise = Infinity
+    console.log(maxPrise)
+};
+
+// const maxPrise = Infinity
+// console.log(maxPrise)
