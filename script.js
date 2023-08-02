@@ -279,10 +279,51 @@
  @return {number}
  */
 
-const maxProfit = function(prices) {
-    const maxPrise = Infinity
-    console.log(maxPrise)
+// const maxProfit = function(prices) {
+//     const maxPrise = Infinity
+//     console.log(maxPrise)
+// };
+//
+// // const maxPrise = Infinity
+// // console.log(maxPrise)
+
+/**
+
+ LeetCode Problem #217
+ You are given an integer array nums. The task is to determine if any value appears at least twice in the array. If any value is repeated, return true. If all elements are distinct, return false.
+ For example, if the input array is [1,2,3,1], the output should be true because the value 1 appears twice.
+ If the input array is [1,2,3,4], the output should be false because all values are distinct.
+ If the input array is [1,1,1,3,3,4,3,2,4,2], the output should be true because the values 1, 3, and 4 appear more than once.
+ Example 1:
+ Input: nums = [1,2,3,1]
+ Output: true
+ Explanation: The value 1 appears twice in the array.
+ Example 2:
+ Input: nums = [1,2,3,4]
+ Output: false
+ Explanation: All values in the array are distinct.
+ Example 3:
+ Input: nums = [1,1,1,3,3,4,3,2,4,2]
+ Output: true
+ Explanation: The values 1, 3, and 4 appear more than once in the array.
+ Constraints:
+ 1 <= nums.length <= 10^5
+ -10^9 <= nums[i] <= 10^9
+ @param {number[]} nums
+ @return {boolean}
+ */
+
+const containsDuplicate = (nums) => {
+    const actualNums = new Map()
+    // let dublicates = 0
+    for (let i = 0; i < nums.length; i++) {
+        if(actualNums.has(nums[i])){
+            return true
+        }else {
+            actualNums.set(nums[i], nums[i])
+        }
+    }
+    return false
 };
 
-// const maxPrise = Infinity
-// console.log(maxPrise)
+console.log(containsDuplicate([1,2,3,4,5]))
