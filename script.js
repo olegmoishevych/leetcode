@@ -370,3 +370,10 @@
  @param {number} n
  @return {void} Do not return anything, modify nums1 in-place instead.
  */
+
+const merge = (nums1, m, nums2, n) => {
+    let i = m - 1
+    let j = m - 1
+    let currentIndex = m + n - 1
+
+};
