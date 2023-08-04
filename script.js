@@ -38,13 +38,50 @@
  @return {number[]}
  */
 
-const filter = function(arr, fn) {
-    const result = []
-    for (let i = 0; i < arr.length; i++) {
-        if(fn(arr[i], i)){
-            result.push(arr[i])
-        }
-    }
-    return result
-};
+// const filter = function(arr, fn) {
+//     const result = []
+//     for (let i = 0; i < arr.length; i++) {
+//         if(fn(arr[i], i)){
+//             result.push(arr[i])
+//         }
+//     }
+//     return result
+// };
+
+/**
+
+ Problem #2635
+ You are given an integer array arr and a mapping function fn. The task is to return a new array with a transformation applied to each element.
+
+ The returned array should be created such that returnedArray[i] = fn(arr[i], i).
+
+ Please solve it without the built-in Array.map method.
+
+ For example, if the input array is [1,2,3] and the mapping function is plusone(n) { return n + 1; }, the output should be [2,3,4] because each value in the array is increased by one.
+ If the input array is [1,2,3] and the mapping function is plusI(n, i) { return n + i; }, the output should be [1,3,5] because each value is increased by its index.
+ If the input array is [10,20,30] and the mapping function is constant() { return 42; }, the output should be [42,42,42] because the function always returns 42.
+
+ Example 1:
+ Input: arr = [1,2,3], fn = function plusone(n) { return n + 1; }
+ Output: [2,3,4]
+ Explanation: The function increases each value in the array by one.
+
+ Example 2:
+ Input: arr = [1,2,3], fn = function plusI(n, i) { return n + i; }
+ Output: [1,3,5]
+ Explanation: The function increases each value by the index it resides in.
+
+ Example 3:
+ Input: arr = [10,20,30], fn = function constant() { return 42; }
+ Output: [42,42,42]
+ Explanation: The function always returns 42.
+
+ Constraints:
+ 0 <= arr.length <= 1000
+ -10^9 <= arr[i] <= 10^9
+ fn returns a number
+ @param {number[]} arr
+ @param {function} fn
+ @return {number[]}
+ */
 
