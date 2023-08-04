@@ -313,54 +313,35 @@
  @return {boolean}
  */
 
-// const containsDuplicate = (nums) => {
-//     const actualNums = new Map()
-//     let dublicates = 0
-//     for (let i = 0; i < nums.length; i++) {
-//         actualNums.set(nums[i], (actualNums.get(nums[i]) || 0) + 1)
-//     }
-//     actualNums.forEach(value => {
-//         if(value >1){
-//          dublicates++
-//         }
-//     })
-//     return dublicates
-// };
-//
-// console.log(containsDuplicate([1,2,3,4,5,2,3,4]))
-
-//The given description is not related to the LeetCode Problem #217. It appears to be a description of another problem related to function composition and evaluation.
-//
-// The problem is titled "Function Composition." Given an array of functions [f1, f2, f3, ..., fn], the task is to return a new function that represents the composition of all the functions in the array.
-//
-// Function composition is defined as fn(x) = f(g(h(x))).
-//
-// In this context, each function in the array takes an integer as input and returns an integer as output.
-//
-// The function composition of an empty list of functions is defined as the identity function f(x) = x.
-//
-// The description provides three examples to illustrate how the function composition works. For example:
-//
-// Example 1:
-// Input: functions = [x => x + 1, x => x * x, x => 2 * x], x = 4
-// Output: 65
-// Explanation:
-// Starting with x = 4.
-// 2 * (4) = 8
-// (8) * (8) = 64
-// (64) + 1 = 65
-//
-// Example 2:
-// Input: functions = [x => 10 * x, x => 10 * x, x => 10 * x], x = 1
-// Output: 1000
-// Explanation:
-// 10 * (1) = 10
-// 10 * (10) = 100
-// 10 * (100) = 1000
-//
-// Example 3:
-// Input: functions = [], x = 42
-// Output: 42
-// Explanation:
-// The composition of zero functions is the identity function.
-//
+// Filter Elements from Array
+const letterCombinations = function(digits) {
+    const arr = []
+    if(!digits)return arr
+    let phoneMap = new Map([
+        ["2", "abc"],
+        ["3", "def"],
+        ["4", "ghi"],
+        ["5", "jkl"],
+        ["6", "mno"],
+        ["7", "pqrs"],
+        ["8", "tuv"],
+        ["9", "wxyz"]
+    ]);
+    for (let i = 0; i < digits.length; i++) {
+        if(phoneMap.has(digits[i])){
+            arr.push(phoneMap.get(digits[i]))
+        }
+    }
+    let result = []
+    function combine(a,b){
+        if(a === arr.length){
+            return result.push(b)
+        }
+        for (const aElement of arr[a]) {
+            combine(a + 1, b + aElement)
+        }
+    }
+    combine(a, '')
+    return result
+};
+console.log(letterCombinations('2,3'))
