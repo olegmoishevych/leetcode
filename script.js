@@ -94,7 +94,7 @@
 //     return newArr
 // };
 
-const map = (arr, fn) => Array.from(arr, fn)
-
-const str = 'hello'
-console.log(Array.from(str))
+// const map = (arr, fn) => Array.from(arr, fn)
+//
+// const str = 'hello'
+// console.log(Array.from(str))
