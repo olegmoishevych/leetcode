@@ -132,4 +132,43 @@
 // };
 // console.log(argumentsLength())
 
+/**
+ * Problem #2666
+ * Allow One Function Call
+ *
+ * You are tasked to create a function `once` that takes in another function `fn` as its argument.
+ * The returned function should be identical to `fn` but with a constraint that it can be called only once.
+ *
+ * The function should adhere to the following rules:
+ * 1. The first time the returned function is called, it should execute `fn` and return its result.
+ * 2. Any subsequent calls to the returned function should not execute `fn` and should return `undefined`.
+ *
+ * Example 1:
+ * Input: fn = (a,b,c) => (a + b + c), calls = [[1,2,3],[2,3,6]]
+ * Output: [{"calls":1,"value":6}]
+ * Explanation:
+ * const onceFn = once(fn);
+ * onceFn(1, 2, 3); // 6
+ * onceFn(2, 3, 6); // undefined, fn was not called
+ *
+ * Example 2:
+ * Input: fn = (a,b,c) => (a * b * c), calls = [[5,7,4],[2,3,6],[4,6,8]]
+ * Output: [{"calls":1,"value":140}]
+ * Explanation:
+ * const onceFn = once(fn);
+ * onceFn(5, 7, 4); // 140
+ * onceFn(2, 3, 6); // undefined, fn was not called
+ * onceFn(4, 6, 8); // undefined, fn was not called
+ *
+ * Constraints:
+ * - 1 <= calls.length <= 10
+ * - 1 <= calls[i].length <= 100
+ * - 2 <= JSON.stringify(calls).length <= 1000
+ *
+ * @param {function} fn - The original function.
+ * @return {function} - The new function that can be called only once.
+ */
+function once(fn) {
+    // Implementation here
+}
 
