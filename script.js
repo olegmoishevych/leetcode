@@ -169,22 +169,21 @@
  * @return {function} - The new function that can be called only once.
  */
 
-function add(a, b, c) {
-    return a + b + c;
-}
-
-const once = function(fn) {
-    let called = false
-    let result
-    return function(...args){
-        if(!called){
-            called = true
-            result = fn(...args)
-            return result
-        }
-    }
-};
-
-const onceAdd = once(add);
-
-console.log(onceAdd(1,2,3))
+// function add(a, b, c) {
+//     return a + b + c;
+// }
+//
+// const once = function(fn) {
+//     let called = false
+//     let result
+//     return function(...args){
+//         if(!called){
+//             called = true
+//             result = fn(...args)
+//             return result
+//         }
+//     }
+// };
+//
+// const onceAdd = once(add);
+// console.log(onceAdd(1,2,3))
