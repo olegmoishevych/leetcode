@@ -127,9 +127,9 @@
  * @param {...any} args - The arguments passed to the function.
  * @return {number} - The count of arguments passed.
  */
-const argumentsLength = function(...args) {
-    return args.length
-};
-console.log(argumentsLength())
+// const argumentsLength = function(...args) {
+//     return args.length
+// };
+// console.log(argumentsLength())
 
 
