@@ -169,9 +169,9 @@
  * @return {function} - The new function that can be called only once.
  */
 
-// function add(a, b, c) {
-//     return a + b + c;
-// }
+function add(a, b, c) {
+    return a + b + c;
+}
 //
 // const once = function(fn) {
 //     let called = false
