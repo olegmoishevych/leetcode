@@ -227,22 +227,32 @@
  */
 
 const createCounter = (init) => {
+    let startValue = init
     return{
         increment: function (){
             return ++init
         },
         decrement: function (){
+            if(init === 0){
+                return 0
+            }
             return --init
         },
         reset: function (){
-            return init
+            return init = startValue
         }
     }
 };
 
 const counter = createCounter(5)
+console.log(counter.increment())
+console.log(counter.reset())
+console.log(counter.increment())
+console.log(counter.increment())
 console.log(counter.decrement())
 console.log(counter.reset())
 console.log(counter.decrement())
-console.log(counter.decrement())
-console.log(counter.reset())
+console.log(counter.increment())
+
+
+
