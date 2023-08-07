@@ -169,9 +169,9 @@
  * @return {function} - The new function that can be called only once.
  */
 
-function add(a, b, c) {
-    return a + b + c;
-}
+// function add(a, b, c) {
+//     return a + b + c;
+// }
 //
 // const once = function(fn) {
 //     let called = false
@@ -187,3 +187,62 @@ function add(a, b, c) {
 //
 // const onceAdd = once(add);
 // console.log(onceAdd(1,2,3))
+
+/**
+ * Problem #2665
+ * Counter II
+ *
+ * Create a function named `createCounter` that accepts an initial integer `init`.
+ * The function should return an object with three methods:
+ * 1. `increment()` - Increases the current value by 1 and then returns it.
+ * 2. `decrement()` - Reduces the current value by 1 and then returns it.
+ * 3. `reset()` - Sets the current value to `init` and then returns it.
+ *
+ * Example 1:
+ * Input: init = 5, calls = ["increment","reset","decrement"]
+ * Output: [6,5,4]
+ * Explanation:
+ * const counter = createCounter(5);
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ *
+ * Example 2:
+ * Input: init = 0, calls = ["increment","increment","decrement","reset","reset"]
+ * Output: [1,2,1,0,0]
+ * Explanation:
+ * const counter = createCounter(0);
+ * counter.increment(); // 1
+ * counter.increment(); // 2
+ * counter.decrement(); // 1
+ * counter.reset(); // 0
+ * counter.reset(); // 0
+ *
+ * Constraints:
+ * -1000 <= init <= 1000
+ * Total calls not to exceed 1000.
+ *
+ * @param {number} init - The initial value for the counter.
+ * @return {object} - An object with three methods: increment, decrement, and reset.
+ */
+
+const createCounter = (init) => {
+    return{
+        increment: function (){
+            return ++init
+        },
+        decrement: function (){
+            return --init
+        },
+        reset: function (){
+            return init
+        }
+    }
+};
+
+const counter = createCounter(5)
+console.log(counter.decrement())
+console.log(counter.reset())
+console.log(counter.decrement())
+console.log(counter.decrement())
+console.log(counter.reset())
