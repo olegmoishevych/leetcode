@@ -226,25 +226,25 @@
  * @return {object} - An object with three methods: increment, decrement, and reset.
  */
 
-const createCounter = (init) => {
-    const startValue = init;
-    return {
-        increment: () => ++init,
-        decrement: () => --init,
-        reset: () => init = startValue
-    };
-};
-
-
-const counter = createCounter(5)
-console.log(counter.increment())
-console.log(counter.reset())
-console.log(counter.increment())
-console.log(counter.increment())
-console.log(counter.decrement())
-console.log(counter.reset())
-console.log(counter.decrement())
-console.log(counter.decrement())
+// const createCounter = (init) => {
+//     const startValue = init;
+//     return {
+//         increment: () => ++init,
+//         decrement: () => --init,
+//         reset: () => init = startValue
+//     };
+// };
+//
+//
+// const counter = createCounter(5)
+// console.log(counter.increment())
+// console.log(counter.reset())
+// console.log(counter.increment())
+// console.log(counter.increment())
+// console.log(counter.decrement())
+// console.log(counter.reset())
+// console.log(counter.decrement())
+// console.log(counter.decrement())
 
 
 
