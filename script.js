@@ -277,8 +277,8 @@
  * promise1 and promise2 are promises that resolve with a number.
  */
 
-const addTwoPromises = async (promise1, promise2) => {
-   const [res1, res2] = await Promise.all([promise1, promise2])
-    return res1 + res2
-};
-console.log(addTwoPromises(1,2))
+// const addTwoPromises = async (promise1, promise2) => {
+//    const [res1, res2] = await Promise.all([promise1, promise2])
+//     return res1 + res2
+// };
+// console.log(addTwoPromises(1,2))
