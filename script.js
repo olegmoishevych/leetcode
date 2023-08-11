@@ -333,6 +333,22 @@
  * - 10 <= cancelT <= 1000
  */
 
-const cancellable = function(fn, args, t) {
-
+const cancellable = (fn, args, t) => {
+    const timer = setTimeout(()=>{
+        fn(...args)
+    },t)
+    const canceledFunc = () => {
+        clearTimeout(timer)
+    }
+    return canceledFunc;
 };
+const testFunction = (message) => {
+    console.log(message);
+};
+
+// Вызов функции cancellable
+const cancelFn = cancellable(testFunction, ["Hello, World!"], 5000);
+setTimeout(()=>{
+    cancelFn()
+    console.log('res')
+},20000)
