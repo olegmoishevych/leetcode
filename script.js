@@ -282,3 +282,57 @@
 //     return res1 + res2
 // };
 // console.log(addTwoPromises(1,2))
+
+/**
+ * Problem #2715
+ * Timeout Cancellation
+ * Difficulty: Easy
+ *
+ * Given a function `fn`, an array of arguments `args`, and a timeout `t` in milliseconds,
+ * the task is to implement a function `cancellable` that returns a cancel function `cancelFn`.
+ *
+ * The function `fn` should be called with the arguments from `args` after a delay of `t` milliseconds.
+ * However, if the `cancelFn` is invoked before the delay of `t` milliseconds elapses,
+ * specifically at `cancelT` ms, then the function `fn` should never be called.
+ *
+ * Example 1:
+ * Input:
+ * fn = (x) => x * 5, args = [2], t = 20, cancelT = 50
+ * Output:
+ * [{"time": 20, "returned": 10}]
+ * Explanation:
+ * The function `fn` is called after 20ms and returns a value of 10.
+ * The cancellation function is scheduled to be called after 50ms,
+ * which is after the function `fn` has already been executed.
+ *
+ * Example 2:
+ * Input:
+ * fn = (x) => x**2, args = [2], t = 100, cancelT = 50
+ * Output:
+ * []
+ * Explanation:
+ * The cancellation function is scheduled to be called after 50ms,
+ * which is before the function `fn` is scheduled to be called at 100ms.
+ * Therefore, the function `fn` is never executed.
+ *
+ * Example 3:
+ * Input:
+ * fn = (x1, x2) => x1 * x2, args = [2,4], t = 30, cancelT = 100
+ * Output:
+ * [{"time": 30, "returned": 8}]
+ * Explanation:
+ * The function `fn` is called after 30ms and returns a value of 8.
+ * The cancellation function is scheduled to be called after 100ms,
+ * which is after the function `fn` has already been executed.
+ *
+ * Constraints:
+ * - `fn` is a function.
+ * - `args` is a valid JSON array.
+ * - 1 <= args.length <= 10
+ * - 20 <= t <= 1000
+ * - 10 <= cancelT <= 1000
+ */
+
+const cancellable = function(fn, args, t) {
+
+};
