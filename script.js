@@ -370,8 +370,12 @@ const compose = function(functions) {
         return x
     }
 };
+const addOne = x => x + 1;
+const square = x => x * x;
+const double = x => x * 2;
 
-/**
- * const fn = compose([x => x + 1, x => 2 * x])
- * fn(4) // 9
- */
+const composedFunction = compose([addOne, square, double]);
+
+console.log(composedFunction(2));
+console.log(composedFunction(3));
+
