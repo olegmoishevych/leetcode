@@ -382,12 +382,22 @@
 /**
  * @return {Generator<number>}
  */
-const fibGenerator = function*() {
+// const fibGenerator = function*() {
+//     let a = 0, b = 1
+//     yield a
+//     while (true){
+//         yield b;
+//         [a, b] = [b, a + b]
+//     }
+// };
+// const res = fibGenerator()
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
 
-};
 
-/**
- * const gen = fibGenerator();
- * gen.next().value; // 0
- * gen.next().value; // 1
- */
+
