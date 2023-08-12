@@ -360,22 +360,34 @@
  * @param {Function[]} functions
  * @return {Function}
  */
-const compose = function(functions) {
-    return function(x) {
-        if(functions.length === 0)
-            return x
-        for (let i = functions.length - 1; i >= 0; i--) {
-            x = functions[i](x)
-        }
-        return x
-    }
+// const compose = function(functions) {
+//     return function(x) {
+//         if(functions.length === 0)
+//             return x
+//         for (let i = functions.length - 1; i >= 0; i--) {
+//             x = functions[i](x)
+//         }
+//         return x
+//     }
+// };
+// const addOne = x => x + 1;
+// const square = x => x * x;
+// const double = x => x * 2;
+//
+// const composedFunction = compose([addOne, square, double]);
+//
+// console.log(composedFunction(2));
+// console.log(composedFunction(3));
+
+/**
+ * @return {Generator<number>}
+ */
+const fibGenerator = function*() {
+
 };
-const addOne = x => x + 1;
-const square = x => x * x;
-const double = x => x * 2;
 
-const composedFunction = compose([addOne, square, double]);
-
-console.log(composedFunction(2));
-console.log(composedFunction(3));
-
+/**
+ * const gen = fibGenerator();
+ * gen.next().value; // 0
+ * gen.next().value; // 1
+ */
