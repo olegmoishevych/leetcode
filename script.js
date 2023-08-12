@@ -352,3 +352,60 @@
 //     cancelFn()
 //     console.log('res')
 // },20000)
+
+/**
+ * Problem #2627
+ * Debounce
+ * Difficulty: Medium
+ *
+ * Given a function `fn` and a time in milliseconds `t`, the task is to implement a function `debounce`
+ * that returns a debounced version of the original function `fn`.
+ *
+ * A debounced function is a function whose execution is delayed by `t` milliseconds
+ * and whose execution is cancelled if it is called again within that window of time.
+ * The debounced function should also receive the passed parameters.
+ *
+ * The main idea behind debounce is to group multiple sequential calls in a single one.
+ *
+ * Example 1:
+ * Input:
+ * t = 50
+ * calls = [
+ *   {"t": 50, inputs: [1]},
+ *   {"t": 75, inputs: [2]}
+ * ]
+ * Output: [{"t": 125, inputs: [2]}]
+ * Explanation:
+ * The first call is cancelled by the second call because the second call occurred before 100ms.
+ * The second call is delayed by 50ms and executed at 125ms with inputs [2].
+ *
+ * Example 2:
+ * Input:
+ * t = 20
+ * calls = [
+ *   {"t": 50, inputs: [1]},
+ *   {"t": 100, inputs: [2]}
+ * ]
+ * Output: [{"t": 70, inputs: [1]}, {"t": 120, inputs: [2]}]
+ * Explanation:
+ * Both calls are executed after a delay of 20ms.
+ *
+ * Example 3:
+ * Input:
+ * t = 150
+ * calls = [
+ *   {"t": 50, inputs: [1, 2]},
+ *   {"t": 300, inputs: [3, 4]},
+ *   {"t": 300, inputs: [5, 6]}
+ * ]
+ * Output: [{"t": 200, inputs: [1,2]}, {"t": 450, inputs: [5, 6]}]
+ * Explanation:
+ * The first call is executed after a delay of 150ms.
+ * The second call is cancelled by the third call, which is executed after a delay of 150ms.
+ *
+ * Constraints:
+ * - 0 <= t <= 1000
+ * - 1 <= calls.length <= 10
+ * - 0 <= calls[i].t <= 1000
+ * - 0 <= calls[i].inputs.length <= 10
+ */
