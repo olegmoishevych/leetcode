@@ -447,4 +447,6 @@ function f(a) {
 
 console.log(f([1,2,3,4,5]))
 
-
+/**
+ * @return {Function}
+ */
