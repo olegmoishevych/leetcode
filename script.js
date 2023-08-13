@@ -399,21 +399,23 @@
 // console.log(res.next())
 // console.log(res.next())
 
-function* generateSequence() {
-    yield 1;
-    yield 2;
-    yield 3
+// function* generateSequence() {
+//     yield 1;
+//     yield 2;
+//     yield 3
+//
+// }
+// const res = generateSequence()
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
 
-}
-const res = generateSequence()
-console.log(res.next())
-console.log(res.next())
-console.log(res.next())
-console.log(res.next())
-console.log(res.next())
-console.log(res.next())
-
-
+/**
+ * @param {number[]} nums
+ */
 
 
 
