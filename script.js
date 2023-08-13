@@ -437,16 +437,23 @@
 // console.log(wrapper.valueOf()); // 10
 // console.log(wrapper.toString()); // 10
 
-function f(a) {
-    let num = 0
-    for (let i = 0; i < a.length; i++) {
-        num += a[i]
-    }
-    return num
-}
-
-console.log(f([1,2,3,4,5]))
+// function f(a) {
+//     let num = 0
+//     for (let i = 0; i < a.length; i++) {
+//         num += a[i]
+//     }
+//     return num
+// }
+//
+// console.log(f([1,2,3,4,5]))
 
 /**
  * @return {Function}
  */
+
+const createHelloWorld = function() {
+    return function(...args) {
+        return 'Hello World'
+    }
+};
+console.log(createHelloWorld([1,2,3,5]))
