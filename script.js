@@ -417,25 +417,34 @@
  * @param {number[]} nums
  */
 
-function ArrayWrapper(nums) {
-    this.nums = nums
-}
+// function ArrayWrapper(nums) {
+//     this.nums = nums
+// }
+//
+// ArrayWrapper.prototype.valueOf = function() {
+//     let num = 0
+//     const valueArr = []
+//     for (let i = 0; i < this.nums.length; i++) {
+//         num += this.nums[i]
+//     }
+//     return num
+// }
+//
+// ArrayWrapper.prototype.toString = function() {
+//     return "[" + this.nums.toString() + "]"
+// }
+// const wrapper = new ArrayWrapper([1, 2, 3, 4]);
+// console.log(wrapper.valueOf()); // 10
+// console.log(wrapper.toString()); // 10
 
-ArrayWrapper.prototype.valueOf = function() {
+function f(a) {
     let num = 0
-    const valueArr = []
-    for (let i = 0; i < this.nums.length; i++) {
-        num += this.nums[i]
+    for (let i = 0; i < a.length; i++) {
+        num += a[i]
     }
     return num
 }
 
-ArrayWrapper.prototype.toString = function() {
-    return "[" + this.nums.toString() + "]"
-}
-const wrapper = new ArrayWrapper([1, 2, 3, 4]);
-console.log(wrapper.valueOf()); // 10
-console.log(wrapper.toString()); // 10
-
+console.log(f([1,2,3,4,5]))
 
 
