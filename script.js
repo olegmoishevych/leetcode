@@ -459,14 +459,14 @@
 // console.log(createHelloWorld([1,2,3,5]))
 
 const containsDuplicate = (nums) => {
-    const newSet = new Set()
-    for (let i = 0; i > nums.length; i++){
-        if(newSet.has(nums[i])){
+    const arrMap = new Set()
+    for (let i = 0; i < nums.length; i++) {
+        if(arrMap.has(nums[i])) {
             return true
         }else {
-            newSet.add(nums[i])
-            return false
+            arrMap.add(nums[i])
         }
     }
+    return false
 };
 console.log(containsDuplicate([1,2,3]))
