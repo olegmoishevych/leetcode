@@ -451,9 +451,22 @@
  * @return {Function}
  */
 
-const createHelloWorld = function() {
-    return function(...args) {
-        return 'Hello World'
+// const createHelloWorld = function() {
+//     return function(...args) {
+//         return 'Hello World'
+//     }
+// };
+// console.log(createHelloWorld([1,2,3,5]))
+
+const containsDuplicate = (nums) => {
+    const newSet = new Set()
+    for (let i = 0; i > nums.length; i++){
+        if(newSet.has(nums[i])){
+            return true
+        }else {
+            newSet.add(nums[i])
+            return false
+        }
     }
 };
-console.log(createHelloWorld([1,2,3,5]))
+console.log(containsDuplicate([1,2,3]))
