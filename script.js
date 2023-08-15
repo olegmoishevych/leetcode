@@ -458,15 +458,15 @@
 // };
 // console.log(createHelloWorld([1,2,3,5]))
 
-const containsDuplicate = (nums) => {
-    const arrMap = new Set()
-    for (let i = 0; i < nums.length; i++) {
-        if(arrMap.has(nums[i])) {
-            return true
-        }else {
-            arrMap.add(nums[i])
-        }
-    }
-    return false
-};
-console.log(containsDuplicate([1,2,3]))
+// const containsDuplicate = (nums) => {
+//     const arrMap = new Set()
+//     for (let i = 0; i < nums.length; i++) {
+//         if(arrMap.has(nums[i])) {
+//             return true
+//         }else {
+//             arrMap.add(nums[i])
+//         }
+//     }
+//     return false
+// };
+// console.log(containsDuplicate([1,2,3]))
