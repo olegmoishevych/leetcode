@@ -470,3 +470,12 @@
 //     return false
 // };
 // console.log(containsDuplicate([1,2,3]))
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isAnagram = function(s, t) {
+
+};
