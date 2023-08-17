@@ -499,14 +499,23 @@
 // }
 // console.log(twoSum([1,2,3,4,5], 8))
 
-const theBiggestSumAtArray = (sum) => {
-    let  theBiggestSum = 0
-    for (let i = 0; i < sum.length; i++) {
-        console.log(sum[i])
-        if(sum[i] > theBiggestSum){
-            theBiggestSum = sum[i]
-        }
+// const theBiggestSumAtArray = (sum) => {
+//     let  theBiggestSum = 0
+//     for (let i = 0; i < sum.length; i++) {
+//         console.log(sum[i])
+//         if(sum[i] > theBiggestSum){
+//             theBiggestSum = sum[i]
+//         }
+//     }
+//     return theBiggestSum
+// }
+// console.log(theBiggestSumAtArray([1,2,3,4,5,6,16]))
+
+const sumAtArr = (arr) => {
+    let sum = 0
+    for (const arrElement of arr) {
+        sum += arrElement
     }
-    return theBiggestSum
+    return sum
 }
-console.log(theBiggestSumAtArray([1,2,3,4,5,6,16]))
+console.log(sumAtArr([4,10]))
