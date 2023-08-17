@@ -471,12 +471,30 @@
 // };
 // console.log(containsDuplicate([1,2,3]))
 
+// /**
+//  * @param {string} s
+//  * @param {string} t
+//  * @return {boolean}
+//  */
+// const isAnagram = function(s, t) {
+//     return s.split('').sort().join('') === t.split('').sort().join('')
+// };
+// console.log(isAnagram('слово', 'волос'))
+
 /**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
  */
-const isAnagram = function(s, t) {
-    return s.split('').sort().join('') === t.split('').sort().join('')
-};
-console.log(isAnagram('слово', 'волос'))
+const  twoSum = function(nums, target) {
+    const table = {}
+    for (let i = 0; i < nums.length; i++) {
+        console.log(i)
+        let different = target - nums[i]
+        if(different in table){
+            return [table[different], i]
+        }
+        table[nums[i]] = i
+    }
+}
+console.log(twoSum([1,2,3,4,5], 8))
