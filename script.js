@@ -486,15 +486,27 @@
  * @param {number} target
  * @return {number[]}
  */
-const  twoSum = function(nums, target) {
-    const table = {}
-    for (let i = 0; i < nums.length; i++) {
-        console.log(i)
-        let different = target - nums[i]
-        if(different in table){
-            return [table[different], i]
+// const  twoSum = function(nums, target) {
+//     const table = {}
+//     for (let i = 0; i < nums.length; i++) {
+//         console.log(i)
+//         let different = target - nums[i]
+//         if(different in table){
+//             return [table[different], i]
+//         }
+//         table[nums[i]] = i
+//     }
+// }
+// console.log(twoSum([1,2,3,4,5], 8))
+
+const theBiggestSumAtArray = (sum) => {
+    let  theBiggestSum = 0
+    for (let i = 0; i < sum.length; i++) {
+        console.log(sum[i])
+        if(sum[i] > theBiggestSum){
+            theBiggestSum = sum[i]
         }
-        table[nums[i]] = i
     }
+    return theBiggestSum
 }
-console.log(twoSum([1,2,3,4,5], 8))
+console.log(theBiggestSumAtArray([1,2,3,4,5,6,16]))
