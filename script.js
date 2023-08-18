@@ -525,5 +525,11 @@
  * @return {boolean}
  */
 const isPalindrome = function(s) {
-
+    if(s === null) return false
+    let letterA = s.toLocaleLowerCase().replace(/[^a-z0-9]/g, '')
+    console.log(letterA)
+    let letterS = letterA.split('').reverse().join('')
+    console.log(letterS)
+    return letterA === letterS
 };
+console.log(isPalindrome('A man, a plan, a canal: Panama'))
