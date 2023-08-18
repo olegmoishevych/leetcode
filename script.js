@@ -521,9 +521,9 @@
 // console.log(sumAtArr([4,10]))
 
 /**
- * @param {string[]} strs
- * @return {string[][]}
+ * @param {string} s
+ * @return {boolean}
  */
-var groupAnagrams = function(strs) {
+const isPalindrome = function(s) {
 
 };
