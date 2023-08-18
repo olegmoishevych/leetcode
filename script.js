@@ -511,11 +511,19 @@
 // }
 // console.log(theBiggestSumAtArray([1,2,3,4,5,6,16]))
 
-const sumAtArr = (arr) => {
-    let sum = 0
-    for (const arrElement of arr) {
-        sum += arrElement
-    }
-    return sum
-}
-console.log(sumAtArr([4,10]))
+// const sumAtArr = (arr) => {
+//     let sum = 0
+//     for (const arrElement of arr) {
+//         sum += arrElement
+//     }
+//     return sum
+// }
+// console.log(sumAtArr([4,10]))
+
+/**
+ * @param {string[]} strs
+ * @return {string[][]}
+ */
+var groupAnagrams = function(strs) {
+
+};
