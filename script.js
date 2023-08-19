@@ -539,5 +539,16 @@
  * @return {number[]}
  */
 const getConcatenation = function(nums) {
-
+    const arr1 = []
+    const arr2 = []
+    const arr3 = []
+    for (let i = 0; i < nums.length; i++) {
+        arr1.push(nums[i])
+        arr2.push(nums[i])
+    }
+    // arr3 = arr2.concat(arr1)
+    arr3.push(...arr1, ...arr2)
+    return arr3
 };
+
+console.log(getConcatenation([1,2,3,4,5]))
