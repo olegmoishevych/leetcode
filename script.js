@@ -533,11 +533,11 @@
 //     return letterA === letterS
 // };
 // console.log(isPalindrome('A man, a plan, a canal: Panama'))
-
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
+//
+// /**
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
 // const getConcatenation = (nums) => {
 //     const arr = []
 //     for (let i = 0; i < nums.length; i++) {
@@ -547,6 +547,17 @@
 //     return arr
 // };
 
-const getConcatenation = (nums) => nums.concat(nums)
+// const getConcatenation = (nums) => nums.concat(nums)
+//
+// console.log(getConcatenation([1,2,3,4,5]))
 
-console.log(getConcatenation([1,2,3,4,5]))
+/**
+ * @param {string} s
+ * @return {number}
+ */
+const lengthOfLastWord = function(s) {
+    let str = s.trim().split(' ')
+    let newStr = str[str.length - 1].length
+    return newStr
+};
+console.log(lengthOfLastWord('hello man hehehe'))
