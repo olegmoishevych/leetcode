@@ -520,16 +520,24 @@
 // }
 // console.log(sumAtArr([4,10]))
 
+// /**
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// const isPalindrome = function(s) {
+//     if(s === null) return false
+//     let letterA = s.toLocaleLowerCase().replace(/[^a-z0-9]/g, '')
+//     console.log(letterA)
+//     let letterS = letterA.split('').reverse().join('')
+//     console.log(letterS)
+//     return letterA === letterS
+// };
+// console.log(isPalindrome('A man, a plan, a canal: Panama'))
+
 /**
- * @param {string} s
- * @return {boolean}
+ * @param {number[]} nums
+ * @return {number[]}
  */
-const isPalindrome = function(s) {
-    if(s === null) return false
-    let letterA = s.toLocaleLowerCase().replace(/[^a-z0-9]/g, '')
-    console.log(letterA)
-    let letterS = letterA.split('').reverse().join('')
-    console.log(letterS)
-    return letterA === letterS
+const getConcatenation = function(nums) {
+
 };
-console.log(isPalindrome('A man, a plan, a canal: Panama'))
