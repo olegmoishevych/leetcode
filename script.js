@@ -551,13 +551,29 @@
 //
 // console.log(getConcatenation([1,2,3,4,5]))
 
-/**
- * @param {string} s
- * @return {number}
- */
-const lengthOfLastWord = function(s) {
-    let str = s.trim().split(' ')
-    let newStr = str[str.length - 1].length
-    return newStr
-};
-console.log(lengthOfLastWord('hello man hehehe'))
+// /**
+//  * @param {string} s
+//  * @return {number}
+//  */
+// const lengthOfLastWord = function(s) {
+//     let str = s.trim().split(' ')
+//     let newStr = str[str.length - 1].length
+//     return newStr
+// };
+// console.log(lengthOfLastWord('hello man hehehe'))
+
+// /**
+//  * @param {number[]} arr
+//  * @param {Function} fn
+//  * @return {number[]}
+//  */
+// const filter = function(arr, fn) {
+//     const arr1 = []
+//     for (let i = 0; i < arr.length; i++) {
+//         if(fn(arr[i], i)){
+//             arr1.push(arr[i])
+//         }
+//     }
+//     return arr1
+// };
+
