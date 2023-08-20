@@ -583,5 +583,16 @@
  * @return {Array[]}
  */
 const chunk = function(arr, size) {
+    const result = []
 
+    for (let i = 0; i < arr.length; i += size) {
+        let forArr = []
+        for (let j = i; j < i + size && j < arr.length; j++) {
+            forArr.push(arr[j])
+        }
+        result.push(forArr)
+    }
+    return result
 };
+
+console.log(chunk([1,2,3,4,5], 3))
