@@ -577,22 +577,47 @@
 //     return arr1
 // };
 
+// /**
+//  * @param {Array} arr
+//  * @param {number} size
+//  * @return {Array[]}
+//  */
+// const chunk = function(arr, size) {
+//     const result = []
+//
+//     for (let i = 0; i < arr.length; i += size) {
+//         let forArr = []
+//         for (let j = i; j < i + size && j < arr.length; j++) {
+//             forArr.push(arr[j])
+//         }
+//         result.push(forArr)
+//     }
+//     return result
+// };
+//
+// console.log(chunk([1,2,3,4,5], 3))
+
 /**
- * @param {Array} arr
- * @param {number} size
- * @return {Array[]}
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
  */
-const chunk = function(arr, size) {
-    const result = []
+const search = function(nums, target) {
+    let right = 0
+    let left = nums.length - 1
+    let mid
 
-    for (let i = 0; i < arr.length; i += size) {
-        let forArr = []
-        for (let j = i; j < i + size && j < arr.length; j++) {
-            forArr.push(arr[j])
+    while (right <= left){
+        mid = Math.floor((right + left) / 2)
+        if(nums[mid] === target){
+            console.log(nums[mid])
+            return mid
+        }else if (nums[mid] < target){
+            right = mid + 1
+        }else {
+            left = mid - 1
         }
-        result.push(forArr)
     }
-    return result
+    return -1
 };
-
-console.log(chunk([1,2,3,4,5], 3))
+console.log(search([1,2,3,4,5, 6,8,10,15], 1))
