@@ -597,27 +597,35 @@
 //
 // console.log(chunk([1,2,3,4,5], 3))
 
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number}
+//  */
+// const search = function(nums, target) {
+//     let right = 0
+//     let left = nums.length - 1
+//     let mid
+//
+//     while (right <= left){
+//         mid = Math.floor((right + left) / 2)
+//         if(nums[mid] === target){
+//             console.log(nums[mid])
+//             return mid
+//         }else if (nums[mid] < target){
+//             right = mid + 1
+//         }else {
+//             left = mid - 1
+//         }
+//     }
+//     return -1
+// };
+// console.log(search([1,2,3,4,5, 6,8,10,15], 1))
+
 /**
- * @param {number[]} nums
- * @param {number} target
+ * @param {string} text
  * @return {number}
  */
-const search = function(nums, target) {
-    let right = 0
-    let left = nums.length - 1
-    let mid
+var maxNumberOfBalloons = function(text) {
 
-    while (right <= left){
-        mid = Math.floor((right + left) / 2)
-        if(nums[mid] === target){
-            console.log(nums[mid])
-            return mid
-        }else if (nums[mid] < target){
-            right = mid + 1
-        }else {
-            left = mid - 1
-        }
-    }
-    return -1
 };
-console.log(search([1,2,3,4,5, 6,8,10,15], 1))
