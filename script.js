@@ -626,6 +626,38 @@
  * @param {string} text
  * @return {number}
  */
-var maxNumberOfBalloons = function(text) {
+const maxNumberOfBalloons = function(text) {
+    const balloon1 = new Map()
+    const balloon2 = new Map()
+    const world = 'balloon'
+    let totalCountOrWords = Infinity
+    for (const worldElement of world) {
+        if(balloon1.has(worldElement)){
+            balloon1.set(worldElement, balloon1.get(worldElement) + 1)
+        }else {
+            balloon1.set(worldElement, 1)
+        }
+    }
 
+    for (const worldElement of text) {
+        if(balloon2.has(worldElement)){
+            balloon2.set(worldElement, balloon2.get(worldElement) + 1)
+        }else {
+            balloon2.set(worldElement, 1)
+        }
+    }
+
+    for (const [key, value] of balloon1) {
+        console.log(key)
+        console.log(value)
+        if(balloon2.has(key)){
+            const countInBalloon2 = balloon2.get(key)
+            totalCountOrWords = Math.min(totalCountOrWords, Math.floor(countInBalloon2 / value))
+        }else {
+            return 0
+        }
+    }
+    console.log(totalCountOrWords)
+    return totalCountOrWords
 };
+console.log(maxNumberOfBalloons('loonbalxballpoon'))
