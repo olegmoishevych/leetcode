@@ -662,10 +662,10 @@
 // };
 // console.log(maxNumberOfBalloons('loonbalxballpoon'))
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
 // const singleNumber = (nums) => {
 //     let result = 0
 //     for (let i = 0; i < nums.length; i++) {
@@ -677,6 +677,14 @@
 //
 // console.log(singleNumber([1,1,2,3,3]))
 
-const singleNumber = (nums) => nums.reduce((res, num) => res ^ num, 0)
+// const singleNumber = (nums) => nums.reduce((res, num) => res ^ num, 0)
+//
+// console.log(singleNumber([1,1,2,3,3]))
 
-console.log(singleNumber([1,1,2,3,3]))
+/**
+ * @param {number} n - a positive integer
+ * @return {number}
+ */
+const hammingWeight = (n) => n.toString(2).split('1').length - 1
+
+console.log(hammingWeight(00000000000000000000000000000001100011))
