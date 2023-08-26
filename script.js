@@ -681,10 +681,27 @@
 //
 // console.log(singleNumber([1,1,2,3,3]))
 
-/**
- * @param {number} n - a positive integer
- * @return {number}
- */
-const hammingWeight = (n) => n.toString(2).split('1').length - 1
+// /**
+//  * @param {number} n - a positive integer
+//  * @return {number}
+//  */
+// const hammingWeight = (n) => n.toString(2).split('1').length - 1
+//
+// console.log(hammingWeight(00000000000000000000000000000001100011))
 
-console.log(hammingWeight(00000000000000000000000000000001100011))
+/**
+ * @param {number} n
+ * @return {number[]}
+ */
+const countBits = (n)=> {
+    let arr = new Array(n + 1).fill(0)
+    console.log(arr)
+    for (let i = 1; i <= n; i++) {
+        console.log(arr[i >>> 1] + (i & 1))
+        arr[i] = arr[i >>> 1] + (i & 1)
+        console.log(arr)
+    }
+    console.log(arr)
+    return arr
+}
+console.log(countBits(5))
