@@ -694,14 +694,11 @@
  * @return {number[]}
  */
 const countBits = (n)=> {
-    let arr = new Array(n + 1).fill(0)
-    console.log(arr)
-    for (let i = 1; i <= n; i++) {
-        console.log(arr[i >>> 1] + (i & 1))
-        arr[i] = arr[i >>> 1] + (i & 1)
-        console.log(arr)
+    let res = []
+
+    for (let i = 0; i <= n; i++) {
+        res.push(i.toString(2).split('').filter(b => b === '1').length)
     }
-    console.log(arr)
-    return arr
+    return res
 }
 console.log(countBits(5))
