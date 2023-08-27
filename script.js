@@ -708,28 +708,34 @@
  * @param {string} s
  * @return {boolean}
  */
-const wordPattern = function(pattern, s) {
-    let sWords = s.split(' ')
-    if(pattern.length !== sWords.length) {
-        return false
-    }
-    let symbols1 = new Map()
-    let symbols2 = new Map()
-    for (let i = 0; i < pattern.length; i++) {
-        let char = pattern[i]
-        console.log(char)
-        let word = sWords[i]
-        console.log(word)
-        if(symbols1.has(char) && symbols1.get(char) !== word){
-            return false
-        }
-        if(symbols2.has(word) && symbols2.get(word) !== char){
-            return false
-        }
-        symbols1.set(char, word)
-        symbols2.set(word, char)
-    }
-    return true
-};
+// const wordPattern = function(pattern, s) {
+//     let sWords = s.split(' ')
+//     if(pattern.length !== sWords.length) {
+//         return false
+//     }
+//     let symbols1 = new Map()
+//     let symbols2 = new Map()
+//     for (let i = 0; i < pattern.length; i++) {
+//         let char = pattern[i]
+//         console.log(char)
+//         let word = sWords[i]
+//         console.log(word)
+//         if(symbols1.has(char) && symbols1.get(char) !== word){
+//             return false
+//         }
+//         if(symbols2.has(word) && symbols2.get(word) !== char){
+//             return false
+//         }
+//         symbols1.set(char, word)
+//         symbols2.set(word, char)
+//     }
+//     return true
+// };
+//
+// console.log(wordPattern('abba', 'dog cat cat dog'))
 
-console.log(wordPattern('abba', 'dog cat cat dog'))
+const dublFUnc = (arr) => {
+    let res = [...new Set(arr)]
+    return res
+}
+console.log(dublFUnc([1,1,2,3,4,5]))
