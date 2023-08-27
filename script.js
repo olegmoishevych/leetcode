@@ -734,8 +734,11 @@
 //
 // console.log(wordPattern('abba', 'dog cat cat dog'))
 
-const dublFUnc = (arr) => {
-    let res = [...new Set(arr)]
-    return res
-}
+// const dublFUnc = (arr) => {
+//     let res = [...new Set(arr)]
+//     return res
+// }
+// console.log(dublFUnc([1,1,2,3,4,5]))
+
+const dublFUnc = (arr) => arr.filter((el, index) => arr.indexOf(el) === index)
 console.log(dublFUnc([1,1,2,3,4,5]))
