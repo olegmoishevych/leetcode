@@ -689,16 +689,47 @@
 //
 // console.log(hammingWeight(00000000000000000000000000000001100011))
 
-/**
- * @param {number} n
- * @return {number[]}
- */
-const countBits = (n)=> {
-    let res = []
+// /**
+//  * @param {number} n
+//  * @return {number[]}
+//  */
+// const countBits = (n)=> {
+//     let res = []
+//
+//     for (let i = 0; i <= n; i++) {
+//         res.push(i.toString(2).split('').filter(b => b === '1').length)
+//     }
+//     return res
+// }
+// console.log(countBits(5))
 
-    for (let i = 0; i <= n; i++) {
-        res.push(i.toString(2).split('').filter(b => b === '1').length)
+/**
+ * @param {string} pattern
+ * @param {string} s
+ * @return {boolean}
+ */
+const wordPattern = function(pattern, s) {
+    let sWords = s.split(' ')
+    if(pattern.length !== sWords.length) {
+        return false
     }
-    return res
-}
-console.log(countBits(5))
+    let symbols1 = new Map()
+    let symbols2 = new Map()
+    for (let i = 0; i < pattern.length; i++) {
+        let char = pattern[i]
+        console.log(char)
+        let word = sWords[i]
+        console.log(word)
+        if(symbols1.has(char) && symbols1.get(char) !== word){
+            return false
+        }
+        if(symbols2.has(word) && symbols2.get(word) !== char){
+            return false
+        }
+        symbols1.set(char, word)
+        symbols2.set(word, char)
+    }
+    return true
+};
+
+console.log(wordPattern('abba', 'dog cat cat dog'))
