@@ -743,10 +743,10 @@
 // const dublFUnc = (arr) => arr.filter((el, index) => arr.indexOf(el) === index)
 // console.log(dublFUnc([1,1,2,3,4,5]))
 
-/**
- * @param {string} haystack
- * @param {string} needle
- * @return {number}
- */
-const strStr = (haystack, needle) => haystack.indexOf(needle)
-console.log(strStr('sadbutsad', 'sad'))
+// /**
+//  * @param {string} haystack
+//  * @param {string} needle
+//  * @return {number}
+//  */
+// const strStr = (haystack, needle) => haystack.indexOf(needle)
+// console.log(strStr('sadbutsad', 'sad'))
