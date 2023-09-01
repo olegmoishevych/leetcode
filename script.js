@@ -755,18 +755,18 @@
 //  * @param {number} n
 //  * @return {number}
 //  */
-// const climbStairs = (n) => {
-//     if(n <= 2) return n
-//
-//     let oneBefore = 2
-//     let oneAfter = 1
-//     let current = 0
-//
-//     for (let i = 3; i <= n; i++) {
-//         current = oneBefore + oneAfter
-//         oneAfter = oneBefore
-//         oneBefore = current
-//     }
-//     return current
-// }
-// console.log(climbStairs(5))
+const climbStairs = (n) => {
+    if(n <= 2) return n
+
+    let oneBefore = 2
+    let oneAfter = 1
+    let current = 0
+
+    for (let i = 3; i <= n; i++) {
+        current = oneBefore + oneAfter
+        oneAfter = oneBefore
+        oneBefore = current
+    }
+    return current
+}
+console.log(climbStairs(5))
