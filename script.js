@@ -755,18 +755,50 @@
 //  * @param {number} n
 //  * @return {number}
 //  */
-const climbStairs = (n) => {
-    if(n <= 2) return n
+// const climbStairs = (n) => {
+//     if(n <= 2) return n
+//
+//     let oneBefore = 2
+//     let oneAfter = 1
+//     let current = 0
+//
+//     for (let i = 3; i <= n; i++) {
+//         current = oneBefore + oneAfter
+//         oneAfter = oneBefore
+//         oneBefore = current
+//     }
+//     return current
+// }
+// console.log(climbStairs(5))
 
-    let oneBefore = 2
-    let oneAfter = 1
-    let current = 0
+/**
+ * @param {string[]} operations
+ * @return {number}
+ */
+const calPoints = (operations) => {
+    // Используем массив в качестве стека для хранения счетов
+    let scores = [];
 
-    for (let i = 3; i <= n; i++) {
-        current = oneBefore + oneAfter
-        oneAfter = oneBefore
-        oneBefore = current
+    // Обходим каждую операцию
+    for (const operation of operations) {
+        if (operation === 'C') {
+            // Удаляем последний счет
+            scores.pop();
+        } else if (operation === 'D') {
+            // Добавляем удвоенный последний счет
+            scores.push(2 * scores[scores.length - 1]);
+        } else if (operation === "+") {
+            // Добавляем сумму двух последних счетов
+            scores.push(scores[scores.length - 1] + scores[scores.length - 2]);
+        } else {
+            // Добавляем новый счет
+            scores.push(parseInt(operation));
+        }
     }
-    return current
-}
-console.log(climbStairs(5))
+
+    // Возвращаем общий счет
+    return scores.reduce((total, score) => total + score, 0);
+};
+
+
+console.log(calPoints(['1', 'C']))
