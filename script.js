@@ -771,34 +771,47 @@
 // }
 // console.log(climbStairs(5))
 
+// /**
+//  * @param {string[]} operations
+//  * @return {number}
+//  */
+// const calPoints = (operations) => {
+//     // Используем массив в качестве стека для хранения счетов
+//     let scores = [];
+//
+//     // Обходим каждую операцию
+//     for (const operation of operations) {
+//         if (operation === 'C') {
+//             // Удаляем последний счет
+//             scores.pop();
+//         } else if (operation === 'D') {
+//             // Добавляем удвоенный последний счет
+//             scores.push(2 * scores[scores.length - 1]);
+//         } else if (operation === "+") {
+//             // Добавляем сумму двух последних счетов
+//             scores.push(scores[scores.length - 1] + scores[scores.length - 2]);
+//         } else {
+//             // Добавляем новый счет
+//             scores.push(parseInt(operation));
+//         }
+//     }
+//
+//     // Возвращаем общий счет
+//     return scores.reduce((total, score) => total + score, 0);
+// };
+//
+//
+// console.log(calPoints(['1', 'C']))
+
 /**
- * @param {string[]} operations
- * @return {number}
+ * @param {number[]} arr
+ * @return {number[]}
  */
-const calPoints = (operations) => {
-    // Используем массив в качестве стека для хранения счетов
-    let scores = [];
+const replaceElements = function(arr) {
+    let res = []
 
-    // Обходим каждую операцию
-    for (const operation of operations) {
-        if (operation === 'C') {
-            // Удаляем последний счет
-            scores.pop();
-        } else if (operation === 'D') {
-            // Добавляем удвоенный последний счет
-            scores.push(2 * scores[scores.length - 1]);
-        } else if (operation === "+") {
-            // Добавляем сумму двух последних счетов
-            scores.push(scores[scores.length - 1] + scores[scores.length - 2]);
-        } else {
-            // Добавляем новый счет
-            scores.push(parseInt(operation));
-        }
+    for (let i = 0; i < arr.length - 1; i++) {
+        // console.log(arr.length- 1)
     }
-
-    // Возвращаем общий счет
-    return scores.reduce((total, score) => total + score, 0);
 };
-
-
-console.log(calPoints(['1', 'C']))
+console.log(replaceElements([1,2,3,4,5,6,7,8]))
