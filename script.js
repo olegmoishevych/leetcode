@@ -837,25 +837,25 @@
 //     Для каждого элемента найдите максимальное значение среди элементов справа и замените текущий элемент на найденное максимальное значение.
 //     Замените последний элемент массива на -1.
 
-const replaceElements = function(arr) {
-    let res = []
-
-    for (let i = 0; i < arr.length - 1; i++) {
-        // console.log(arr.length- 1)
-        // console.log(i + 1)
-        // console.log(Math.max(...arr.slice(i + 1)))
-
-        // Находим максимальное значение среди элементов справа от текущего элемента
-        let maxVal = Math.max(...arr.slice(i + 1));
-        console.log(maxVal)
-        res.push(maxVal)
-    }
-
-    // console.log(res.push(-1))
-    // Добавляем -1 для последнего элемента
-    res.push(-1)
-
-    // console.log(res)
-    return res
-};
-console.log(replaceElements([1,2,3,4,5,6,7,8]))
+// const replaceElements = function(arr) {
+//     let res = []
+//
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         // console.log(arr.length- 1)
+//         // console.log(i + 1)
+//         // console.log(Math.max(...arr.slice(i + 1)))
+//
+//         // Находим максимальное значение среди элементов справа от текущего элемента
+//         let maxVal = Math.max(...arr.slice(i + 1));
+//         console.log(maxVal)
+//         res.push(maxVal)
+//     }
+//
+//     // console.log(res.push(-1))
+//     // Добавляем -1 для последнего элемента
+//     res.push(-1)
+//
+//     // console.log(res)
+//     return res
+// };
+// console.log(replaceElements([1,2,3,4,5,6,7,8]))
