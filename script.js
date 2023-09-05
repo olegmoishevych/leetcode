@@ -859,3 +859,21 @@
 //     return res
 // };
 // console.log(replaceElements([1,2,3,4,5,6,7,8]))
+
+let str = 'aabbbcccccdd'
+
+const foo = (str) => {
+    let object = {}
+
+    for (const char of str) {
+        if(!object[char]){
+            object[char] = 1
+            // console.log(object[char])
+        }else {
+            object[char]++
+            console.log(object[char])
+        }
+    }
+    return object
+}
+console.log(foo(str))
