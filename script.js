@@ -905,4 +905,7 @@ let reverseString = function(s) {
     console.log(s)
     return s
 }
-console.log(reverseString('privet'.split('')));
+// console.log(reverseString('privet'.split('')));
+
+let reverseString2 = (n) => n.split('').reverse().join('')
+console.log(reverseString2('helo'))
