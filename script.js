@@ -876,10 +876,33 @@
 // }
 // console.log(foo(str))
 
-let arr = [1,2,3,2,3,4]
+// let arr = [1,2,3,2,3,4]
+//
+// let foo = (n) => {
+//     let newArr = [...new Set(n)]
+//     return newArr
+// }
+// console.log(foo(arr))
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+let reverseString = function(s) {
+    let start = 0
+    let end = s.length - 1
 
-let foo = (n) => {
-    let newArr = [...new Set(n)]
-    return newArr
+    while (start < end) {
+        let temp = s[start]
+        console.log(temp)
+        s[start] = s[end]
+        console.log(s[start])
+        s[end] = temp
+        console.log(s[end])
+
+        start++
+        end--
+    }
+    console.log(s)
+    return s
 }
-console.log(foo(arr))
+console.log(reverseString('privet'.split('')));
