@@ -860,20 +860,26 @@
 // };
 // console.log(replaceElements([1,2,3,4,5,6,7,8]))
 
-let str = 'aabbbcccccdd'
+// let str = 'aabbbcccccdd'
+//
+// const foo = (str) => {
+//     let obj = {}
+//
+//     for (const char of str) {
+//         if(!obj[char]){
+//             obj[char] = 1
+//         }else {
+//             obj[char]++
+//         }
+//     }
+//     return obj
+// }
+// console.log(foo(str))
 
-const foo = (str) => {
-    let object = {}
+let arr = [1,2,3,2,3,4]
 
-    for (const char of str) {
-        if(!object[char]){
-            object[char] = 1
-            // console.log(object[char])
-        }else {
-            object[char]++
-            console.log(object[char])
-        }
-    }
-    return object
+let foo = (n) => {
+    let newArr = [...new Set(n)]
+    return newArr
 }
-console.log(foo(str))
+console.log(foo(arr))
