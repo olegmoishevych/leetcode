@@ -883,29 +883,29 @@
 //     return newArr
 // }
 // console.log(foo(arr))
-/**
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
- */
-let reverseString = function(s) {
-    let start = 0
-    let end = s.length - 1
-
-    while (start < end) {
-        let temp = s[start]
-        console.log(temp)
-        s[start] = s[end]
-        console.log(s[start])
-        s[end] = temp
-        console.log(s[end])
-
-        start++
-        end--
-    }
-    console.log(s)
-    return s
-}
-// console.log(reverseString('privet'.split('')));
-
-let reverseString2 = (n) => n.split('').reverse().join('')
-console.log(reverseString2('helo'))
+// /**
+//  * @param {character[]} s
+//  * @return {void} Do not return anything, modify s in-place instead.
+//  */
+// let reverseString = function(s) {
+//     let start = 0
+//     let end = s.length - 1
+//
+//     while (start < end) {
+//         let temp = s[start]
+//         console.log(temp)
+//         s[start] = s[end]
+//         console.log(s[start])
+//         s[end] = temp
+//         console.log(s[end])
+//
+//         start++
+//         end--
+//     }
+//     console.log(s)
+//     return s
+// }
+// // console.log(reverseString('privet'.split('')));
+//
+// let reverseString2 = (n) => n.split('').reverse().join('')
+// console.log(reverseString2('helo'))
