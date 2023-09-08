@@ -909,3 +909,12 @@
 //
 // let reverseString2 = (n) => n.split('').reverse().join('')
 // console.log(reverseString2('helo'))
+
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+
+};
