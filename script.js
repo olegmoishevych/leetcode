@@ -936,9 +936,9 @@
 // console.log(removeElement([1,2,2,3,4], 2))
 
 /**
- * @param {string[]} emails
+ * @param {number[]} stones
  * @return {number}
  */
-var numUniqueEmails = function(emails) {
+const lastStoneWeight = function(stones) {
 
 };
