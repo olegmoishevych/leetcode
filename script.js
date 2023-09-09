@@ -910,27 +910,35 @@
 // let reverseString2 = (n) => n.split('').reverse().join('')
 // console.log(reverseString2('helo'))
 
+// /**
+//  * @param {number[]} nums
+//  * @param {number} val
+//  * @return {number}
+//  */
+// const removeElement = function(nums, val) {
+//     // let arr = nums.filter((el) => el !== val)
+//     // return arr
+//     // start value of array
+//     let index = 0
+//     for (let i = 0; i < nums.length; i++) {
+//         console.log(nums[i])
+//         console.log(val)
+//         if(nums[i] !== val){
+//             console.log(nums[index])
+//             console.log(nums[i])
+//             nums[index] = nums[i]
+//             index++
+//         }
+//     }
+//     console.log(index)
+//     return index
+// };
+// console.log(removeElement([1,2,2,3,4], 2))
+
 /**
- * @param {number[]} nums
- * @param {number} val
+ * @param {string[]} emails
  * @return {number}
  */
-const removeElement = function(nums, val) {
-    // let arr = nums.filter((el) => el !== val)
-    // return arr
-    // start value of array
-    let index = 0
-    for (let i = 0; i < nums.length; i++) {
-        console.log(nums[i])
-        console.log(val)
-        if(nums[i] !== val){
-            console.log(nums[index])
-            console.log(nums[i])
-            nums[index] = nums[i]
-            index++
-        }
-    }
-    console.log(index)
-    return index
+var numUniqueEmails = function(emails) {
+
 };
-console.log(removeElement([1,2,2,3,4], 2))
