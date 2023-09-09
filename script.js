@@ -936,9 +936,9 @@
 // console.log(removeElement([1,2,2,3,4], 2))
 
 /**
- * @param {number[]} stones
+ * @param {number[]} prices
  * @return {number}
  */
-const lastStoneWeight = function(stones) {
+var maxProfit = function(prices) {
 
 };
