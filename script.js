@@ -939,6 +939,24 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+const maxProfit = function(prices) {
+    let minPrice = Infinity
+    let maxProfit = 0
 
+    for (let i = 0; i < prices.length; i++) {
+        console.log(prices[i])
+        if(prices[i] < minPrice){
+            minPrice = prices[i]
+        }else {
+            let potentialProfit = prices[i] - minPrice;
+            console.log(potentialProfit)
+            console.log(prices[i] - minPrice)
+            if (potentialProfit > maxProfit) {
+                maxProfit = potentialProfit;
+            }
+        }
+    }
+    console.log(maxProfit)
+    return maxProfit;
 };
+console.log(maxProfit([1,6,4,3,1]))
