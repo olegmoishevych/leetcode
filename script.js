@@ -961,11 +961,19 @@
 // };
 // console.log(maxProfit([1,6,4,3,1]))
 
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-let searchInsert = function(nums, target) {
+// dubl in array
 
-};
+const arrayDublicates = (args) => {
+    let arr = new Map()
+    let dublicated = []
+
+    for (let i = 0; i < args.length; i++) {
+        if(arr.has(args[i]) && !dublicated.includes(args[i])){
+            dublicated.push(args[i])
+        }
+        arr.set(args[i], true)
+    }
+    return dublicated
+}
+
+console.log(arrayDublicates([1,1, 2,3,4,5,5]))
