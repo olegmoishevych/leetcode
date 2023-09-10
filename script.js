@@ -963,17 +963,33 @@
 
 // dubl in array
 
-const arrayDublicates = (args) => {
-    let arr = new Map()
-    let dublicated = []
+// const arrayDublicates = (args) => {
+//     let arr = new Map()
+//     let dublicated = []
+//
+//     for (let i = 0; i < args.length; i++) {
+//         console.log(arr)
+//         if(arr.has(args[i]) && !dublicated.includes(args[i])){
+//             dublicated.push(args[i])
+//         }
+//         arr.set(args[i], true)
+//     }
+//     console.log(dublicated)
+//     return dublicated
+// }
+//
+// console.log(arrayDublicates([1,1, 2,3,4,5,5]))
 
-    for (let i = 0; i < args.length; i++) {
-        if(arr.has(args[i]) && !dublicated.includes(args[i])){
-            dublicated.push(args[i])
+const sumSumbolsOfStr = (str) => {
+    let obj = {}
+
+    for (const objElement of str) {
+        if(!obj[objElement]){
+            obj[objElement] = 1
+        }else {
+            obj[objElement]++
         }
-        arr.set(args[i], true)
     }
-    return dublicated
+    return  obj
 }
-
-console.log(arrayDublicates([1,1, 2,3,4,5,5]))
+console.log(sumSumbolsOfStr('ahahaha'))
