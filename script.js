@@ -980,16 +980,19 @@
 //
 // console.log(arrayDublicates([1,1, 2,3,4,5,5]))
 
-const sumSumbolsOfStr = (str) => {
-    let obj = {}
+// const sumSumbolsOfStr = (str) => {
+//     let obj = {}
+//
+//     for (const objElement of str) {
+//         if(!obj[objElement]){
+//             obj[objElement] = 1
+//         }else {
+//             obj[objElement]++
+//         }
+//     }
+//     return  obj
+// }
+// console.log(sumSumbolsOfStr('ahahaha'))
 
-    for (const objElement of str) {
-        if(!obj[objElement]){
-            obj[objElement] = 1
-        }else {
-            obj[objElement]++
-        }
-    }
-    return  obj
-}
-console.log(sumSumbolsOfStr('ahahaha'))
+let dubl = (arr) => [...new Set(arr)]
+console.log(dubl([1,2,3,4,5,5,5]))
