@@ -1010,3 +1010,12 @@
 //     return dubls
 // }
 // console.log(foo([1,2,3,3,5,5]))
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var minimumDifference = function(nums, k) {
+
+};
