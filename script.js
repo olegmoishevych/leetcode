@@ -994,5 +994,19 @@
 // }
 // console.log(sumSumbolsOfStr('ahahaha'))
 
-let dubl = (arr) => [...new Set(arr)]
-console.log(dubl([1,2,3,4,5,5,5]))
+// let dubl = (arr) => [...new Set(arr)]
+// console.log(dubl([1,2,3,4,5,5,5]))
+
+// let foo = (arr) => {
+//     let set = new Set()
+//     let dubls = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if(set.has(arr[i]) && !dubls.includes(arr[i])){
+//             dubls.push(arr[i])
+//         }
+//         set.add(arr[i])
+//     }
+//     return dubls
+// }
+// console.log(foo([1,2,3,3,5,5]))
