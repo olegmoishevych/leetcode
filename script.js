@@ -1032,3 +1032,12 @@
 // };
 //
 // console.log(mergeAlternately('pri', 'vet'))
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+let isSubsequence = function(s, t) {
+
+};
