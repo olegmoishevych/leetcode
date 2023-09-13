@@ -1010,25 +1010,25 @@
 //     return dubls
 // }
 // console.log(foo([1,2,3,3,5,5]))
-
-/**
- * @param {string} word1
- * @param {string} word2
- * @return {string}
- */
-let mergeAlternately = function(word1, word2) {
-    let result = []
-
-    for (let i = 0, j = 0; i < word1.length || j < word2.length; i++, j++) {
-        if(i < word1.length){
-            result.push(word1[i])
-        }
-        if(j < word2.length){
-            result.push(word2[j])
-        }
-    }
-    console.log(result)
-    return result.join('')
-};
-
-console.log(mergeAlternately('pri', 'vet'))
+//
+// /**
+//  * @param {string} word1
+//  * @param {string} word2
+//  * @return {string}
+//  */
+// let mergeAlternately = function(word1, word2) {
+//     let result = []
+//
+//     for (let i = 0, j = 0; i < word1.length || j < word2.length; i++, j++) {
+//         if(i < word1.length){
+//             result.push(word1[i])
+//         }
+//         if(j < word2.length){
+//             result.push(word2[j])
+//         }
+//     }
+//     console.log(result)
+//     return result.join('')
+// };
+//
+// console.log(mergeAlternately('pri', 'vet'))
