@@ -1063,16 +1063,18 @@
 let numUniqueEmails = function(emails) {
     let uniq = new Set()
 
-    for (const uniqEmail of emails) {
-        console.log(uniqEmail)
-        if(uniq[uniqEmail]){
-            console.log(uniq.size)
-            return uniq.size
-        }else {
-            uniq.add(uniq[uniqEmail])
-        }
+    for (let uniqEmail of emails) {
+        let [local, temp] = uniqEmail.split('@')
+
+        local = local.split('+')[0]
+        console.log(local)
+        local = local.split('.').join('')
+        console.log(local)
+        uniq.add(local + '@' + temp)
+        console.log(uniq)
     }
+    console.log(uniq)
     return uniq.size
 };
 
-console.log(numUniqueEmails(["a@leetcode.com","b@leetcode.com","c@leetcode.com"]))
+console.log(numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
