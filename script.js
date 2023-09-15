@@ -1055,3 +1055,24 @@
 // };
 //
 // console.log(isSubsequence('aaaabaaaac', 'abc'))
+
+/**
+ * @param {string[]} emails
+ * @return {number}
+ */
+let numUniqueEmails = function(emails) {
+    let uniq = new Set()
+
+    for (const uniqEmail of emails) {
+        console.log(uniqEmail)
+        if(uniq[uniqEmail]){
+            console.log(uniq.size)
+            return uniq.size
+        }else {
+            uniq.add(uniq[uniqEmail])
+        }
+    }
+    return uniq.size
+};
+
+console.log(numUniqueEmails(["a@leetcode.com","b@leetcode.com","c@leetcode.com"]))
