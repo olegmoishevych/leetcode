@@ -1056,25 +1056,25 @@
 //
 // console.log(isSubsequence('aaaabaaaac', 'abc'))
 
-/**
- * @param {string[]} emails
- * @return {number}
- */
-let numUniqueEmails = function(emails) {
-    let uniq = new Set()
-
-    for (let uniqEmail of emails) {
-        let [local, temp] = uniqEmail.split('@')
-
-        local = local.split('+')[0]
-        console.log(local)
-        local = local.split('.').join('')
-        console.log(local)
-        uniq.add(local + '@' + temp)
-        console.log(uniq)
-    }
-    console.log(uniq)
-    return uniq.size
-};
-
-console.log(numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
+// /**
+//  * @param {string[]} emails
+//  * @return {number}
+//  */
+// let numUniqueEmails = function(emails) {
+//     let uniq = new Set()
+//
+//     for (let uniqEmail of emails) {
+//         let [local, temp] = uniqEmail.split('@')
+//
+//         local = local.split('+')[0]
+//         console.log(local)
+//         local = local.split('.').join('')
+//         console.log(local)
+//         uniq.add(local + '@' + temp)
+//         console.log(uniq)
+//     }
+//     console.log(uniq)
+//     return uniq.size
+// };
+//
+// console.log(numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
