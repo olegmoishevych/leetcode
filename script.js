@@ -1084,5 +1084,21 @@
  * @return {number}
  */
 let majorityElement = function(nums) {
+    let hashTable = new Map()
+
+    for (let i = 0; i < nums.length; i++) {
+        if(hashTable.has(nums[i])) {
+            hashTable.set(nums[i], hashTable.get(nums[i]) + 1)
+        }
+        else {
+            hashTable.set(nums[i], 1)
+        }
+    }
+    for (const [key, value] of hashTable) {
+        console.log(value)
+        console.log(key)
+        if(value > nums.length / 2) return key
+    }
 
 };
+console.log(majorityElement([1,2,3,4,5]))
