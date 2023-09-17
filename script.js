@@ -1078,3 +1078,11 @@
 // };
 //
 // console.log(numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
+
+/**
+ * @param {number} numRows
+ * @return {number[][]}
+ */
+let generate = function(numRows) {
+
+};
