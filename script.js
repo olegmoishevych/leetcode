@@ -1079,26 +1079,61 @@
 //
 // console.log(numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
-let majorityElement = function(nums) {
-    let hashTable = new Map()
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// let majorityElement = function(nums) {
+//     let hashTable = new Map()
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         if(hashTable.has(nums[i])) {
+//             hashTable.set(nums[i], hashTable.get(nums[i]) + 1)
+//         }
+//         else {
+//             hashTable.set(nums[i], 1)
+//         }
+//     }
+//     for (const [key, value] of hashTable) {
+//         console.log(value)
+//         console.log(key)
+//         if(value > nums.length / 2) return key
+//     }
+//
+// };
+// console.log(majorityElement([1,2,3,4,5]))
 
+// let foo = (nums) => {
+//     return [...new Set(nums)]
+// }
+
+// let foo = (str) => {
+//     let obj = {}
+//
+//     for (const word of str) {
+//         if(!obj[word]){
+//             obj[word] = 1
+//         }else {
+//             obj[word]++
+//         }
+//     }
+//     return obj
+// }
+//
+// console.log(foo('sssttrrrr'))
+
+let foo = (nums) => {
+    let hash = new Map()
+    let values = []
     for (let i = 0; i < nums.length; i++) {
-        if(hashTable.has(nums[i])) {
-            hashTable.set(nums[i], hashTable.get(nums[i]) + 1)
-        }
-        else {
-            hashTable.set(nums[i], 1)
+        if(hash.has(nums[i])){
+            values.push(nums[i])
+        }else {
+            hash.set(nums[i], 1)
         }
     }
-    for (const [key, value] of hashTable) {
-        console.log(value)
-        console.log(key)
-        if(value > nums.length / 2) return key
-    }
+    return values.length > 0 ? values : null
 
-};
-console.log(majorityElement([1,2,3,4,5]))
+}
+
+console.log(foo([1,2,3,4,4,2,1]))
