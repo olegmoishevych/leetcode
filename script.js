@@ -1138,5 +1138,20 @@
 //
 // console.log(foo([1,2,3,4,4,2,1]))
 
-let dublicatFunc = (arg) => [...new Set(arg)]
-console.log(dublicatFunc([1,2,3,4,5,5]))
+// let dublicatFunc = (arg) => [...new Set(arg)]
+// let sumOfDublFunc = (args) => {
+//     let map = new Map()
+//     let arr = []
+//
+//     for (let i = 0; i < args.length; i++) {
+//         if(map.has(args[i])){
+//             arr.push(args[i])
+//         }else {
+//             map.set(args[i], 1)
+//         }
+//     }
+//     return arr.length > 0 ? arr : null
+// }
+
+
+console.log(sumOfDublFunc([1,2,3,4,5,5,5,1]))
