@@ -1153,5 +1153,17 @@
 //     return arr.length > 0 ? arr : null
 // }
 
+let sumWordsOfString = (str) => {
+    let obj = {}
 
-console.log(sumOfDublFunc([1,2,3,4,5,5,5,1]))
+    for (const word of str) {
+        if(!obj[word]){
+            obj[word] = 1
+        }else {
+            obj[word]++
+        }
+    }
+    return obj
+}
+
+console.log(sumWordsOfString('sstr'))
