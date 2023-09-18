@@ -1122,18 +1122,21 @@
 //
 // console.log(foo('sssttrrrr'))
 
-let foo = (nums) => {
-    let hash = new Map()
-    let values = []
-    for (let i = 0; i < nums.length; i++) {
-        if(hash.has(nums[i])){
-            values.push(nums[i])
-        }else {
-            hash.set(nums[i], 1)
-        }
-    }
-    return values.length > 0 ? values : null
+// let foo = (nums) => {
+//     let hash = new Map()
+//     let values = []
+//     for (let i = 0; i < nums.length; i++) {
+//         if(hash.has(nums[i])){
+//             values.push(nums[i])
+//         }else {
+//             hash.set(nums[i], 1)
+//         }
+//     }
+//     return values.length > 0 ? values : null
+//
+// }
+//
+// console.log(foo([1,2,3,4,4,2,1]))
 
-}
-
-console.log(foo([1,2,3,4,4,2,1]))
+let dublicatFunc = (arg) => [...new Set(arg)]
+console.log(dublicatFunc([1,2,3,4,5,5]))
