@@ -1152,18 +1152,42 @@
 //     }
 //     return arr.length > 0 ? arr : null
 // }
+// let sumWordsOfString = (str) => {
+//     let obj = {}
+//
+//     for (const word of str) {
+//         if(!obj[word]){
+//             obj[word] = 1
+//         }else {
+//             obj[word]++
+//         }
+//     }
+//     return obj
+// }
+//
+// console.log(sumWordsOfString('sstr'))
 
-let sumWordsOfString = (str) => {
-    let obj = {}
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+let findDisappearedNumbers = function(nums) {
+    let set = new Set()
+    let result = []
 
-    for (const word of str) {
-        if(!obj[word]){
-            obj[word] = 1
-        }else {
-            obj[word]++
+    for (let i = 0; i < nums.length; i++) {
+        if(!set.has(nums[i])){
+            set.add(nums[i])
         }
     }
-    return obj
-}
+    for (let i = 1; i <= nums.length; i++) {
+        if(!set.has(i)){
+            console.log(i)
+            result.push(i)
+        }
+    }
+    console.log(result)
+    return result
+};
 
-console.log(sumWordsOfString('sstr'))
+console.log(findDisappearedNumbers([1,2,3,4,6,8,9]))
