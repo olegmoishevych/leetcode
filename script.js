@@ -1167,27 +1167,57 @@
 //
 // console.log(sumWordsOfString('sstr'))
 
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-let findDisappearedNumbers = function(nums) {
-    let set = new Set()
-    let result = []
+// /**
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// let findDisappearedNumbers = function(nums) {
+//     let set = new Set()
+//     let result = []
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         if(!set.has(nums[i])){
+//             set.add(nums[i])
+//         }
+//     }
+//
+//     for (let i = 1; i <= nums.length; i++) {
+//         if(!set.has(i)){
+//             console.log(i)
+//             result.push(i)
+//         }
+//     }
+//     console.log(result)
+//     return result
+// };
+//
+// console.log(findDisappearedNumbers([1,2,3,4,6,8,9]))
 
-    for (let i = 0; i < nums.length; i++) {
-        if(!set.has(nums[i])){
-            set.add(nums[i])
+// let sumOfDublFunc = (args) => {
+//     let map = new Map()
+//     let arr = []
+//
+//     for (let i = 0; i < args.length; i++) {
+//         if(map.has(args[i])){
+//             arr.push(args[i])
+//         }else {
+//             map.set(args[i], 1)
+//         }
+//     }
+//     return arr.length > 0 ? arr : null
+// }
+// console.log(sumOfDublFunc([1,2,3,4,5,6,6,6]))
+
+let sumOfStr = (str) => {
+    let obj = {}
+
+    for (const word of str) {
+        if(!obj[word]){
+            obj[word] = 1
+        }else {
+            obj[word]++
         }
     }
-    for (let i = 1; i <= nums.length; i++) {
-        if(!set.has(i)){
-            console.log(i)
-            result.push(i)
-        }
-    }
-    console.log(result)
-    return result
-};
-
-console.log(findDisappearedNumbers([1,2,3,4,6,8,9]))
+    return obj
+}
+console.log(sumOfStr('ssttr'))
