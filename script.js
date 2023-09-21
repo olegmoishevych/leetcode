@@ -1220,4 +1220,5 @@ let sumOfStr = (str) => {
     }
     return obj
 }
+
 console.log(sumOfStr('ssttr'))
