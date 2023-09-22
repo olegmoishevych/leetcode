@@ -1208,17 +1208,28 @@
 // }
 // console.log(sumOfDublFunc([1,2,3,4,5,6,6,6]))
 
-let sumOfStr = (str) => {
-    let obj = {}
+// let sumOfStr = (str) => {
+//     let obj = {}
+//
+//     for (const word of str) {
+//         if(!obj[word]){
+//             obj[word] = 1
+//         }else {
+//             obj[word]++
+//         }
+//     }
+//     return obj
+// }
+//
+// console.log(sumOfStr('ssttr'))
 
-    for (const word of str) {
-        if(!obj[word]){
-            obj[word] = 1
-        }else {
-            obj[word]++
+let linageSearch = (arr, num) => {
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] === num){
+            return i
         }
     }
-    return obj
+    return null
 }
-
-console.log(sumOfStr('ssttr'))
+// O(n)
+console.log(linageSearch([1,2,3,4,5,6,7,8,9,10], 3))
