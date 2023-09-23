@@ -1254,3 +1254,33 @@
 //     return -1
 // }
 // console.log(binarySearch([1,2,3,4,5], ))
+
+// let fibonachi = (n) => {
+//     if(n === 1 || n === 2){
+//         return 1
+//     }
+//
+//     return fibonachi( n - 1) + fibonachi(n - 2)
+// }
+//
+// console.log(fibonachi(8))
+
+ /**
+ * @param {Function} fn
+ */
+function memoize(fn) {
+    let cache = {}
+    let callCount = 0
+
+    return function(...args) {
+       if(n in cache){
+           return cache[n]
+       } else {
+           let res = n + 10
+           cache[n] = res
+           return res
+       }
+    }
+}
+let newAdd = memoize()
+console.log(newAdd(9))
