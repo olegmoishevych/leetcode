@@ -1268,19 +1268,32 @@
  /**
  * @param {Function} fn
  */
+
 function memoize(fn) {
     let cache = {}
     let callCount = 0
 
-    return function(...args) {
-       if(n in cache){
-           return cache[n]
-       } else {
-           let res = n + 10
-           cache[n] = res
-           return res
-       }
+    let memoizeFn =  function(...args) {
+        let key = JSON.stringify(args)
+        if(key in cache){
+            return cache[key]
+        }
+
+        callCount++
+        let res = fn(...args)
+        cache[key] = res
+
+        return res
     }
+    memoizeFn.getCallCount = function (){
+        return callCount
+    }
+    return memoizeFn
 }
-let newAdd = memoize()
-console.log(newAdd(9))
+function add(a,b) {
+    return a + b
+}
+
+let newAdd = memoize(add)
+
+console.log(newAdd(9,15))
