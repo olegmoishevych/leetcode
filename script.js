@@ -1265,35 +1265,57 @@
 //
 // console.log(fibonachi(8))
 
- /**
- * @param {Function} fn
+//  /**
+//  * @param {Function} fn
+//  */
+//
+// function memoize(fn) {
+//     let cache = {}
+//     let callCount = 0
+//
+//     let memoizeFn =  function(...args) {
+//         let key = JSON.stringify(args)
+//         if(key in cache){
+//             return cache[key]
+//         }
+//
+//         callCount++
+//         let res = fn(...args)
+//         cache[key] = res
+//
+//         return res
+//     }
+//     memoizeFn.getCallCount = function (){
+//         return callCount
+//     }
+//     return memoizeFn
+// }
+// function add(a,b) {
+//     return a + b
+// }
+//
+// let newAdd = memoize(add)
+//
+// console.log(newAdd(9,15))
+
+/**
+ * @param {number} n
+ * @return {Function} counter
  */
+let createCounter = function(n) {
+    return function() {
+        return n++
+    };
+};
 
-function memoize(fn) {
-    let cache = {}
-    let callCount = 0
 
-    let memoizeFn =  function(...args) {
-        let key = JSON.stringify(args)
-        if(key in cache){
-            return cache[key]
-        }
-
-        callCount++
-        let res = fn(...args)
-        cache[key] = res
-
-        return res
-    }
-    memoizeFn.getCallCount = function (){
-        return callCount
-    }
-    return memoizeFn
-}
-function add(a,b) {
-    return a + b
-}
-
-let newAdd = memoize(add)
-
-console.log(newAdd(9,15))
+let counter = createCounter(5)
+console.log(counter())
+console.log(counter())
+console.log(counter())
+/**
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
+ */
