@@ -1298,24 +1298,65 @@
 //
 // console.log(newAdd(9,15))
 
+// /**
+//  * @param {number} n
+//  * @return {Function} counter
+//  */
+// let createCounter = function(n) {
+//     return function() {
+//         return n++
+//     };
+// };
+//
+// let counter = createCounter(5)
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
+// //Временная сложность:
+// // O(1) — константное время, так как каждый вызов функции выполняется
+// // за одинаковое количество операций, независимо от значения n.
+// /**
+//  * const counter = createCounter(10)
+//  * counter() // 10
+//  * counter() // 11
+//  * counter() // 12
+//  */
+
 /**
- * @param {number} n
- * @return {Function} counter
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
  */
-let createCounter = function(n) {
-    return function() {
-        return n++
-    };
+let createCounter = (init) => {
+    let current = init
+
+    return {
+      increment(){
+          return ++current
+      },
+      decrement(){
+          return --current
+      },
+      reset(){
+          current = init
+          return current
+      }
+    }
 };
-
-
 let counter = createCounter(5)
-console.log(counter())
-console.log(counter())
-console.log(counter())
+console.log(counter.reset())
+console.log(counter.increment())
+console.log(counter.increment())
+console.log(counter.decrement())
+console.log(counter.decrement())
+console.log(counter.decrement())
+console.log(counter.reset())
+console.log(counter.decrement())
+console.log(counter.decrement())
 /**
- * const counter = createCounter(10)
- * counter() // 10
- * counter() // 11
- * counter() // 12
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
  */
+
+//Сложность O(1)
