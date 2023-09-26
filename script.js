@@ -1361,17 +1361,33 @@
 
 //Сложность O(1)
 
-let dublicats = (str) => {
-    let obj = {}
+// let dublicats = (str) => {
+//     let obj = {}
+//
+//     for (const words of str) {
+//         if(!obj[words]){
+//             obj[words] = 1
+//         }else {
+//             obj[words]++
+//         }
+//     }
+//     return obj
+// }
+//
+// console.log(dublicats('ssstttrrrrrr'))
 
-    for (const words of str) {
-        if(!obj[words]){
-            obj[words] = 1
+let deleteDublicats = (arr) => {
+    let newMap = new Map()
+    let set = []
+
+    for (let i = 0; i < arr.length; i++) {
+        if(newMap.has(arr[i])){
+            set.push(arr[i])
         }else {
-            obj[words]++
+            newMap.set(arr[i], 1)
         }
     }
-    return obj
+    return set.length > 0 ? set : null
 }
 
-console.log(dublicats('ssstttrrrrrr'))
+console.log(deleteDublicats([1,2,3,4,5,5,5,6,6,6,7,7]))
