@@ -1326,32 +1326,32 @@
  * @param {integer} init
  * @return { increment: Function, decrement: Function, reset: Function }
  */
-let createCounter = (init) => {
-    let current = init
-
-    return {
-      increment(){
-          return ++current
-      },
-      decrement(){
-          return --current
-      },
-      reset(){
-          current = init
-          return current
-      }
-    }
-};
-let counter = createCounter(5)
-console.log(counter.reset())
-console.log(counter.increment())
-console.log(counter.increment())
-console.log(counter.decrement())
-console.log(counter.decrement())
-console.log(counter.decrement())
-console.log(counter.reset())
-console.log(counter.decrement())
-console.log(counter.decrement())
+// let createCounter = (init) => {
+//     let current = init
+//
+//     return {
+//       increment(){
+//           return ++current
+//       },
+//       decrement(){
+//           return --current
+//       },
+//       reset(){
+//           current = init
+//           return current
+//       }
+//     }
+// };
+// let counter = createCounter(5)
+// console.log(counter.reset())
+// console.log(counter.increment())
+// console.log(counter.increment())
+// console.log(counter.decrement())
+// console.log(counter.decrement())
+// console.log(counter.decrement())
+// console.log(counter.reset())
+// console.log(counter.decrement())
+// console.log(counter.decrement())
 /**
  * const counter = createCounter(5)
  * counter.increment(); // 6
@@ -1360,3 +1360,18 @@ console.log(counter.decrement())
  */
 
 //Сложность O(1)
+
+let dublicats = (str) => {
+    let obj = {}
+
+    for (const words of str) {
+        if(!obj[words]){
+            obj[words] = 1
+        }else {
+            obj[words]++
+        }
+    }
+    return obj
+}
+
+console.log(dublicats('ssstttrrrrrr'))
