@@ -1376,18 +1376,70 @@
 //
 // console.log(dublicats('ssstttrrrrrr'))
 
-let deleteDublicats = (arr) => {
-    let newMap = new Map()
-    let set = []
+// let deleteDublicats = (arr) => {
+//     let newMap = new Map()
+//     let set = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if(newMap.has(arr[i])){
+//             set.push(arr[i])
+//         }else {
+//             newMap.set(arr[i], 1)
+//         }
+//     }
+//     return set.length > 0 ? set : null
+// }
+//
+// console.log(deleteDublicats([1,2,3,4,5,5,5,6,6,6,7,7]))
 
-    for (let i = 0; i < arr.length; i++) {
-        if(newMap.has(arr[i])){
-            set.push(arr[i])
-        }else {
-            newMap.set(arr[i], 1)
+class SimplePromise {
+    constructor(executor) {
+        this.callbacks = [];
+        this.errorCallbacks = [];
+        this.finallyCallbacks = [];
+
+        const resolve = (value) => {
+            this.callbacks.forEach(callback => callback(value));
+            this.finallyCallbacks.forEach(callback => callback());
+        };
+
+        const reject = (error) => {
+            this.errorCallbacks.forEach(callback => callback(error));
+            this.finallyCallbacks.forEach(callback => callback());
+        };
+
+        try {
+            executor(resolve, reject);
+        } catch (error) {
+            reject(error);
         }
     }
-    return set.length > 0 ? set : null
+
+    then(callback) {
+        this.callbacks.push(callback);
+        return this; // для цепочки
+    }
+
+    catch(callback) {
+        this.errorCallbacks.push(callback);
+        return this; // для цепочки
+    }
+
+    finally(callback) {
+        this.finallyCallbacks.push(callback);
+        return this; // для цепочки
+    }
 }
 
-console.log(deleteDublicats([1,2,3,4,5,5,5,6,6,6,7,7]))
+// Пример использования
+const promise = new SimplePromise((resolve, reject) => {
+    console.log('Промис начал выполнение');
+    resolve('Промис выполнен');
+    // или
+    // reject('Промис отклонён');
+});
+
+promise
+    .then(value => console.log(value))
+    .catch(error => console.error(error))
+    .finally(() => console.log('Промис завершил выполнение'));
