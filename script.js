@@ -1392,54 +1392,68 @@
 //
 // console.log(deleteDublicats([1,2,3,4,5,5,5,6,6,6,7,7]))
 
-class SimplePromise {
-    constructor(executor) {
-        this.callbacks = [];
-        this.errorCallbacks = [];
-        this.finallyCallbacks = [];
+// class SimplePromise {
+//     constructor(executor) {
+//         this.callbacks = [];
+//         this.errorCallbacks = [];
+//         this.finallyCallbacks = [];
+//
+//         const resolve = (value) => {
+//             this.callbacks.forEach(callback => callback(value));
+//             this.finallyCallbacks.forEach(callback => callback());
+//         };
+//
+//         const reject = (error) => {
+//             this.errorCallbacks.forEach(callback => callback(error));
+//             this.finallyCallbacks.forEach(callback => callback());
+//         };
+//
+//         try {
+//             executor(resolve, reject);
+//         } catch (error) {
+//             reject(error);
+//         }
+//     }
+//
+//     then(callback) {
+//         this.callbacks.push(callback);
+//         return this; // для цепочки
+//     }
+//
+//     catch(callback) {
+//         this.errorCallbacks.push(callback);
+//         return this; // для цепочки
+//     }
+//
+//     finally(callback) {
+//         this.finallyCallbacks.push(callback);
+//         return this; // для цепочки
+//     }
+// }
+//
+// // Пример использования
+// const promise = new SimplePromise((resolve, reject) => {
+//     console.log('Промис начал выполнение');
+//     resolve('Промис выполнен');
+//     // или
+//     // reject('Промис отклонён');
+// });
+//
+// promise
+//     .then(value => console.log(value))
+//     .catch(error => console.error(error))
+//     .finally(() => console.log('Промис завершил выполнение'));
 
-        const resolve = (value) => {
-            this.callbacks.forEach(callback => callback(value));
-            this.finallyCallbacks.forEach(callback => callback());
-        };
-
-        const reject = (error) => {
-            this.errorCallbacks.forEach(callback => callback(error));
-            this.finallyCallbacks.forEach(callback => callback());
-        };
-
-        try {
-            executor(resolve, reject);
-        } catch (error) {
-            reject(error);
-        }
-    }
-
-    then(callback) {
-        this.callbacks.push(callback);
-        return this; // для цепочки
-    }
-
-    catch(callback) {
-        this.errorCallbacks.push(callback);
-        return this; // для цепочки
-    }
-
-    finally(callback) {
-        this.finallyCallbacks.push(callback);
-        return this; // для цепочки
-    }
+/**
+ * @param {number} millis
+ * @return {Promise}
+ */
+async function sleep(millis) {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res('hello')
+        },millis)
+    })
 }
 
-// Пример использования
-const promise = new SimplePromise((resolve, reject) => {
-    console.log('Промис начал выполнение');
-    resolve('Промис выполнен');
-    // или
-    // reject('Промис отклонён');
-});
-
-promise
-    .then(value => console.log(value))
-    .catch(error => console.error(error))
-    .finally(() => console.log('Промис завершил выполнение'));
+console.log()
