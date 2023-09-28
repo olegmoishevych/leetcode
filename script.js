@@ -413,9 +413,9 @@
 // console.log(res.next())
 // console.log(res.next())
 
-/**
- * @param {number[]} nums
- */
+// /**
+//  * @param {number[]} nums
+//  */
 
 // function ArrayWrapper(nums) {
 //     this.nums = nums
@@ -447,9 +447,9 @@
 //
 // console.log(f([1,2,3,4,5]))
 
-/**
- * @return {Function}
- */
+// /**
+//  * @return {Function}
+//  */
 
 // const createHelloWorld = function() {
 //     return function(...args) {
@@ -1444,16 +1444,36 @@
 //     .catch(error => console.error(error))
 //     .finally(() => console.log('Промис завершил выполнение'));
 
-/**
- * @param {number} millis
- * @return {Promise}
- */
-async function sleep(millis) {
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res('hello')
-        },millis)
-    })
+// /**
+//  * @param {number} millis
+//  * @return {Promise}
+//  */
+// async function sleep(millis) {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res('hello')
+//         },millis)
+//     })
+// }
+//
+// console.log()
+
+let clearDubl = (arr) => {
+    let map = new Map()
+    let array = []
+
+    for (let i = 0; i < arr.length ; i++) {
+        if(map.has(arr[i])) {
+            array.push(arr[i])
+        }else {
+            map.set(arr[i], 1)
+        }
+    }
+    console.log(arr)
+    console.log(array)
+    return array.length > 0 ? array : null
 }
 
-console.log()
+// let d = clearDubl([12,3,4,5,6,6,4,5,6,78,9,2])
+// console.log(d)
+console.log(clearDubl(1,2,3,4,5,2,3,4,5))
