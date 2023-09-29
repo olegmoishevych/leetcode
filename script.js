@@ -1458,22 +1458,30 @@
 //
 // console.log()
 
-let clearDubl = (arr) => {
-    let map = new Map()
-    let array = []
+// let clearDubl = (arr) => {
+//     let map = new Map()
+//     let array = []
+//
+//     for (let i = 0; i < arr.length ; i++) {
+//         if(map.has(arr[i])) {
+//             array.push(arr[i])
+//         }else {
+//             map.set(arr[i], 1)
+//         }
+//     }
+//     console.log(arr)
+//     console.log(array)
+//     return array.length > 0 ? array : null
+// }
+//
+// // let d = clearDubl([12,3,4,5,6,6,4,5,6,78,9,2])
+// // console.log(d)
+// console.log(clearDubl(1,2,3,4,5,2,3,4,5))
 
-    for (let i = 0; i < arr.length ; i++) {
-        if(map.has(arr[i])) {
-            array.push(arr[i])
-        }else {
-            map.set(arr[i], 1)
-        }
-    }
-    console.log(arr)
-    console.log(array)
-    return array.length > 0 ? array : null
-}
+/**
+ * @param {number[]} arr
+ * @return {number[]}
+ */
+const replaceElements = function(arr) {
 
-// let d = clearDubl([12,3,4,5,6,6,4,5,6,78,9,2])
-// console.log(d)
-console.log(clearDubl(1,2,3,4,5,2,3,4,5))
+};
