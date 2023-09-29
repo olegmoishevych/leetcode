@@ -1479,9 +1479,21 @@
 // console.log(clearDubl(1,2,3,4,5,2,3,4,5))
 
 /**
- * @param {number[]} arr
- * @return {number[]}
+ * @param {number} columnNumber
+ * @return {string}
  */
-const replaceElements = function(arr) {
-
+let convertToTitle = function(n) {
+    let res = "";
+    console.log(n)
+    while(n > 0) {
+        n--;
+        console.log(n)
+        res = `${String.fromCharCode('A'.charCodeAt() + n % 26)}${res}`;
+        console.log(res)
+        console.log(n)
+        n = Math.floor(n / 26);
+    }
+    console.log(res)
+    return res;
 };
+console.log(convertToTitle(6))
