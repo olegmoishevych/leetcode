@@ -1482,18 +1482,18 @@
  * @param {number} columnNumber
  * @return {string}
  */
-let convertToTitle = function(n) {
-    let res = "";
-    console.log(n)
-    while(n > 0) {
-        n--;
-        console.log(n)
-        res = `${String.fromCharCode('A'.charCodeAt() + n % 26)}${res}`;
-        console.log(res)
-        console.log(n)
-        n = Math.floor(n / 26);
-    }
-    console.log(res)
-    return res;
-};
-console.log(convertToTitle(6))
+// let convertToTitle = function(n) {
+//     let res = "";
+//     console.log(n)
+//     while(n > 0) {
+//         n--;
+//         console.log(n)
+//         res = `${String.fromCharCode('A'.charCodeAt() + n % 26)}${res}`;
+//         console.log(res)
+//         console.log(n)
+//         n = Math.floor(n / 26);
+//     }
+//     console.log(res)
+//     return res;
+// };
+// console.log(convertToTitle(6))
