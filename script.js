@@ -1502,14 +1502,14 @@
  * @param {number[]} nums
  * @return {number}
  */
-const singleNumber = (nums) => {
-    let res = 0
+const singleNumber = (nums) => nums.reduce((acc, num) => acc ^ num, 0)
+    // let res = 0
 
-    for (let i = 0; i < nums.length; i++) {
-        res ^= nums[i]
-    }
+    // for (let i = 0; i < nums.length; i++) {
+    //     res ^= nums[i]
+    // }
 
-    return res
-}
+    // return res
+
 
 console.log(singleNumber([1,2,2]))
