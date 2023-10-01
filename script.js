@@ -1497,3 +1497,19 @@
 //     return res;
 // };
 // console.log(convertToTitle(6))
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+const singleNumber = (nums) => {
+    let res = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        res ^= nums[i]
+    }
+
+    return res
+}
+
+console.log(singleNumber([1,2,2]))
