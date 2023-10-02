@@ -1502,7 +1502,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const singleNumber = (nums) => nums.reduce((acc, num) => acc ^ num, 0)
+// const singleNumber = (nums) => nums.reduce((acc, num) => acc ^ num, 0)
     // let res = 0
 
     // for (let i = 0; i < nums.length; i++) {
@@ -1512,4 +1512,36 @@ const singleNumber = (nums) => nums.reduce((acc, num) => acc ^ num, 0)
     // return res
 
 
-console.log(singleNumber([1,2,2]))
+// console.log(singleNumber([1,2,2]))
+
+// const array=[,,,]; console.log(array.length);
+
+const clearDubl = (array) => {
+    let map = new Map()
+    let res = []
+
+        for (let i = 0; i < array.length; i++) {
+            if(map.has(array[i])){
+                res.push(array[i])
+            }else {
+                map.set(array[i])
+            }
+        }
+        return res
+}
+
+let dubl = (arr) => [...new Set(arr)]
+let countOfStting = (string) => {
+    let obj = {}
+
+    for (const word of string) {
+        if(!obj[word]){
+            obj[word] = 1
+        }else {
+            obj[word]++
+        }
+    }
+    return obj
+}
+
+console.log(countOfStting('sttrrrr'))
