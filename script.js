@@ -1516,32 +1516,52 @@
 
 // const array=[,,,]; console.log(array.length);
 
-const clearDubl = (array) => {
-    let map = new Map()
-    let res = []
+// const clearDubl = (array) => {
+//     let map = new Map()
+//     let res = []
+//
+//         for (let i = 0; i < array.length; i++) {
+//             if(map.has(array[i])){
+//                 res.push(array[i])
+//             }else {
+//                 map.set(array[i])
+//             }
+//         }
+//         return res
+// }
+//
+// let dubl = (arr) => [...new Set(arr)]
+// let countOfStting = (string) => {
+//     let obj = {}
+//
+//     for (const word of string) {
+//         if(!obj[word]){
+//             obj[word] = 1
+//         }else {
+//             obj[word]++
+//         }
+//     }
+//     return obj
+// }
+//
+// console.log(countOfStting('sttrrrr'))
 
-        for (let i = 0; i < array.length; i++) {
-            if(map.has(array[i])){
-                res.push(array[i])
-            }else {
-                map.set(array[i])
-            }
-        }
-        return res
-}
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+let longestCommonPrefix = function(strs) {
+    if(!strs.length) return ''
 
-let dubl = (arr) => [...new Set(arr)]
-let countOfStting = (string) => {
-    let obj = {}
+    let prefix = strs[0]
 
-    for (const word of string) {
-        if(!obj[word]){
-            obj[word] = 1
-        }else {
-            obj[word]++
+    for (let i = 1; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) !== 0){
+            prefix = prefix.substring(0, prefix.length - 1)
+            if(prefix === '')return ''
         }
     }
-    return obj
-}
+    return prefix
+};
 
-console.log(countOfStting('sttrrrr'))
+console.log(longestCommonPrefix(["flower","flow","flight"]))
