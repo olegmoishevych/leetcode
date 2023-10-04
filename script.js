@@ -1546,22 +1546,29 @@
 //
 // console.log(countOfStting('sttrrrr'))
 
+// /**
+//  * @param {string[]} strs
+//  * @return {string}
+//  */
+// let longestCommonPrefix = function(strs) {
+//     if(!strs.length) return ''
+//
+//     let prefix = strs[0]
+//
+//     for (let i = 1; i < strs.length; i++) {
+//         while (strs[i].indexOf(prefix) !== 0){
+//             prefix = prefix.substring(0, prefix.length - 1)
+//             if(prefix === '')return ''
+//         }
+//     }
+//     return prefix
+// };
+//
+// console.log(longestCommonPrefix(["flower","flow","flight"]))
+
 /**
- * @param {string[]} strs
- * @return {string}
+ * @param {number} n - a positive integer
+ * @return {number}
  */
-let longestCommonPrefix = function(strs) {
-    if(!strs.length) return ''
-
-    let prefix = strs[0]
-
-    for (let i = 1; i < strs.length; i++) {
-        while (strs[i].indexOf(prefix) !== 0){
-            prefix = prefix.substring(0, prefix.length - 1)
-            if(prefix === '')return ''
-        }
-    }
-    return prefix
-};
-
-console.log(longestCommonPrefix(["flower","flow","flight"]))
+const hammingWeight = (n) => n.toString(2).split(0).join('').length
+console.log(hammingWeight('000000110001'))
