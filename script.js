@@ -1566,13 +1566,49 @@
 //
 // console.log(longestCommonPrefix(["flower","flow","flight"]))
 
-/**
- * @param {number} n - a positive integer
- * @return {number}
- */
-const hammingWeight = (n) => n
-    .toString(2)
-    .split(0)
-    .join('')
-    .length
-console.log(hammingWeight('000000110001'))
+// /**
+//  * @param {number} n - a positive integer
+//  * @return {number}
+//  */
+// const hammingWeight = (n) => n
+//     .toString(2)
+//     .split(0)
+//     .join('')
+//     .length
+// console.log(hammingWeight('000000110001'))
+
+// let dublOfArr = (arr) => {
+//     let map = new Map()
+//     let array = []
+//
+//         for (let i = 0; i < arr.length; i++) {
+//             if(map.has(arr[i])){
+//                 array.push(arr[i])
+//             }else {
+//                 map.set(arr[i], 1)
+//             }
+//         }
+//         console.log(map)
+//         console.log(array)
+//         return array.length > 0 ? array : null
+// }
+//
+// console.log(dublOfArr([1,2,3,4,5,5,6,6]))
+
+// let countWordsOfString = (str) => {
+//     let obj = {}
+//
+//         for (const word of str) {
+//             if(!obj[word]){
+//                 obj[word] = 1
+//             }else {
+//                 obj[word]++
+//             }
+//         }
+//         return obj
+// }
+//
+// console.log(countWordsOfString('stringgg'))
+
+let clearOfSet = (arr) => [... new Set(arr)]
+console.log(clearOfSet([1,2,3,3,4,4,4,5,5]))
