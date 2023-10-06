@@ -1619,5 +1619,31 @@
  * @return {boolean}
  */
 let isIsomorphic = function(s, t) {
+    let sMap = new Map()
+    let tMap = new Map()
 
+    for (let i = 0; i < s.length; i++) {
+        let sChar = s[i]
+        let tChar = t[i]
+        console.log(sChar)
+        console.log(tChar)
+        if(sMap.has(sChar) && sMap.get(sChar) !== tChar) return false
+        if(tMap.has(tChar) && tMap.get(tChar) !== sChar) return false
+
+        sMap.set(sChar, tChar)
+        tMap.set(tChar, sChar)
+    }
+    return true
 };
+
+console.log(isIsomorphic('egg', 'add'))
+// Input: s = "egg", t = "add"
+// Output: true
+// Example 2:
+//
+// Input: s = "foo", t = "bar"
+// Output: false
+// Example 3:
+//
+// Input: s = "paper", t = "title"
+// Output: true
