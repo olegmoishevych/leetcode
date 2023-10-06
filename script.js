@@ -1610,5 +1610,14 @@
 //
 // console.log(countWordsOfString('stringgg'))
 
-let clearOfSet = (arr) => [... new Set(arr)]
-console.log(clearOfSet([1,2,3,3,4,4,4,5,5]))
+// let clearOfSet = (arr) => [... new Set(arr)]
+// console.log(clearOfSet([1,2,3,3,4,4,4,5,5]))
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+let isIsomorphic = function(s, t) {
+
+};
