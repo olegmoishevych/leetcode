@@ -1613,30 +1613,30 @@
 // let clearOfSet = (arr) => [... new Set(arr)]
 // console.log(clearOfSet([1,2,3,3,4,4,4,5,5]))
 
-/**
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */
-let isIsomorphic = function(s, t) {
-    let sMap = new Map()
-    let tMap = new Map()
-
-    for (let i = 0; i < s.length; i++) {
-        let sChar = s[i]
-        let tChar = t[i]
-        console.log(sChar)
-        console.log(tChar)
-        if(sMap.has(sChar) && sMap.get(sChar) !== tChar) return false
-        if(tMap.has(tChar) && tMap.get(tChar) !== sChar) return false
-
-        sMap.set(sChar, tChar)
-        tMap.set(tChar, sChar)
-    }
-    return true
-};
-
-console.log(isIsomorphic('egg', 'add'))
+// /**
+//  * @param {string} s
+//  * @param {string} t
+//  * @return {boolean}
+//  */
+// let isIsomorphic = function(s, t) {
+//     let sMap = new Map()
+//     let tMap = new Map()
+//
+//     for (let i = 0; i < s.length; i++) {
+//         let sChar = s[i]
+//         let tChar = t[i]
+//         console.log(sChar)
+//         console.log(tChar)
+//         if(sMap.has(sChar) && sMap.get(sChar) !== tChar) return false
+//         if(tMap.has(tChar) && tMap.get(tChar) !== sChar) return false
+//
+//         sMap.set(sChar, tChar)
+//         tMap.set(tChar, sChar)
+//     }
+//     return true
+// };
+//
+// console.log(isIsomorphic('egg', 'add'))
 // Input: s = "egg", t = "add"
 // Output: true
 // Example 2:
