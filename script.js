@@ -1710,11 +1710,17 @@ let pivotIndex = function(nums) {
     }
 
     for (let i = 0; i < nums.length; i++) {
+        console.log(i)
         totalSum -= nums[i]
+        console.log(totalSum)
+        console.log(i)
         if(totalSum === leftSum){
+            console.log(i)
             return i
         }
+        console.log(i)
         leftSum += nums[i]
+        console.log(i)
     }
     return - 1
 };
