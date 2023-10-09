@@ -1698,30 +1698,30 @@
 // // Вызываем функцию поиска в ширину, начиная с вершины 'A'.
 // console.log(bfs(graph, 'A'));  // Вывод: A B C D E F
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
-let pivotIndex = function(nums) {
-    let totalSum = 0, leftSum = 0
-
-    for (let i = 0; i < nums.length; i++) {
-        totalSum += nums[i]
-    }
-
-    for (let i = 0; i < nums.length; i++) {
-        console.log(i)
-        totalSum -= nums[i]
-        console.log(totalSum)
-        console.log(i)
-        if(totalSum === leftSum){
-            console.log(i)
-            return i
-        }
-        console.log(i)
-        leftSum += nums[i]
-        console.log(i)
-    }
-    return - 1
-};
-console.log(pivotIndex([1,7,3,6,5,6]))
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// let pivotIndex = function(nums) {
+//     let totalSum = 0, leftSum = 0
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         totalSum += nums[i]
+//     }
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         console.log(i)
+//         totalSum -= nums[i]
+//         console.log(totalSum)
+//         console.log(i)
+//         if(totalSum === leftSum){
+//             console.log(i)
+//             return i
+//         }
+//         console.log(i)
+//         leftSum += nums[i]
+//         console.log(i)
+//     }
+//     return - 1
+// };
+// console.log(pivotIndex([1,7,3,6,5,6]))
