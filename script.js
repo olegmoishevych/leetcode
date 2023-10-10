@@ -1725,3 +1725,12 @@
 //     return - 1
 // };
 // console.log(pivotIndex([1,7,3,6,5,6]))
+
+/**
+ * @param {number[]} flowerbed
+ * @param {number} n
+ * @return {boolean}
+ */
+let canPlaceFlowers = function(flowerbed, n) {
+
+};
