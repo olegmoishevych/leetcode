@@ -1732,5 +1732,23 @@
  * @return {boolean}
  */
 let canPlaceFlowers = function(flowerbed, n) {
+    let count = 0
 
+    for (let i = 0; i < flowerbed.length; i++) {
+        if(!flowerbed[i] && !flowerbed[i - 1] && !flowerbed[i + 1]){
+            flowerbed[i] = 1
+            count++
+        }
+    }
+
+    return count >= n
 };
+
+// Input: flowerbed = [1,0,0,0,1], n = 1
+// Output: true
+
+// Input: flowerbed = [1,0,0,0,1], n = 2
+// Output: false
+// O(n), где n — это длина массива flowerbed
+
+console.log(canPlaceFlowers([1,0,0,0,1], 1))
