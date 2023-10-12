@@ -40,16 +40,16 @@
 // }
 // console.log(double([1,2,3,4,5,5,5,6,6]))
 
-let countOfString = (str) => {
-    let obj = {}
-
-    for (const word of str) {
-        if(!obj[word]){
-            obj[word] = 1
-        }else {
-            obj[word]++
-        }
-    }
-    return obj
-}
-console.log(countOfString('strrr'))
+// let countOfString = (str) => {
+//     let obj = {}
+//
+//     for (const word of str) {
+//         if(!obj[word]){
+//             obj[word] = 1
+//         }else {
+//             obj[word]++
+//         }
+//     }
+//     return obj
+// }
+// console.log(countOfString('strrr'))
