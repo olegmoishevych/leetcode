@@ -58,6 +58,7 @@
  * @param {number[]} nums
  * @return {number}
  */
+// O(n)
 let pivotIndex = function(nums) {
     let totalSum = 0
     let leftSum = 0
