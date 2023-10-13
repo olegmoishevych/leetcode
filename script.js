@@ -53,3 +53,12 @@
 //     return obj
 // }
 // console.log(countOfString('strrr'))
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+let pivotIndex = function(nums) {
+
+};
+console.log(pivotIndex([1,7,3,6,5,6]))
