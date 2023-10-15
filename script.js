@@ -54,31 +54,63 @@
 // }
 // console.log(countOfString('strrr'))
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
-// O(n)
-let pivotIndex = function(nums) {
-    let totalSum = 0
-    let leftSum = 0
-
-    for (let i = 0; i < nums.length; i++) {
-        totalSum += nums[i]
-    }
-    console.log(leftSum)
-    for (let i = 0; i < nums.length; i++) {
-        console.log(totalSum)
-        console.log(leftSum - leftSum - nums[i])
-        console.log(i)
-        if(leftSum === totalSum - leftSum - nums[i]){
-            console.log(i)
-            return i
-        }
-        leftSum += nums[i]
-    }
-
-    return - 1
-
-};
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// // O(n)
+// let pivotIndex = function(nums) {
+//     let totalSum = 0
+//     let leftSum = 0
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         totalSum += nums[i]
+//     }
+//     console.log(leftSum)
+//     for (let i = 0; i < nums.length; i++) {
+//         console.log(totalSum)
+//         console.log(leftSum - leftSum - nums[i])
+//         console.log(i)
+//         if(leftSum === totalSum - leftSum - nums[i]){
+//             console.log(i)
+//             return i
+//         }
+//         leftSum += nums[i]
+//     }
+//
+//     return - 1
+//
+// };
 // console.log(pivotIndex([1,7,3,6,5,6]))
+
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+// Input: head = [1,2,3,4,5]
+// Output: [5,4,3,2,1]
+
+let reverseList = function(head) {
+    let prev = null
+    let current = head
+    let next = null
+
+    while (current !== null){
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    }
+    head = prev
+    console.log(head)
+    return head
+}
+
+console.log(reverseList([1,2]))
