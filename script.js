@@ -113,23 +113,26 @@
 // // O(n)
 // console.log(reverseList([1,2]))
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
-let maxSubArray = function(nums) {
-    let max_current = nums[0]
-    let max_global = nums[0]
-
-    for (let i = 1; i < nums.length; i++) {
-        max_current = Math.max(nums[i], max_current + nums[i])
-
-
-        if(max_current > max_global){
-            max_global = max_current
-        }
-    }
-    return max_global
-};
-//O(n)
-console.log(maxSubArray([5,4,-1,7,8]))
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// let maxSubArray = function(nums) {
+//     let max_current = nums[0]
+//     let max_global = nums[0]
+//
+//     for (let i = 1; i < nums.length; i++) {
+//         max_current = Math.max(nums[i], max_current + nums[i])
+//
+//         if(max_current > max_global){
+//             max_global = max_current
+//         }
+//     }
+//     return max_global
+// };
+//
+// // let numbers = [1, 2, 3, 4, 5];
+// // let maxNumber = Math.max(...numbers); // вернет 5
+//
+// //O(n)
+// console.log(maxSubArray([5,4,-1,7,8]))
