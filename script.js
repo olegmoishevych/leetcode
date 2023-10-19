@@ -138,11 +138,10 @@
 // console.log(maxSubArray([5,4,-1,7,8]))
 
 /**
+ * @param {Array} arr
  * @param {Function} fn
- * @param {Array} args
- * @param {number} t
- * @return {Function}
+ * @return {Array}
  */
-var cancellable = function(fn, args, t) {
-
-};
+// O(n log n).
+const sortBy = (arr, fn) => arr.sort((a,b) => fn(a) - fn(b))
+console.log(sortBy([1,2,3,4,5], fn = (x) => x))
