@@ -136,12 +136,20 @@
 //
 // //O(n)
 // console.log(maxSubArray([5,4,-1,7,8]))
+//
+// /**
+//  * @param {Array} arr
+//  * @param {Function} fn
+//  * @return {Array}
+//  */
+// // O(n log n).
+// const sortBy = (arr, fn) => arr.sort((a,b) => fn(a) - fn(b))
+// console.log(sortBy([1,2,3,4,5], fn = (x) => x))
 
 /**
- * @param {Array} arr
- * @param {Function} fn
- * @return {Array}
- */
-// O(n log n).
-const sortBy = (arr, fn) => arr.sort((a,b) => fn(a) - fn(b))
-console.log(sortBy([1,2,3,4,5], fn = (x) => x))
+ * @param {Object|Array} obj
+ * @return {boolean}
+ *///O(n)
+let isEmpty = (obj)=> Object.keys(obj).length === 0
+console.log(isEmpty({}))
+
