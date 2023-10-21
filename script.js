@@ -146,10 +146,18 @@
 // const sortBy = (arr, fn) => arr.sort((a,b) => fn(a) - fn(b))
 // console.log(sortBy([1,2,3,4,5], fn = (x) => x))
 
-/**
- * @param {Object|Array} obj
- * @return {boolean}
- *///O(n)
-let isEmpty = (obj)=> Object.keys(obj).length === 0
-console.log(isEmpty({}))
+// /**
+//  * @param {Object|Array} obj
+//  * @return {boolean}
+//  *///O(n)
+// let isEmpty = (obj)=> Object.keys(obj).length === 0
+// console.log(isEmpty({}))
+
+function sortDigitsDescending(digits) {
+    return digits.sort((a, b) => b - a);
+}
+
+const digits = [3, 9, 5, 4, 8];
+const sortedDigits = sortDigitsDescending(digits);
+console.log(sortedDigits);  //[9, 8, 5, 4, 3]
 
