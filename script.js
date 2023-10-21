@@ -153,11 +153,41 @@
 // let isEmpty = (obj)=> Object.keys(obj).length === 0
 // console.log(isEmpty({}))
 
-function sortDigitsDescending(digits) {
-    return digits.sort((a, b) => b - a);
+// function sortDigitsDescending(digits) {
+//     return digits.sort((a, b) => b - a);
+// }
+//
+// const digits = [3, 9, 5, 4, 8];
+// const sortedDigits = sortDigitsDescending(digits);
+// console.log(sortedDigits);  //[9, 8, 5, 4, 3]
+
+/**
+ * @param {string} val
+ * @return {Object}
+ */
+let expect = function(val) {
+ return {
+     toBe(value){
+         if(value === val) return true
+         throw new Error('Not Equal')
+     },
+     notToBe(value) {
+         if(value !== val) return true
+         throw new Error('Equal')
+     }
+ }
+};
+
+try{
+    let res = expect(5).notToBe(5)
+    console.log(res)
+}catch (e){
+    console.log(e)
 }
 
-const digits = [3, 9, 5, 4, 8];
-const sortedDigits = sortDigitsDescending(digits);
-console.log(sortedDigits);  //[9, 8, 5, 4, 3]
+// O(1)
 
+/**
+ * expect(5).toBe(5); // true
+ * expect(5).notToBe(5); // throws "Equal"
+ */
