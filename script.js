@@ -160,34 +160,47 @@
 // const digits = [3, 9, 5, 4, 8];
 // const sortedDigits = sortDigitsDescending(digits);
 // console.log(sortedDigits);  //[9, 8, 5, 4, 3]
+// /**
+//  * @param {string} val
+//  * @return {Object}
+//  */
+// let expect = function(val) {
+//  return {
+//      toBe(value){
+//          if(value === val) return true
+//          throw new Error('Not Equal')
+//      },
+//      notToBe(value) {
+//          if(value !== val) return true
+//          throw new Error('Equal')
+//      }
+//  }
+// };
+//
+// try{
+//     let res = expect(5).notToBe(5)
+//     console.log(res)
+// }catch (e){
+//     console.log(e)
+// }
+//
+// // // O(1)
+// /**
+//  * expect(5).toBe(5); // true
+//  * expect(5).notToBe(5); // throws "Equal"
+//  */
 
 /**
- * @param {string} val
- * @return {Object}
+ * @param {number[]} nums
+ * @return {number[]}
  */
-let expect = function(val) {
- return {
-     toBe(value){
-         if(value === val) return true
-         throw new Error('Not Equal')
-     },
-     notToBe(value) {
-         if(value !== val) return true
-         throw new Error('Equal')
-     }
- }
+let buildArray = function(nums) {
+    let ans = []
+
+    for (let i = 0; i < nums.length; i++) {
+        ans.push(nums[nums[i]])
+    }
+
+    return ans
 };
-
-try{
-    let res = expect(5).notToBe(5)
-    console.log(res)
-}catch (e){
-    console.log(e)
-}
-
-// O(1)
-
-/**
- * expect(5).toBe(5); // true
- * expect(5).notToBe(5); // throws "Equal"
- */
+console.log(buildArray([0,1,2,3,4,5]))
