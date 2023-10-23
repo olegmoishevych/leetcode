@@ -190,18 +190,38 @@
 //  * expect(5).notToBe(5); // throws "Equal"
 //  */
 
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
-let buildArray = function(nums) {
-    let ans = []
-
-    for (let i = 0; i < nums.length; i++) {
-        ans.push(nums[nums[i]])
-    }
-
-    return ans
-};
+// /**
+//  * @param {number[]} nums
+//  * @return {number[]}
+//  */
+// let buildArray = function(nums) {
+//     let ans = []
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         ans.push(nums[nums[i]])
+//     }
+//
+//     return ans
+// };
 
 // console.log(buildArray([0,1,2,3,4,5]))
+
+/**
+ * @param {string} address
+ * @return {string}
+ */
+// let defangIPaddr = (address) => address.split('.').join("[.]")
+let defangIPaddr = (address) => {
+    let value = ''
+
+    for (const valueElement of address) {
+        if(valueElement === '.'){
+            value += "[.]"
+        }else {
+            value += valueElement
+        }
+    }
+    return value
+}
+
+console.log(defangIPaddr("111.244.555"))
