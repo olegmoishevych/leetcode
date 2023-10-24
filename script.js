@@ -206,22 +206,37 @@
 
 // console.log(buildArray([0,1,2,3,4,5]))
 
-/**
- * @param {string} address
- * @return {string}
- */
-// let defangIPaddr = (address) => address.split('.').join("[.]")
-let defangIPaddr = (address) => {
-    let value = ''
+// /**
+//  * @param {string} address
+//  * @return {string}
+//  */
+// // let defangIPaddr = (address) => address.split('.').join("[.]")
+// let defangIPaddr = (address) => {
+//     let value = ''
+//
+//     for (const valueElement of address) {
+//         if(valueElement === '.'){
+//             value += "[.]"
+//         }else {
+//             value += valueElement
+//         }
+//     }
+//     return value
+// }
+//
+// console.log(defangIPaddr("111.244.555"))
 
-    for (const valueElement of address) {
-        if(valueElement === '.'){
-            value += "[.]"
+let countOfStr = (str) => {
+    let hash = {}
+
+    for (const worlds of str) {
+        if(!hash[worlds]){
+            hash[worlds] = 1
         }else {
-            value += valueElement
+            hash[worlds]++
         }
     }
-    return value
-}
 
-console.log(defangIPaddr("111.244.555"))
+    return hash
+}
+console.log(countOfStr('ssrssstr'))
