@@ -226,17 +226,51 @@
 //
 // console.log(defangIPaddr("111.244.555"))
 
-let countOfStr = (str) => {
-    let hash = {}
+// let countOfStr = (str) => {
+//     let hash = {}
+//
+//     for (const worlds of str) {
+//         if(!hash[worlds]){
+//             hash[worlds] = 1
+//         }else {
+//             hash[worlds]++
+//         }
+//     }
+//
+//     return hash
+// }
+// console.log(countOfStr('ssrssstr'))
 
-    for (const worlds of str) {
-        if(!hash[worlds]){
-            hash[worlds] = 1
-        }else {
-            hash[worlds]++
+/**
+ * @param {string[]} operations
+ * @return {number}
+ */
+let finalValueAfterOperations = function(operations) {
+    let x = 0
+
+    for (const str of operations) {
+        switch (str) {
+            case '++X':
+            case 'X++':
+                x++
+                break;
+            case '--X':
+            case 'X--':
+                x--
+                break;
+            default:
         }
     }
 
-    return hash
-}
-console.log(countOfStr('ssrssstr'))
+    return x
+};
+
+//let finalValueAfterOperations = function(operations) {
+//     return operations.reduce((x, operation) => {
+//         if (operation.includes('+')) return x + 1;
+//         if (operation.includes('-')) return x - 1;
+//         return x;
+//     }, 0);
+// };
+
+console.log(finalValueAfterOperations(['++X', 'X++', '--X']))
