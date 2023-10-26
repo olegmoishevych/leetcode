@@ -241,29 +241,29 @@
 // }
 // console.log(countOfStr('ssrssstr'))
 
-/**
- * @param {string[]} operations
- * @return {number}
- */
-let finalValueAfterOperations = function(operations) {
-    let x = 0
-
-    for (const str of operations) {
-        switch (str) {
-            case '++X':
-            case 'X++':
-                x++
-                break;
-            case '--X':
-            case 'X--':
-                x--
-                break;
-            default:
-        }
-    }
-
-    return x
-};
+// /**
+//  * @param {string[]} operations
+//  * @return {number}
+//  */
+// let finalValueAfterOperations = function(operations) {
+//     let x = 0
+//
+//     for (const str of operations) {
+//         switch (str) {
+//             case '++X':
+//             case 'X++':
+//                 x++
+//                 break;
+//             case '--X':
+//             case 'X--':
+//                 x--
+//                 break;
+//             default:
+//         }
+//     }
+//
+//     return x
+// };
 
 //let finalValueAfterOperations = function(operations) {
 //     return operations.reduce((x, operation) => {
@@ -273,4 +273,24 @@ let finalValueAfterOperations = function(operations) {
 //     }, 0);
 // };
 
-console.log(finalValueAfterOperations(['++X', 'X++', '--X']))
+// console.log(finalValueAfterOperations(['++X', 'X++', '--X']))
+
+/**
+ * @param {string} jewels
+ * @param {string} stones
+ * @return {number}
+ */
+let numJewelsInStones = function(jewels, stones) {
+    let countOfJewels = 0
+
+    for (const stone of stones) {
+
+        if(jewels.includes(stone)){
+            countOfJewels++
+        }
+    }
+
+    return countOfJewels
+};
+
+console.log(numJewelsInStones('bB', 'aBBbbaA'))
