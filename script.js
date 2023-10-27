@@ -274,23 +274,43 @@
 // };
 
 // console.log(finalValueAfterOperations(['++X', 'X++', '--X']))
+//
+// /**
+//  * @param {string} jewels
+//  * @param {string} stones
+//  * @return {number}
+//  */
+// let numJewelsInStones = function(jewels, stones) {
+//     let countOfJewels = 0
+//
+//     for (const stone of stones) {
+//
+//         if(jewels.includes(stone)){
+//             countOfJewels++
+//         }
+//     }
+//
+//     return countOfJewels
+// };
+//
+// console.log(numJewelsInStones('bB', 'aBBbbaA'))
 
 /**
- * @param {string} jewels
- * @param {string} stones
+ * @param {number[]} nums
+ * @param {number} target
  * @return {number}
  */
-let numJewelsInStones = function(jewels, stones) {
-    let countOfJewels = 0
+let countPairs = function(nums, target) {
+    let count = 0
 
-    for (const stone of stones) {
-
-        if(jewels.includes(stone)){
-            countOfJewels++
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if(nums[i] + nums[j] < target){
+                count++
+            }
         }
     }
-
-    return countOfJewels
+    return count
 };
 
-console.log(numJewelsInStones('bB', 'aBBbbaA'))
+console.log(countPairs([-1, 1, 2, 3, 1], 2))
