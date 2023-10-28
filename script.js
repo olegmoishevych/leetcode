@@ -294,23 +294,60 @@
 // };
 //
 // console.log(numJewelsInStones('bB', 'aBBbbaA'))
+//
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number}
+//  */
+// let countPairs = function(nums, target) {
+//     let count = 0
+//
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if(nums[i] + nums[j] < target){
+//                 count++
+//             }
+//         }
+//     }
+//     return count
+// };
+//
+// console.log(countPairs([-1, 1, 2, 3, 1], 2))
 
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-let countPairs = function(nums, target) {
-    let count = 0
+function lcs(X, Y) {
+    const m = X.length;
+    const n = Y.length;
+    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
 
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if(nums[i] + nums[j] < target){
-                count++
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (X[i - 1] === Y[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1;
+            } else {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
     }
-    return count
-};
 
-console.log(countPairs([-1, 1, 2, 3, 1], 2))
+    let index = dp[m][n];
+    let lcs = Array(index).fill('');
+
+    let i = m, j = n;
+    while (i > 0 && j > 0) {
+        if (X[i - 1] === Y[j - 1]) {
+            lcs[index - 1] = X[i - 1];
+            i--; j--; index--;
+        } else if (dp[i - 1][j] > dp[i][j - 1]) {
+            i--;
+        } else {
+            j--;
+        }
+    }
+
+    return lcs.join('');
+}
+
+const X = "AGGTAB";
+const Y = "GXTXAYB";
+console.log("The Longest Common Subsequence is: " + lcs(X, Y));
