@@ -315,39 +315,60 @@
 //
 // console.log(countPairs([-1, 1, 2, 3, 1], 2))
 
-function lcs(X, Y) {
-    const m = X.length;
-    const n = Y.length;
-    const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+// function lcs(X, Y) {
+//     const m = X.length;
+//     const n = Y.length;
+//     const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+//
+//     for (let i = 1; i <= m; i++) {
+//         for (let j = 1; j <= n; j++) {
+//             if (X[i - 1] === Y[j - 1]) {
+//                 dp[i][j] = dp[i - 1][j - 1] + 1;
+//             } else {
+//                 dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+//             }
+//         }
+//     }
+//
+//     let index = dp[m][n];
+//     let lcs = Array(index).fill('');
+//
+//     let i = m, j = n;
+//     while (i > 0 && j > 0) {
+//         if (X[i - 1] === Y[j - 1]) {
+//             lcs[index - 1] = X[i - 1];
+//             i--; j--; index--;
+//         } else if (dp[i - 1][j] > dp[i][j - 1]) {
+//             i--;
+//         } else {
+//             j--;
+//         }
+//     }
+//
+//     return lcs.join('');
+// }
+//
+// const X = "AGGTAB";
+// const Y = "GXTXAYB";
+// console.log("The Longest Common Subsequence is: " + lcs(X, Y));
 
-    for (let i = 1; i <= m; i++) {
-        for (let j = 1; j <= n; j++) {
-            if (X[i - 1] === Y[j - 1]) {
-                dp[i][j] = dp[i - 1][j - 1] + 1;
-            } else {
-                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
-            }
+/**
+ * @param {string[]} sentences
+ * @return {number}
+ */
+let mostWordsFound = function(sentences) {
+    let maxCount = 0
+
+    for (const sentence of sentences) {
+        console.log(sentence)
+        let lenghtOfSentence = sentence.split(' ').length
+        console.log(lenghtOfSentence)
+        if(lenghtOfSentence > maxCount){
+            maxCount = lenghtOfSentence
         }
     }
+    console.log(maxCount)
+    return maxCount
 
-    let index = dp[m][n];
-    let lcs = Array(index).fill('');
-
-    let i = m, j = n;
-    while (i > 0 && j > 0) {
-        if (X[i - 1] === Y[j - 1]) {
-            lcs[index - 1] = X[i - 1];
-            i--; j--; index--;
-        } else if (dp[i - 1][j] > dp[i][j - 1]) {
-            i--;
-        } else {
-            j--;
-        }
-    }
-
-    return lcs.join('');
-}
-
-const X = "AGGTAB";
-const Y = "GXTXAYB";
-console.log("The Longest Common Subsequence is: " + lcs(X, Y));
+};
+console.log(mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]))
