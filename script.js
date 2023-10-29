@@ -352,23 +352,70 @@
 // const Y = "GXTXAYB";
 // console.log("The Longest Common Subsequence is: " + lcs(X, Y));
 
-/**
- * @param {string[]} sentences
- * @return {number}
- */
-let mostWordsFound = function(sentences) {
-    let maxCount = 0
+// /**
+//  * @param {string[]} sentences
+//  * @return {number}
+//  */
+// let mostWordsFound = function(sentences) {
+//     let maxCount = 0
+//
+//     for (const sentence of sentences) {
+//         console.log(sentence)
+//         let lenghtOfSentence = sentence.split(' ').length
+//         console.log(lenghtOfSentence)
+//         if(lenghtOfSentence > maxCount){
+//             maxCount = lenghtOfSentence
+//         }
+//     }
+//     console.log(maxCount)
+//     return maxCount
+//
+// };
+// console.log(mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]))
 
-    for (const sentence of sentences) {
-        console.log(sentence)
-        let lenghtOfSentence = sentence.split(' ').length
-        console.log(lenghtOfSentence)
-        if(lenghtOfSentence > maxCount){
-            maxCount = lenghtOfSentence
-        }
+// Евклидово расстояние между двумя точками
+function euclideanDistance(point1, point2) {
+    let sum = 0;
+    for (let i = 0; i < point1.length; i++) {
+        sum += Math.pow(point1[i] - point2[i], 2);
     }
-    console.log(maxCount)
-    return maxCount
+    return Math.sqrt(sum);
+}
 
-};
-console.log(mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]))
+// k-NN классификация
+function kNN(data, query, k) {
+    const distances = [];
+
+    // Вычисляем расстояния от запроса до всех точек в данных
+    for (const [point, label] of data) {
+        const distance = euclideanDistance(point, query);
+        distances.push([distance, label]);
+    }
+
+    // Сортируем и выбираем k ближайших соседей
+    const kNearest = distances.sort((a, b) => a[0] - b[0]).slice(0, k);
+
+    // Подсчитываем голоса для каждого класса
+    const votes = {};
+    for (const [, label] of kNearest) {
+        votes[label] = (votes[label] || 0) + 1;
+    }
+
+    // Возвращаем класс с наибольшим количеством голосов
+    return Object.keys(votes).reduce((a, b) => (votes[a] > votes[b] ? a : b));
+}
+
+// Пример использования
+const data = [
+    [[1, 1], 'A'],
+    [[2, 2], 'A'],
+    [[3, 3], 'A'],
+    [[6, 6], 'B'],
+    [[7, 7], 'B'],
+    [[8, 8], 'B'],
+];
+const query = [5, 5];
+const k = 3;
+
+const label = kNN(data, query, k);
+console.log(`The query point belongs to class ${label}`);
