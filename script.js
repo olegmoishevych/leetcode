@@ -420,29 +420,47 @@
 // const label = kNN(data, query, k);
 // console.log(`The query point belongs to class ${label}`);
 
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// const numIdenticalPairs = (nums) => {
+//     const m = {};
+//     let pairs = 0;
+//
+//     for (const n of nums) {
+//         console.log(n)
+//         console.log(nums)
+//         if (m[n]) {
+//             pairs += m[n];
+//             console.log(pairs)
+//             console.log(m[n])
+//             m[n] += 1;
+//         } else {
+//             m[n] = 1;
+//             console.log(m[n])
+//         }
+//     }
+//     console.log(pairs)
+//     return pairs;
+// };
+//
+// console.log(numIdenticalPairs([1,1,1,1]))
+
 /**
  * @param {number[]} nums
- * @return {number}
+ * @param {number} n
+ * @return {number[]}
  */
-const numIdenticalPairs = (nums) => {
-    const m = {};
-    let pairs = 0;
+let shuffle = function(nums, n) {
+    const res = [];
 
-    for (const n of nums) {
-        console.log(n)
-        console.log(nums)
-        if (m[n]) {
-            pairs += m[n];
-            console.log(pairs)
-            console.log(m[n])
-            m[n] += 1;
-        } else {
-            m[n] = 1;
-            console.log(m[n])
-        }
+    for (let i = 0; i < n; i++) {
+        res.push(nums[i], nums[i + n]);
     }
-    console.log(pairs)
-    return pairs;
+
+    return res;
 };
 
-console.log(numIdenticalPairs([1,1,1,1]))
+
+console.log(shuffle([1,2,3,4,4,3,2,1], 4))
