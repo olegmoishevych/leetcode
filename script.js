@@ -456,6 +456,10 @@ let shuffle = function(nums, n) {
     const res = [];
 
     for (let i = 0; i < n; i++) {
+        console.log(n[i])
+        console.log(nums[i])
+        console.log(nums[i + n])
+        console.log(nums[n])
         res.push(nums[i], nums[i + n]);
     }
 
