@@ -447,24 +447,33 @@
 //
 // console.log(numIdenticalPairs([1,1,1,1]))
 
+// /**
+//  * @param {number[]} nums
+//  * @param {number} n
+//  * @return {number[]}
+//  */
+// let shuffle = function(nums, n) {
+//     const res = [];
+//
+//     for (let i = 0; i < n; i++) {
+//         console.log(n[i])
+//         console.log(nums[i])
+//         console.log(nums[i + n])
+//         console.log(nums[n])
+//         res.push(nums[i], nums[i + n]);
+//     }
+//
+//     return res;
+// };
+//
+//
+// console.log(shuffle([1,2,3,4,4,3,2,1], 4))
+
 /**
- * @param {number[]} nums
- * @param {number} n
- * @return {number[]}
+ * @param {string} address
+ * @return {string}
  */
-let shuffle = function(nums, n) {
-    const res = [];
-
-    for (let i = 0; i < n; i++) {
-        console.log(n[i])
-        console.log(nums[i])
-        console.log(nums[i + n])
-        console.log(nums[n])
-        res.push(nums[i], nums[i + n]);
-    }
-
-    return res;
+var defangIPaddr = function(address) {
+    return address.split('.').join('[.]')
 };
-
-
-console.log(shuffle([1,2,3,4,4,3,2,1], 4))
+console.log(defangIPaddr('1.1.1.1'))
