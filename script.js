@@ -489,7 +489,11 @@ let sortSentence = function(s) {
         return parseInt(numA,10) - parseInt(numB, 10)
     })
 
-    return str.join(' ')
+    let arr = str.map((value) => value.slice(0, - 1))
+    console.log(arr)
+
+
+    return arr.join(' ')
 };
 
 console.log(sortSentence('is2 sentence4 This1 a3'))
