@@ -469,10 +469,27 @@
 //
 // console.log(shuffle([1,2,3,4,4,3,2,1], 4))
 
+// /**
+//  * @param {string} address
+//  * @return {string}
+//  */
+// const defangIPaddr = address => address.split('.').join('[.]');
+//
+// console.log(defangIPaddr('1.1.1.1'))
+
 /**
- * @param {string} address
+ * @param {string} s
  * @return {string}
  */
-const defangIPaddr = address => address.split('.').join('[.]');
+let sortSentence = function(s) {
+    let str = s.split(' ').sort((a,b)=>{
+        let numA = a.match(/\d+$/)[0]
+        let numB = b.match(/\d+$/)[0]
 
-console.log(defangIPaddr('1.1.1.1'))
+        return parseInt(numA,10) - parseInt(numB, 10)
+    })
+
+    return str.join(' ')
+};
+
+console.log(sortSentence('is2 sentence4 This1 a3'))
