@@ -476,24 +476,33 @@
 // const defangIPaddr = address => address.split('.').join('[.]');
 //
 // console.log(defangIPaddr('1.1.1.1'))
+//
+// /**
+//  * @param {string} s
+//  * @return {string}
+//  */
+// let sortSentence = function(s) {
+//     let str = s.split(' ').sort((a,b)=>{
+//         let numA = a.match(/\d+$/)[0]
+//         let numB = b.match(/\d+$/)[0]
+//
+//         return parseInt(numA,10) - parseInt(numB, 10)
+//     })
+//
+//     let arr = str.map((value) => value.slice(0, - 1))
+//     console.log(arr)
+//
+//
+//     return arr.join(' ')
+// };
+//
+// console.log(sortSentence('is2 sentence4 This1 a3'))
 
 /**
- * @param {string} s
- * @return {string}
+ * @param {number} num
+ * @param {number} t
+ * @return {number}
  */
-let sortSentence = function(s) {
-    let str = s.split(' ').sort((a,b)=>{
-        let numA = a.match(/\d+$/)[0]
-        let numB = b.match(/\d+$/)[0]
+let theMaximumAchievableX = (num, t) => num + 2 * t
 
-        return parseInt(numA,10) - parseInt(numB, 10)
-    })
-
-    let arr = str.map((value) => value.slice(0, - 1))
-    console.log(arr)
-
-
-    return arr.join(' ')
-};
-
-console.log(sortSentence('is2 sentence4 This1 a3'))
+console.log(theMaximumAchievableX(4, 1))
