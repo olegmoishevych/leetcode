@@ -498,11 +498,15 @@
 //
 // console.log(sortSentence('is2 sentence4 This1 a3'))
 
-/**
- * @param {number} num
- * @param {number} t
- * @return {number}
- */
-let theMaximumAchievableX = (num, t) => num + 2 * t
+// /**
+//  * @param {number} num
+//  * @param {number} t
+//  * @return {number}
+//  */
+// let theMaximumAchievableX = (num, t) => num + 2 * t
+//
+// console.log(theMaximumAchievableX(4, 1))
 
-console.log(theMaximumAchievableX(4, 1))
+const isObjectEmpty = (obj) => Object.keys(obj).length === 0
+
+console.log()
