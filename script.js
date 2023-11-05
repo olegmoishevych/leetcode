@@ -507,6 +507,30 @@
 //
 // console.log(theMaximumAchievableX(4, 1))
 
-const isObjectEmpty = (obj) => Object.keys(obj).length === 0
+// const isObjectEmpty = (obj) => Object.keys(obj).length === 0
+//
+// console.log()
 
-console.log()
+/**
+ * @param {string} s
+ * @return {number}
+ */
+let balancedStringSplit = function(s) {
+    let count= 0
+    let tempCount= 0
+
+    for (let i = 0; i < s.length; i++) {
+        if(s[i] === 'L'){
+            tempCount--
+        }
+        if(s[i] === 'R'){
+            tempCount++
+        }
+        if(tempCount === 0){
+            count++
+        }
+    }
+    return count
+};
+
+console.log(balancedStringSplit('RLRRLLRLRL'))
