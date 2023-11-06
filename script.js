@@ -510,27 +510,51 @@
 // const isObjectEmpty = (obj) => Object.keys(obj).length === 0
 //
 // console.log()
+//
+// /**
+//  * @param {string} s
+//  * @return {number}
+//  */
+// let balancedStringSplit = function(s) {
+//     let count= 0
+//     let tempCount= 0
+//
+//     for (let i = 0; i < s.length; i++) {
+//         if(s[i] === 'L'){
+//             tempCount--
+//         }
+//         if(s[i] === 'R'){
+//             tempCount++
+//         }
+//         if(tempCount === 0){
+//             count++
+//         }
+//     }
+//     return count
+// };
+//
+// console.log(balancedStringSplit('RLRRLLRLRL'))
 
 /**
- * @param {string} s
+ * @param {number} num
  * @return {number}
  */
-let balancedStringSplit = function(s) {
-    let count= 0
-    let tempCount= 0
+let maximum69Number  = function(num) {
+    num = num.toString()
+    let result = []
+    let numberFlag = false
 
-    for (let i = 0; i < s.length; i++) {
-        if(s[i] === 'L'){
-            tempCount--
-        }
-        if(s[i] === 'R'){
-            tempCount++
-        }
-        if(tempCount === 0){
-            count++
+    for (let i = 0; i < num.length; i++) {
+
+        if(+num[i] === 6 && !numberFlag){
+            numberFlag = true
+            result.push('9')
+        }else {
+            result.push(num[i])
         }
     }
-    return count
+
+    return +result.join('')
 };
 
-console.log(balancedStringSplit('RLRRLLRLRL'))
+console.log(maximum69Number(9669))
