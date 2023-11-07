@@ -535,26 +535,47 @@
 //
 // console.log(balancedStringSplit('RLRRLLRLRL'))
 
+// /**
+//  * @param {number} num
+//  * @return {number}
+//  */
+// let maximum69Number  = function(num) {
+//     num = num.toString()
+//     let result = []
+//     let numberFlag = false
+//
+//     for (let i = 0; i < num.length; i++) {
+//
+//         if(+num[i] === 6 && !numberFlag){
+//             numberFlag = true
+//             result.push('9')
+//         }else {
+//             result.push(num[i])
+//         }
+//     }
+//
+//     return +result.join('')
+// };
+//
+// console.log(maximum69Number(9669))
+
 /**
- * @param {number} num
+ * @param {number[][]} grid
  * @return {number}
  */
-let maximum69Number  = function(num) {
-    num = num.toString()
-    let result = []
-    let numberFlag = false
+let countNegatives = function(grid) {
+    let count = 0
 
-    for (let i = 0; i < num.length; i++) {
-
-        if(+num[i] === 6 && !numberFlag){
-            numberFlag = true
-            result.push('9')
-        }else {
-            result.push(num[i])
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid[i].length; j++){
+            console.log(grid[i][j])
+            if(grid[i][j] < 0){
+                count++
+            }
         }
     }
 
-    return +result.join('')
+    return count
 };
 
-console.log(maximum69Number(9669))
+console.log(countNegatives([[3,2],[1,0]]))
