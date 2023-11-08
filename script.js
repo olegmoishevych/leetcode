@@ -580,18 +580,36 @@
 //
 // console.log(countNegatives([[3,2],[1,0]]))
 
-let countOfStringWords = (str) => {
-    let set = new Set()
+// let countOfStringWords = (str) => {
+//     let set = new Set()
+//
+//     for (const words of str) {
+//
+//         if(!set[words]){
+//             set[words] = 1
+//         } else {
+//             set[words]++
+//         }
+//     }
+//     return set
+// }
+//
+// console.log(countOfStringWords('striinggg'))
 
-    for (const words of str) {
+let countOfDoubleValuesOfArray = (arr) => {
+    let map = new Map()
+    let result = []
 
-        if(!set[words]){
-            set[words] = 1
-        } else {
-            set[words]++
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+        if(!map.has(arr[i])){
+            map.set(arr[i], 0)
+        }else {
+            result.push(arr[i])
         }
     }
-    return set
+
+    return result
 }
 
-console.log(countOfStringWords('striinggg'))
+console.log(countOfDoubleValuesOfArray([1,2,3,4,5,5,5,6,7,7,8,8]))
