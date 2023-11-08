@@ -559,23 +559,39 @@
 //
 // console.log(maximum69Number(9669))
 
-/**
- * @param {number[][]} grid
- * @return {number}
- */
-let countNegatives = function(grid) {
-    let count = 0
+// /**
+//  * @param {number[][]} grid
+//  * @return {number}
+//  */
+// let countNegatives = function(grid) {
+//     let count = 0
+//
+//     for (let i = 0; i < grid.length; i++) {
+//         for (let j = 0; j < grid[i].length; j++){
+//             console.log(grid[i][j])
+//             if(grid[i][j] < 0){
+//                 count++
+//             }
+//         }
+//     }
+//
+//     return count
+// };
+//
+// console.log(countNegatives([[3,2],[1,0]]))
 
-    for (let i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[i].length; j++){
-            console.log(grid[i][j])
-            if(grid[i][j] < 0){
-                count++
-            }
+let countOfStringWords = (str) => {
+    let set = new Set()
+
+    for (const words of str) {
+
+        if(!set[words]){
+            set[words] = 1
+        } else {
+            set[words]++
         }
     }
+    return set
+}
 
-    return count
-};
-
-console.log(countNegatives([[3,2],[1,0]]))
+console.log(countOfStringWords('striinggg'))
