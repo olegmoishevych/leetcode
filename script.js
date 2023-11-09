@@ -595,21 +595,45 @@
 // }
 //
 // console.log(countOfStringWords('striinggg'))
+//
+// let countOfDoubleValuesOfArray = (arr) => {
+//     let map = new Map()
+//     let result = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i])
+//         if(!map.has(arr[i])){
+//             map.set(arr[i], 0)
+//         }else {
+//             result.push(arr[i])
+//         }
+//     }
+//
+//     return result
+// }
+//
+// console.log(countOfDoubleValuesOfArray([1,2,3,4,5,5,5,6,7,7,8,8]))
 
-let countOfDoubleValuesOfArray = (arr) => {
-    let map = new Map()
-    let result = []
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+let maximumWealth = function(accounts) {
+    let finaCount = 0
 
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i])
-        if(!map.has(arr[i])){
-            map.set(arr[i], 0)
-        }else {
-            result.push(arr[i])
+    for (let i = 0; i < accounts.length; i++) {
+        let currentCount = 0
+
+        for (let j = 0; j < accounts[i].length; j++) {
+            currentCount += accounts[i][j]
+        }
+
+        if(finaCount < currentCount){
+            finaCount = currentCount
         }
     }
 
-    return result
-}
+    return finaCount
+};
 
-console.log(countOfDoubleValuesOfArray([1,2,3,4,5,5,5,6,7,7,8,8]))
+console.log(maximumWealth([[2,8,7],[7,1,3],[1,9,5]]))
