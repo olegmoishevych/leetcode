@@ -638,17 +638,17 @@
 //
 // console.log(maximumWealth([[2,8,7],[7,1,3],[1,9,5]]))
 
-let clearDoubleOfArr = (arr) => {
-    let map = new Map()
-    let res = []
-
-    for (let i = 0; i < arr.length; i++) {
-        if(!map.has(arr[i])){
-            map.set(arr[i],1)
-        }else {
-            res.push(arr[i])
-        }
-    }
-    return res
-}
-console.log(clearDoubleOfArr([1,2,3,4,5,5,6,6]))
+// let clearDoubleOfArr = (arr) => {
+//     let map = new Map()
+//     let res = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if(!map.has(arr[i])){
+//             map.set(arr[i],1)
+//         }else {
+//             res.push(arr[i])
+//         }
+//     }
+//     return res
+// }
+// console.log(clearDoubleOfArr([1,2,3,4,5,5,6,6]))
