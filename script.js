@@ -677,16 +677,51 @@
 // };
 // console.log(maxProduct([1,5,4,5,6]))
 
-/**
- * @param {number} celsius
- * @return {number[]}
- */
-const convertTemperature = (celsius) => [celsius + 273.15, celsius * 1.80 + 32.00]
-
-
-console.log(convertTemperature(36.50))
+// /**
+//  * @param {number} celsius
+//  * @return {number[]}
+//  */
+// const convertTemperature = (celsius) => [celsius + 273.15, celsius * 1.80 + 32.00]
+//
+//
+// console.log(convertTemperature(36.50))
 //celcion 273.15
 //farion = celsion * 1.80 + 32.00
 // Input: celsius = 36.50
 // Output: [309.65000,97.70000]
 
+const isCorrectSequence = (str) => {
+    let result = []
+
+    for (const char of str) {
+        console.log(char)
+        if(char === '('){
+            result.push(char)
+        }else if(char === ')'){
+            if(result.length === 0){
+                return false
+            }
+            result.pop()
+        }
+    }
+    console.log(result)
+    return result.length === 0
+}
+
+const valid = [
+    '()()',
+    '(())',
+    '(())()'
+];
+
+const inValid = [
+    '()(',
+    '()()())',
+    ')',
+    '(',
+    '())('
+]
+
+valid.forEach(o=>console.log(isCorrectSequence(o)));
+console.log(isCorrectSequence(inValid))
+inValid.forEach(o=>console.log(isCorrectSequence(o)));
