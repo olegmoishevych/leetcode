@@ -690,38 +690,50 @@
 // Input: celsius = 36.50
 // Output: [309.65000,97.70000]
 
-const isCorrectSequence = (str) => {
-    let result = []
+// const isCorrectSequence = (str) => {
+//     let result = []
+//
+//     for (const char of str) {
+//         console.log(char)
+//         if(char === '('){
+//             result.push(char)
+//         }else if(char === ')'){
+//             if(result.length === 0){
+//                 return false
+//             }
+//             result.pop()
+//         }
+//     }
+//     console.log(result)
+//     return result.length === 0
+// }
+//
+// const valid = [
+//     '()()',
+//     '(())',
+//     '(())()'
+// ];
+//
+// const inValid = [
+//     '()(',
+//     '()()())',
+//     ')',
+//     '(',
+//     '())('
+// ]
+//
+// valid.forEach(o=>console.log(isCorrectSequence(o)));
+// console.log(isCorrectSequence(inValid))
+// inValid.forEach(o=>console.log(isCorrectSequence(o)));
 
-    for (const char of str) {
-        console.log(char)
-        if(char === '('){
-            result.push(char)
-        }else if(char === ')'){
-            if(result.length === 0){
-                return false
-            }
-            result.pop()
-        }
-    }
-    console.log(result)
-    return result.length === 0
-}
+/**
+ * @param {number} n
+ * @return {number}
+ */
+const smallestEvenMultiple = (n) => n % 2 === 0 ? n : n * 2
 
-const valid = [
-    '()()',
-    '(())',
-    '(())()'
-];
+let num = 17
+console.log(num % 2 === 0)
 
-const inValid = [
-    '()(',
-    '()()())',
-    ')',
-    '(',
-    '())('
-]
-
-valid.forEach(o=>console.log(isCorrectSequence(o)));
-console.log(isCorrectSequence(inValid))
-inValid.forEach(o=>console.log(isCorrectSequence(o)));
+console.log(smallestEvenMultiple(6))
+// 10
