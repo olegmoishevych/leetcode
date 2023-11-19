@@ -726,14 +726,50 @@
 // console.log(isCorrectSequence(inValid))
 // inValid.forEach(o=>console.log(isCorrectSequence(o)));
 
-/**
- * @param {number} n
- * @return {number}
- */
-const smallestEvenMultiple = (n) => n % 2 === 0 ? n : n * 2
-
-let num = 17
-console.log(num % 2 === 0)
-
-console.log(smallestEvenMultiple(6))
+// /**
+//  * @param {number} n
+//  * @return {number}
+//  */
+// const smallestEvenMultiple = (n) => n % 2 === 0 ? n : n * 2
+//
+// let num = 17
+// console.log(num % 2 === 0)
+//
+// console.log(smallestEvenMultiple(6))
 // 10
+
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+const kidsWithCandies = (candies, extraCandies) => {
+    let result = []
+    let maxCountOfArr = Number.MIN_VALUE
+
+    for (let i = 0; i < candies.length; i++) {
+
+        if(maxCountOfArr < candies[i]){
+            maxCountOfArr = candies[i]
+        }
+
+    }
+
+    for (let i = 0; i < candies.length; i++) {
+        let sumOfCandiesAndExtra = candies[i] + extraCandies
+        console.log(sumOfCandiesAndExtra)
+
+        if(sumOfCandiesAndExtra >= maxCountOfArr){
+            result.push(true)
+        }else {
+            result.push(false)
+        }
+    }
+
+    return result
+};
+
+console.log(kidsWithCandies([2,3,5,1,3], 3))
+
+// Input: candies = [2,3,5,1,3], extraCandies = 3
+// Output: [true,true,true,false,true]
