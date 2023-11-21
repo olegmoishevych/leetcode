@@ -774,27 +774,69 @@
 // Input: candies = [2,3,5,1,3], extraCandies = 3
 // Output: [true,true,true,false,true]
 
+// /**
+//  * @param {number} n
+//  * @param {number} m
+//  * @return {number}
+//  */
+// let differenceOfSums = function(n, m) {
+//     let total = 0
+//
+//     for (let i = 1; i <= n; i++) {
+//         console.log(i)
+//         if(i % m === 0){
+//             total -= i
+//         }else {
+//             total += i
+//         }
+//     }
+//     console.log(total)
+//     return total
+// };
+//
+// // Input: n = 10, m = 3
+// // Output: 19
+//
+// console.log(differenceOfSums(10, 3))
+
 /**
- * @param {number} n
- * @param {number} m
- * @return {number}
+ * @param {string} command
+ * @return {string}
  */
-let differenceOfSums = function(n, m) {
-    let total = 0
+// let interpret = (command) => {
+//     let result = ''
+//
+//     for (let i = 0; i < command.length; i++) {
+//         console.log(command[i])
+//         if(command[i] === 'G'){
+//             result += 'G'
+//         } else if(command[i] === '(' && command[i + 1] === ')'){
+//             result += 'o'
+//         } else if(command[i] === '(' && command[i + 1] === 'a' && command[i + 2] === 'l' && command[i + 3] === ')'){
+//             result += 'al'
+//         }
+//     }
+//
+//     return result
+// }
 
-    for (let i = 1; i <= n; i++) {
-        console.log(i)
-        if(i % m === 0){
-            total -= i
-        }else {
-            total += i
-        }
-    }
-    console.log(total)
-    return total
-};
+let interpret = (command) => command.replaceAll('()', 'o').replaceAll('(al)', 'al')
 
-// Input: n = 10, m = 3
-// Output: 19
+console.log(interpret('G()()()()(al)'))
 
-console.log(differenceOfSums(10, 3))
+// Example 1:
+// Input: command = "G()(al)"
+// Output: "Goal"
+// Explanation: The Goal Parser interprets the command as follows:
+//     G -> G
+//     () -> o
+// (al) -> al
+// The final concatenated result is "Goal".
+//     Example 2:
+//
+// Input: command = "G()()()()(al)"
+// Output: "Gooooal"
+// Example 3:
+//
+// Input: command = "(al)G(al)()()G"
+// Output: "alGalooG"
