@@ -820,9 +820,9 @@
 //     return result
 // }
 
-let interpret = (command) => command.replaceAll('()', 'o').replaceAll('(al)', 'al')
-
-console.log(interpret('G()()()()(al)'))
+// let interpret = (command) => command.replaceAll('()', 'o').replaceAll('(al)', 'al')
+//
+// console.log(interpret('G()()()()(al)'))
 
 // Example 1:
 // Input: command = "G()(al)"
@@ -840,3 +840,28 @@ console.log(interpret('G()()()()(al)'))
 //
 // Input: command = "(al)G(al)()()G"
 // Output: "alGalooG"
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+let runningSum = function(nums) {
+    let result = []
+    let tempCount = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        tempCount += nums[i]
+        console.log(tempCount)
+        result.push(tempCount)
+    }
+
+    return result
+};
+
+console.log(runningSum([1,1,1,1,1]))
+
+// Input: nums = [1,2,3,4]
+// Output: [1,3,6,10]
+
+// Input: nums = [1,1,1,1,1]
+// Output: [1,2,3,4,5]
