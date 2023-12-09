@@ -34,19 +34,21 @@
  * @param {string} n
  * @return {number}
  */
-var minPartitions = (n) => {
-  var arr = n.toString().split('')
-  var maxNum = 0
+// var minPartitions = (n) => {
+//   var arr = n.toString().split('')
+//   var maxNum = 0
+//
+//   for (var i = 0; i < arr.length; i++) {
+//
+//     if(maxNum < arr[i]){
+//        maxNum = arr[i]
+//      }
+//
+//   }
+//
+//   return maxNum
+// };
 
-  for (var i = 0; i < arr.length; i++) {
+// var minPartitions = n => Math.max(...n.split('').map(Number));
 
-    if(maxNum < arr[i]){
-       maxNum = arr[i]
-     }
-
-  }
-
-  return maxNum
-};
-
-console.log(minPartitions(32))
+// console.log(minPartitions(32))
