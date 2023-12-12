@@ -40,14 +40,13 @@
  */
 const numberOfSteps = (num) => {
   let steps = 0
-  let copyOfNum = num
 
-  while (copyOfNum > 0){
+  while (num > 0){
 
-    if(copyOfNum % 2 === 0){
-      copyOfNum /= 2
+    if(num % 2 === 0){
+      num /= 2
     }else {
-      copyOfNum -= 1
+      num -= 1
     }
 
     steps++

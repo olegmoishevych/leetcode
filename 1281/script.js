@@ -43,13 +43,30 @@
 // console.log(subtractProductAndSum(705))
 
 
-var foo = (arr1, arr2) => {
-  var set = new Set(arr1)
+// var foo = (arr1, arr2) => {
+//   var set = new Set(arr1)
+//
+//   return arr2.filter( (num) => set.has( num ))
+// }
+//
+// console.log(foo([1, 2, 3, 4, 5, 6], [3, 4, 7, 8, 9, 1]));
 
-  return arr2.filter( (num) => set.has( num ))
-}
 
-console.log(foo([1, 2, 3, 4, 5, 6], [3, 4, 7, 8, 9, 1]));
+// let foo = (s) => {
+//   let obj = {}
+//
+//   for (const word of s) {
+//     if(!obj[word]){
+//       obj[word] = 1
+//     }else {
+//       obj[word]++
+//     }
+//   }
+//
+//   return obj
+// }
+//
+// console.log(foo('stringgg'))
 
 
 
