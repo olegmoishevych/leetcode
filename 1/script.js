@@ -27,7 +27,8 @@
 //
 // Input: 123456789 Output: 987654321
 
-let descendingOrder = (n) => +n.toString().split('').sort((a,b)=> b - a).join('')
+// let descendingOrder = (n) => +n.toString().split('').sort((a,b)=> b - a).join('')
+//
+//
+// console.log(descendingOrder(42145))
 
-
-console.log(descendingOrder(42145))
