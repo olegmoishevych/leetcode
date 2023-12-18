@@ -32,3 +32,20 @@
 //
 // console.log(descendingOrder(42145))
 
+let number = 10
+const counter = () => number += 1
+
+
+console.log(counter(number)); // 11
+console.log(counter(number)); // 12
+console.log(counter(number)); // 13
+console.log(counter(number)); // 14
+console.log(counter(number)); // 15
+console.log(counter(number)); // 16
+
+
+
+
+
+
+
