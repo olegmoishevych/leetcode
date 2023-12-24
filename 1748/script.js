@@ -31,7 +31,6 @@
  */
 var sumOfUnique = function(nums) {
   let counts = {}
-  let arr = []
   let initialValue = 0
 
   for (const num of nums) {
@@ -40,12 +39,8 @@ var sumOfUnique = function(nums) {
 
   for (const char in counts) {
     if(counts[char] === 1){
-      arr.push(char)
+      initialValue += +char
     }
-  }
-
-  for (let i = 0; i < arr.length; i++) {
-      initialValue += +arr[i]
   }
 
   return initialValue
