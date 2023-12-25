@@ -43,8 +43,25 @@
 // console.log(counter(number)); // 15
 // console.log(counter(number)); // 16
 
+var func = (str) => {
+  var obj = {}
 
+  for (const key of str) {
 
+    if(!obj[key]){
+      obj[key] = 1
+
+    } else {
+      obj[key]++
+    }
+
+  }
+
+  return obj
+
+}
+
+console.log(func('sstr'))
 
 
 
