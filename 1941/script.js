@@ -26,18 +26,21 @@
  * @param {string} s
  * @return {boolean}
  */
-var areOccurrencesEqual = (s) => {
-  var map = new Map()
+// var areOccurrencesEqual = (s) => {
+//   var map = new Map()
+//
+//   for (const char of s) {
+//
+//     map.set(char, (map.get(char) || 0) + 1)
+//
+//   }
+//
+//   var dict = new Set([...map.values()])
+//
+//   return dict.size === 1
+// }
 
-  for (const char of s) {
+var areOccurrencesEqual = (s) => new Set([...s].map(char => s.split(char).length - 1)).size === 1
 
-    map.set(char, (map.get(char) || 0) + 1)
-
-  }
-
-  var dict = new Set([...map.values()])
-
-  return dict.size === 1
-}
 
 console.log(areOccurrencesEqual('aaabb'))
