@@ -1,15 +1,20 @@
-//Given an array of integers, find the one that appears an odd number of times.
-//
-// There will always be only one integer that appears an odd number of times.
-//
-// Examples
-// [7] should return 7, because it occurs 1 time (which is odd).
-// [0] should return 0, because it occurs 1 time (which is odd).
-// [1,1,2] should return 2, because it occurs 1 time (which is odd).
-// [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
-// [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+//Implement the function unique_in_order which takes as argument a
+// sequence and returns a list of items without any elements with
+// the same value next to each other and preserving the original order of elements.
 
-function findOdd(A) {
-  //happy coding!
-  return 0;
+var uniqueInOrder=function(iterable){
+  if(!iterable || !iterable.length) return []
+
+  let res = [iterable[0]]
+  console.log(res)
+
+  for (let i = 1; i < iterable.length; i++) {
+    console.log(iterable[i - 1])
+    if(iterable[i] !== iterable[i - 1]) res.push(iterable[i])
+
+  }
+
+  return res
 }
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'))
