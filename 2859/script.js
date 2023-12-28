@@ -41,19 +41,38 @@
  * @param {number} k
  * @return {number}
  */
+// var sumIndicesWithKSetBits = function(nums, k) {
+//
+//   let count = 0
+//
+//   for (let i = 0; i < nums.length; i++) {
+//
+//     let res = i.toString(2).replaceAll(0, '')
+//     console.log(res)
+//     if(res.length === k) count += nums[i]
+//
+//   }
+//
+//   return count
+// };
 var sumIndicesWithKSetBits = function(nums, k) {
-
-  let count = 0
+  let sum = 0;
 
   for (let i = 0; i < nums.length; i++) {
 
-    let res = i.toString(2).replaceAll(0, '')
-    console.log(res)
-    if(res.length === k) count += nums[i]
+    if (countSetBits(i) === k) {
+      sum += nums[i];
+    }
 
   }
 
-  return count
+  return sum;
 };
 
+function countSetBits(i) {
+  return i.toString(2).split('0').join('').length;
+}
+
+
 console.log(sumIndicesWithKSetBits([4,3,2,1], 2))
+console.log(countSetBits(4))
