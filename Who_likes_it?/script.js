@@ -28,15 +28,30 @@ function likes(names) {
   //
   // }
 
-  const lengthOfNames = names.length
+  // const lengthOfNames = names.length
+  //
+  // if(!lengthOfNames) return "no one likes this"
+  // if (lengthOfNames === 0) return "no one likes this";
+  // if (lengthOfNames === 1) return `${names[0]} likes this`;
+  // if (lengthOfNames === 2) return `${names[0]} and ${names[1]} like this`;
+  // if (lengthOfNames === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+  //
+  // return `${names[0]}, ${names[1]} and ${lengthOfNames - 2} others like this`;
 
-  if(!lengthOfNames) return "no one likes this"
-  if (lengthOfNames === 0) return "no one likes this";
-  if (lengthOfNames === 1) return `${names[0]} likes this`;
-  if (lengthOfNames === 2) return `${names[0]} and ${names[1]} like this`;
-  if (lengthOfNames === 3) return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+  const length = names.length;
 
-  return `${names[0]}, ${names[1]} and ${lengthOfNames - 2} others like this`;
+  switch (length) {
+    case 0:
+      return "no one likes this";
+    case 1:
+      return `${names[0]} likes this`;
+    case 2:
+      return `${names[0]} and ${names[1]} like this`;
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${length - 2} others like this`;
+  }
 
 }
 
