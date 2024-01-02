@@ -64,6 +64,3 @@ var func = (str) => {
 console.log(func('sstr'))
 
 
-
-
-
