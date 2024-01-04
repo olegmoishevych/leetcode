@@ -5,7 +5,7 @@
 var maximumValue = function(strs) {
   let length = strs.map(item => {
     if (!isNaN(item) && !Array.isArray(item)) {
-      return parseInt(item,10)
+      return parseInt(item, 10)
     }
 
     return item.length
