@@ -60,7 +60,7 @@ var func = (str) => {
   return obj
 
 }
-
-console.log(func('sstr'))
+func('str') //?
+// console.log(func('sstr'))
 
 
