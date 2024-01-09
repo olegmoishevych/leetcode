@@ -22,7 +22,9 @@ const numberGame = (nums) => {
   while (nums.length){
 
     const alise = nums.pop()
+    console.log(alise)
     const bob = nums.pop()
+    console.log(bob)
 
     arr.push(bob, alise)
   }
