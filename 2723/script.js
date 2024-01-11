@@ -18,8 +18,13 @@
  * @param {Promise} promise2
  * @return {Promise}
  */
-const addTwoPromises = (promise1, promise2) => Promise.all([promise1, promise2]).then(([promise1, promise2]) => promise1 + promise2)
+// const addTwoPromises = (promise1, promise2) => Promise.all([promise1, promise2]).then(([promise1, promise2]) => promise1 + promise2)
+const addTwoPromises = async function (p1,p2){
+  const n1 = await p1
+  const n2 = await p2
 
+  return n1 + n2
+}
 
 console.log(addTwoPromises(
   new Promise(resolve => setTimeout(() => resolve(2), 20)),
