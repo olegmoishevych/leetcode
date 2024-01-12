@@ -76,12 +76,15 @@
  * @return {Function}
  */
 const cancellable = (fn, args, t) => {
-  fn(...args)
+  const intervalId = setInterval(() => {
+    fn(...args);
+  }, t);
 
-  const intervalID = setInterval(() => fn(...args), t)
+  fn(...args);
 
-  return () => clearInterval(intervalID)
+  return () => clearInterval(intervalId);
 };
+
 const fn = (x) => x * 2
 console.log(cancellable(fn, [4], 35))
 
