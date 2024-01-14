@@ -64,3 +64,4 @@ func('str') //?
 // console.log(func('sstr'))
 
 
+

@@ -55,14 +55,15 @@
 const join = (arr1, arr2) => {
   const obj = {}
 
-  for (const arr of [arr1, arr2]) {
-    for (const item of arr) {
-      const id = item.id;
-      obj[id] = { ...obj[id], ...item };
+  for (const el of [arr1, arr2]) {
+    for (const char of el) {
+
+      obj[char.id] = {...obj[char.id], ...char}
+
     }
   }
 
-  return Object.values(obj);
+  return Object.values(obj)
 };
 
 
