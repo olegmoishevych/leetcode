@@ -43,24 +43,23 @@
 // console.log(counter(number)); // 15
 // console.log(counter(number)); // 16
 
-var func = (str) => {
-  var obj = {}
+const func = (str) => {
+  const obj = {}
 
   for (const key of str) {
 
     if(!obj[key]){
       obj[key] = 1
 
-    } else {
+    }else {
       obj[key]++
     }
 
   }
-
   return obj
 
 }
-func('str') //?
+console.log(func('strcvsaaaab')) //?
 // console.log(func('sstr'))
 
 
