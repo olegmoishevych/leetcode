@@ -12,8 +12,9 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const moveZeroes = (nums) => {
-
-
+  return nums.sort((a, b) => (a === 0) - (b === 0))
 }
 
-console.log(moveZeroes([0,1,0,3,12]))
+
+
+console.log(moveZeroes([0,1,0,3,2,12]))
