@@ -44,6 +44,7 @@
 // console.log(counter(number)); // 16
 
 const func = (str) => {
+  // const obj = {}
   const obj = {}
 
   for (const key of str) {
