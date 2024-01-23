@@ -15,21 +15,30 @@
  * @param {number[]} nums
  * @return {number}
  */
-const singleNumber = (nums) => {
-  return nums.filter((el) => {
-    let count = 0
-    for (let i = 0; i < nums.length; i++) {
+// const singleNumber = (nums) => {
+//   return nums.filter((el) => {
+//     let count = 0
+//     for (let i = 0; i < nums.length; i++) {
+//
+//       if(nums[i] === el){
+//         count++
+//       }
+//
+//     }
+//
+//     return count === 1
+//
+//   })
+//
+// }
 
-      if(nums[i] === el){
-        count++
-      }
-
-    }
-
-    return count === 1
-
-  })
-
-}
+const singleNumber = (nums) => nums.reduce((prev, curr) => prev ^ curr, 0)
+  // let result = 0;
+  //
+  // for (let num of nums) {
+  //   result ^= num;
+  // }
+  //
+  // return result;
 
 console.log(singleNumber([4,1,2,1,2]))
