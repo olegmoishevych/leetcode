@@ -58,7 +58,6 @@ const func = (str) => {
 
   }
   return obj
-
 }
 console.log(func('strcvsaaaab')) //?
 // console.log(func('sstr'))
