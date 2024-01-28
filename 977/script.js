@@ -13,15 +13,19 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-const sortedSquares = (nums) => {
-  let sortedNums = nums.sort((a,b) => (a - b))
-  let result = []
+// const sortedSquares = (nums) => {
+//   let sortedNums = nums.sort((a,b) => (a - b))
+//   let result = []
+//
+//   for (let i = 0; i < sortedNums.length; i++) {
+//     result.push(sortedNums[i] * sortedNums[i])
+//   }
+//
+//   return result.sort((a,b) => (a - b))
+// }
+const sortedSquares = (nums) => nums
+  .map(el=> el * el)
+  .sort((a,b) => a - b)
 
-  for (let i = 0; i < sortedNums.length; i++) {
-    result.push(sortedNums[i] * sortedNums[i])
-  }
-
-  return result.sort((a,b) => (a - b))
-}
 
 console.log(sortedSquares([-4,-1,0,3,10]))
