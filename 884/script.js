@@ -14,6 +14,7 @@
  */
 const uncommonFromSentences = (s1, s2) => {
   let countObj = {}
+  let result = []
 
   for (const word of s1.split(' ')) {
     countObj[word] = (countObj[word] || 0) + 1
@@ -22,8 +23,6 @@ const uncommonFromSentences = (s1, s2) => {
   for (const word of s2.split(' ')) {
     countObj[word] = (countObj[word] || 0) + 1
   }
-
-  let result = []
 
   for (const key in countObj) {
     if(countObj[key] === 1){
