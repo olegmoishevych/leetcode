@@ -43,24 +43,45 @@
 // console.log(counter(number)); // 15
 // console.log(counter(number)); // 16
 
-const func = (str) => {
-  // const obj = {}
-  const obj = {}
+// const func = (str) => {
+//   // const obj = {}
+//   const obj = {}
+//
+//   for (const key of str) {
+//
+//     if(!obj[key]){
+//       obj[key] = 1
+//
+//     }else {
+//       obj[key]++
+//     }
+//
+//   }
+//   return obj
+// }
+// console.log(func('strcvsaaaab')) //?
+// // console.log(func('sstr'))
 
-  for (const key of str) {
+const foo = (s1, s2) => {
+  let obj = {}
+  let res = []
 
-    if(!obj[key]){
-      obj[key] = 1
-
-    }else {
-      obj[key]++
-    }
-
+  for (const word of s1.split(' ')) {
+    obj[word] = (obj[word] || 0) + 1
   }
-  return obj
+
+  for (const word of s2.split(' ')) {
+    obj[word] = (obj[word] || 0) + 1
+  }
+
+  for (const key in obj) {
+    if(obj[key] === 1){
+      res.push(key)
+    }
+  }
+
+  return res
 }
-console.log(func('strcvsaaaab')) //?
-// console.log(func('sstr'))
 
-
+console.log(foo('the', 'the is'))
 
