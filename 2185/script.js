@@ -25,6 +25,6 @@ const prefixCount = (words, pref) => words.filter((el) => el.startsWith(pref)).l
   // }
 
   // return count
-}
+
 
 console.log(prefixCount( ["pay","attention","practice","attend"],"at"))

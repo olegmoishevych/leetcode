@@ -19,16 +19,16 @@
  * @param {string} s
  * @return {number}
  */
-const countPrefixes = (words, s) => {
-  let count = 0
+const countPrefixes = (words, s) => words.filter(el => s.startsWith(el)).length
 
-  for (let i = 0; i < words.length; i++) {
-    if(s.startsWith(words[i])){
-      count++
-    }
-  }
-
-  return count
-}
+  // let count = 0
+  //
+  // for (let i = 0; i < words.length; i++) {
+  //   if(s.startsWith(words[i])){
+  //     count++
+  //   }
+  // }
+  //
+  // return count
 
 console.log(countPrefixes(["a","b","c","ab","bc","abc"], 'abc'))
