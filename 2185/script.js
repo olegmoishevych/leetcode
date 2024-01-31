@@ -14,17 +14,17 @@
  * @param {string} pref
  * @return {number}
  */
-const prefixCount = (words, pref) => {
-  let count = 0
+const prefixCount = (words, pref) => words.filter((el) => el.startsWith(pref)).length;
+  // let count = 0
 
-  for (let i = 0; i < words.length; i++) {
-    console.log(words[i])
-    if(words[i].startsWith(pref)){
-      count++
-    }
-  }
+  // for (let i = 0; i < words.length; i++) {
+  //   console.log(words[i])
+  //   if(words[i].startsWith(pref)){
+  //     count++
+  //   }
+  // }
 
-  return count
+  // return count
 }
 
 console.log(prefixCount( ["pay","attention","practice","attend"],"at"))
