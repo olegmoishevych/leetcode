@@ -15,14 +15,21 @@
 // Output: ""
 // Explanation: There are no palindromic strings, so the empty string is returned.
 const firstPalindrome = (words) => {
-  for (const word of words) {
+  const findPalindromeElement = words.find((word) => {
+    const reversedElement = word.toLowerCase().split('').reverse().join('')
 
-    if(word.toUpperCase().split('').reverse().join('') === word.toUpperCase().split('').join('')){
-      return word
-    }
+    return word.toLowerCase().split('').join('') === reversedElement
+  })
 
-  }
-  return ''
+  return findPalindromeElement || ''
+  // for (const word of words) {
+  //
+  //   if(word.toUpperCase().split('').reverse().join('') === word.toUpperCase().split('').join('')){
+  //     return word
+  //   }
+  //
+  // }
+  // return ''
 }
 
 console.log(firstPalindrome(["notapalindrome","racecar"]))
