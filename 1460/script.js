@@ -23,11 +23,6 @@
  * @param {number[]} arr
  * @return {boolean}
  */
-const canBeEqual = (target, arr) => {
-  let sortedTarget = target.reverse().join('')
-  let sortedArr = arr.reverse().join('')
-
-  return  sortedArr === sortedTarget
-};
+const canBeEqual = (target, arr) => target.sort((a,b) => a - b).join('') === arr.sort((a,b) => a - b).join('')
 
 console.log(canBeEqual([3,7,9], [3,7,11]))
