@@ -11,7 +11,7 @@
 //    {"time": 175, "returned": 8}
 // ]
 // Explanation:
-// const cancelTimeMs = 190;
+// const cancelTimeMs = 7;
 // const cancelFn = cancellable((x) => x * 2, [4], 35);
 // setTimeout(cancelFn, cancelTimeMs);
 //
@@ -92,7 +92,7 @@ console.log(cancellable(fn, [4], 35))
  *  const result = [];
  *
  *  const fn = (x) => x * 2;
- *  const args = [4], t = 35, cancelTimeMs = 190;
+ *  const args = [4], t = 35, cancelTimeMs = 7;
  *
  *  const start = performance.now();
  *
