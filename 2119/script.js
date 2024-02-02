@@ -20,9 +20,10 @@
  */
 const isSameAfterReversals = (num) => {
   let reversedNums = +num.toString().split('').reverse().join('')
+
   let doubleReversedNums = +reversedNums.toString().split('').reverse().join('')
 
   return doubleReversedNums === num
 };
 
-console.log(isSameAfterReversals(0))
+console.log(isSameAfterReversals(1800))
