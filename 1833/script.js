@@ -19,16 +19,32 @@
  * @param {number} coins
  * @return {number}
  */
-const maxIceCream = (costs, coins) => {
-  let sortedCosts = costs.sort((a,b) => a - b)
-  let countOfBueCost = 0
-  let totalCost = 0
+// const maxIceCream = (costs, coins) => {
+//   let sortedCosts = costs.sort((a,b) => a - b)
+//   let countOfBueCost = 0
+//   let totalCost = 0
+//
+//   for (let i = 0; i < sortedCosts.length; i++) {
+//     if(totalCost + sortedCosts[i] <= coins){
+//       totalCost += sortedCosts[i]
+//       countOfBueCost++
+//     }
+//   }
+//
+//   return countOfBueCost
+// }
 
-  for (let i = 0; i < sortedCosts.length; i++) {
-    if(totalCost + sortedCosts[i] <= coins){
-      totalCost += sortedCosts[i]
+const maxIceCream = (costs, coins) => {
+  let countOfBueCost = 0
+  costs.sort((a,b)  => a - b)
+
+  for (const cost of costs) {
+
+    if(coins >= cost){
+      coins -= cost
       countOfBueCost++
     }
+
   }
 
   return countOfBueCost
