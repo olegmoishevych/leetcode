@@ -36,9 +36,9 @@
 
 const maxIceCream = (costs, coins) => {
   let countOfBueCost = 0
-  costs.sort((a,b)  => a - b)
+  let sortedCosts = costs.sort((a,b)  => a - b)
 
-  for (const cost of costs) {
+  for (const cost of sortedCosts) {
 
     if(coins >= cost){
       coins -= cost
@@ -49,5 +49,7 @@ const maxIceCream = (costs, coins) => {
 
   return countOfBueCost
 }
+
+
 
 console.log(maxIceCream([7,3,3,6,6,6,10,5,9,2], 56))
