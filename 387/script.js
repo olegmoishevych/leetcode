@@ -15,16 +15,28 @@
  * @param {string} s
  * @return {number}
  */
+// const firstUniqChar = (s) => {
+//   let obj = {}
+//
+//   for (const char of s) {
+//     obj[char] = (obj[char] || 0) +1
+//   }
+//
+//   for (let i = 0; i < s.length; i++) {
+//
+//     if(obj[s[i]] === 1){
+//       return i
+//     }
+//
+//   }
+//
+//   return -1
+// }
+
 const firstUniqChar = (s) => {
-  let obj = {}
-
-  for (const char of s) {
-    obj[char] = (obj[char] || 0) +1
-  }
-
   for (let i = 0; i < s.length; i++) {
 
-    if(obj[s[i]] === 1){
+    if(s.indexOf(s[i]) === s.lastIndexOf(s[i])){
       return i
     }
 
