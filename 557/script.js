@@ -14,8 +14,7 @@
 const reverseWords = (s) => {
   let a = s.split('').reverse().filter((el) => el !== '').join('')
   let b = a.split(' ').reverse().join(' ')
-  console.log(a)
-  console.log(b)
+
   return b
 }
 
