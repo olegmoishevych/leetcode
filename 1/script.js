@@ -62,26 +62,26 @@
 // console.log(func('strcvsaaaab')) //?
 // // console.log(func('sstr'))
 
-const foo = (s1, s2) => {
-  let obj = {}
-  let res = []
-
-  for (const word of s1.split(' ')) {
-    obj[word] = (obj[word] || 0) + 1
-  }
-
-  for (const word of s2.split(' ')) {
-    obj[word] = (obj[word] || 0) + 1
-  }
-
-  for (const key in obj) {
-    if(obj[key] === 1){
-      res.push(key)
-    }
-  }
-
-  return res
-}
-
-console.log(foo('the', 'the is'))
+// const foo = (s1, s2) => {
+//   let obj = {}
+//   let res = []
+//
+//   for (const word of s1.split(' ')) {
+//     obj[word] = (obj[word] || 0) + 1
+//   }
+//
+//   for (const word of s2.split(' ')) {
+//     obj[word] = (obj[word] || 0) + 1
+//   }
+//
+//   for (const key in obj) {
+//     if(obj[key] === 1){
+//       res.push(key)
+//     }
+//   }
+//
+//   return res
+// }
+//
+// console.log(foo('the', 'the is'))
 
