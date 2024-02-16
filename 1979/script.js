@@ -32,11 +32,12 @@ const findGCD = (nums) => {
   let maxNum = Math.max(...nums)
   let divisor = 0
 
-
   for (let i = 0; i <= smallerNum; i++) {
+
     if(maxNum % i === 0 && smallerNum % i === 0){
       divisor = i
     }
+
   }
 
   return divisor
