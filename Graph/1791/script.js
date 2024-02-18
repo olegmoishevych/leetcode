@@ -11,6 +11,7 @@
  * @return {number}
  */
 const findCenter = (edges) => {
+  console.log(edges.length)
   let count = {}
 
   for (const [u, b] of edges) {
@@ -19,6 +20,8 @@ const findCenter = (edges) => {
   }
 
   for (const key in count) {
+    console.log(count[key])
+    console.log(key)
     if(count[key] === edges.length){
       return key
     }
