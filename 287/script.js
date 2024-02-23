@@ -11,6 +11,8 @@
  * @param {number[]} nums
  * @return {number}
  */
+// const findDuplicate = nums => nums.find((num, index) => nums.indexOf(num) !== index);
+
 const findDuplicate = (nums) => {
   let set = new Set()
   let n
