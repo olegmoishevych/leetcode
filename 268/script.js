@@ -18,12 +18,14 @@
  * @param {number[]} nums
  * @return {number}
  */
-const missingNumber = (nums) => {
-  let n1 = nums.length + 1
-  let reduceSum = nums.reduce((a,b) => a + b, 0)
-  let totalSum = (n1 * (n1 - 1)) / 2;
+const missingNumber = (nums) => nums.length * (nums.length + 1) / 2 - nums.reduce((sum, num) => sum + num, 0);
 
-  return totalSum - reduceSum
-}
+// const missingNumber = (nums) => {
+//   let n1 = nums.length + 1
+//   let reduceSum = nums.reduce((a,b) => a + b, 0)
+//   let totalSum = (n1 * (n1 - 1)) / 2;
+//
+//   return totalSum - reduceSum
+// }
 console.log(missingNumber([9,6,4,2,3,5,7,0,1]))
 
