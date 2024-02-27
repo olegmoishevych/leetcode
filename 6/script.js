@@ -34,14 +34,23 @@
 //
 // console.log(isNarcissistic(1652))
 
-const strCounter = (str) => {
-  let counter = {}
+// const strCounter = (str) => {
+//   let counter = {}
+//
+//   for (const char of str) {
+//     counter[char] = (counter[char] || 0) + 1
+//   }
+//
+//   return counter
+// }
+//
+// console.log(strCounter('strr'))
 
-  for (const char of str) {
-    counter[char] = (counter[char] || 0) + 1
-  }
+//"is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  """is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 
-  return counter
-}
+const order = (words) => words.split(' ').sort((a,b) => a.match(/\d+/)[0] - b.match(/\d+/)[0]).join(' ')
 
-console.log(strCounter('strr'))
+console.log(order("is2 Thi1s T4est 3a"))
