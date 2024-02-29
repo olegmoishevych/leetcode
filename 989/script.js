@@ -19,10 +19,12 @@
  * @param {number} k
  * @return {number[]}
  */
-const addToArrayForm = (num, k) => {
-  let sumOfNums = BigInt(num.join('')) + BigInt(k);
-  return sumOfNums.toString().split('').map(Number);
-}
+const addToArrayForm = (num, k) =>
+     (BigInt(num
+    .join('')) + BigInt(k))
+    .toString()
+    .split('')
+    .map(Number)
 
 
 console.log(addToArrayForm([1,2,0,0], 34))
