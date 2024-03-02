@@ -24,11 +24,12 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-const plusOne = (digits) => {
-  let nums = +digits.join('') + 1
-  let result = nums.toString().split('')
-
-  return result
-}
+// const plusOne = (digits) => {
+//   let nums = +digits.join('') + 1
+//   let result = nums.toString().split('')
+//
+//   return result
+// }
+const plusOne = (digits) => (BigInt(digits.join('')) + 1n).toString().split('').map(Number)
 
 console.log(plusOne([4,3,2,1]))
