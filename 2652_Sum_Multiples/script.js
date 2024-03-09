@@ -13,8 +13,8 @@
 // Example 2:
 //
 // Input: n = 10
-// Output: 40
-// Explanation: Numbers in the range [1, 10] that are divisible by 3, 5, or 7 are 3, 5, 6, 7, 9, 10. The sum of these numbers is 40.
+// Output: 50
+// Explanation: Numbers in the range [1, 10] that are divisible by 3, 5, or 7 are 3, 5, 6, 7, 9, 10. The sum of these numbers is 50.
 // Example 3:
 //
 // Input: n = 9
