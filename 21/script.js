@@ -30,18 +30,18 @@
 // The number of nodes in both lists is in the range [0, 50].
 // -100 <= Node.val <= 100
 // Both list1 and list2 are sorted in non-decreasing order.
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} list1
- * @param {ListNode} list2
- * @return {ListNode}
- */
+// /**
+//  * Definition for singly-linked list.
+//  * function ListNode(val, next) {
+//  *     this.val = (val===undefined ? 0 : val)
+//  *     this.next = (next===undefined ? null : next)
+//  * }
+//  */
+// /**
+//  * @param {ListNode} list1
+//  * @param {ListNode} list2
+//  * @return {ListNode}
+//  */
 function mergeTwoLists (list1, list2) {
   if (!list1 || !list2) return list1 || list2
 
