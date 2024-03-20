@@ -42,24 +42,40 @@
 //  * @param {ListNode} list2
 //  * @return {ListNode}
 //  */
-function mergeTwoLists (list1, list2) {
-  if (!list1 || !list2) return list1 || list2
+// function mergeTwoLists (list1, list2) {
+//   if (!list1 || !list2) return list1 || list2
+//
+//   let head
+//
+//   if (list1.val < list2.val) {
+//
+//     head = list1
+//     head.next = mergeTwoLists(list1.next, list2)
+//
+//   } else {
+//
+//     head = list2
+//     head.next = mergeTwoLists(list1, list2.next)
+//
+//   }
+//
+//   return head
+// }
+//
+// console.log(mergeTwoLists([1,2,4], [1,3,4]))
 
-  let head
+//Дан массив предстоящих эвентов:
+//
+// ['holyjs', 'highload']
+//
+// Нужно найти в них общие буквы и вывести результат:
+//
+// // [ 'h', 'o', 'l' ]
 
-  if (list1.val < list2.val) {
+const foo = (arr) => {
+  const [arr1, arr2] = arr
 
-    head = list1
-    head.next = mergeTwoLists(list1.next, list2)
-
-  } else {
-
-    head = list2
-    head.next = mergeTwoLists(list1, list2.next)
-
-  }
-
-  return head
+  return arr1.filter((el) => arr2.includes(el));
 }
 
-console.log(mergeTwoLists([1,2,4], [1,3,4]))
+console.log(foo(['holyjs', 'highload']))
