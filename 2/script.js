@@ -15,4 +15,4 @@ const solution = (str) => {
   return result
 }
 
-console.log(solution('hello'))
+// console.log(solution('hello'))
