@@ -26,6 +26,23 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-var plusOne = function(digits) {
+// const plusOne = (digits) => {
+//   const str = parseInt(digits.join('')) + 1
+//
+//   return str.toString().split('')
+// }
 
+const plusOne = (digits) => {
+  const n = digits.length;
+  for (let i = n - 1; i >= 0; i--) {
+    if (digits[i] < 9) {
+      digits[i]++;
+      return digits;
+    }
+    digits[i] = 0;
+  }
+
+  return [1, ...digits];
 };
+
+console.log(plusOne([4,3,2,1]))
