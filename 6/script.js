@@ -51,6 +51,35 @@
 // ""  -->  """is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 
-const order = (words) => words.split(' ').sort((a,b) => a.match(/\d+/)[0] - b.match(/\d+/)[0]).join(' ')
+// const order = (words) => words.split(' ').sort((a,b) => a.match(/\d+/)[0] - b.match(/\d+/)[0]).join(' ')
+//
+// console.log(order("is2 Thi1s T4est 3a"))
 
-console.log(order("is2 Thi1s T4est 3a"))
+//Example 1:
+//
+// Input: num = [1,2,0,0], k = 34
+// Output: [1,2,3,4]
+// Explanation: 1200 + 34 = 1234
+// Example 2:
+//
+// Input: num = [2,7,4], k = 181
+// Output: [4,5,5]
+// Explanation: 274 + 181 = 455
+// Example 3:
+//
+// Input: num = [2,1,5], k = 806
+// Output: [1,0,2,1]
+// Explanation: 215 + 806 = 1021
+
+/**
+ * @param {number[]} num
+ * @param {number} k
+ * @return {number[]}
+ */
+const addToArrayForm = (num, k) => {
+  const sum = BigInt(num.join('')) + BigInt(k)
+
+  return sum.toString().split('')
+}
+
+console.log(addToArrayForm([2,1,5], 806))
