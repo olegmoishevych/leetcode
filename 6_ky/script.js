@@ -6,18 +6,18 @@
 // "This is a test        --> "This is a test"
 // "This is another test" --> "This is rehtona test"
 
-const spinWords = (string) => {
-
-  return string.split(' ').map((el) => {
-
-    if(el.length >= 5){
-      return el.split('').reverse().join('')
-
-    } else {
-      return el
-    }
-
-  }).join(' ')
-}
+// const spinWords = (string) => {
+//
+//   return string.split(' ').map((el) => {
+//
+//     if(el.length >= 5){
+//       return el.split('').reverse().join('')
+//
+//     } else {
+//       return el
+//     }
+//
+//   }).join(' ')
+// }
 
 console.log(spinWords('Hey fellow warriors'))
