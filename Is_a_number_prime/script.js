@@ -13,7 +13,7 @@
 
 
 function isPrime(num) {
-  //TODO
+
 }
 
 //const Test = require('@codewars/test-compat');
