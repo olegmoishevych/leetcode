@@ -11,6 +11,6 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-const sortColors = (nums) => nums.sort((a,b) => (a - b))
-
-console.log(sortColors([2,0,2,1,1,0]))
+// const sortColors = (nums) => nums.sort((a,b) => (a - b))
+//
+// console.log(sortColors([2,0,2,1,1,0]))
