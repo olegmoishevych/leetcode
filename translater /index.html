@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Listener</title>
+</head>
+<body>
+<h1>Voice Listener</h1>
+<button id="start">Start Listening</button>
+<p id="output"></p>
+
+<script>
+  const startButton = document.getElementById('start');
+  const output = document.getElementById('output');
+  const ws = new WebSocket('ws://localhost:8080');
+
+  ws.onopen = () => {
+    console.log('WebSocket connection opened');
+  };
+
+  ws.onmessage = (event) => {
+    const message = event.data;
+    console.log(`Received from server: ${message}`);
+    output.innerText += message + '\n';
+  };
+
+  ws.onerror = (error) => {
+    console.error('WebSocket error:', error);
+  };
+
+  ws.onclose = () => {
+    console.log('WebSocket connection closed');
+  };
+
+  startButton.addEventListener('click', () => {
+    console.log('Listening started');
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.interimResults = true;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event) => {
+      let transcript = '';
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript;
+      }
+      console.log(`Transcript: ${transcript}`);
+      if (ws.readyState === WebSocket.OPEN) {
+        ws.send(transcript);
+      } else {
+        console.error('WebSocket is not open: readyState = ' + ws.readyState);
+      }
+    };
+
+    recognition.onerror = (event) => {
+      console.error('Speech recognition error:', event.error);
+    };
+
+    recognition.onend = () => {
+      console.log('Speech recognition ended');
+    };
+
+    recognition.start();
+  });
+</script>
+</body>
+</html>
