@@ -27,5 +27,4 @@ const twoSum = (nums, target) => {
 
   return []
 }
-
 console.log(twoSum([3,3], 6))
