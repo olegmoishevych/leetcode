@@ -4,62 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voice Listener</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    h1, button, p {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <h1>Voice Listener</h1>
 <button id="start">Начать прослушивание</button>
 <p id="output"></p>
-
 <script>
+  // Получаем ссылки на элементы DOM
   const startButton = document.getElementById('start');
   const output = document.getElementById('output');
-  let isListening = false;
-  let silenceTimeout;
+  let isListening = false; // Флаг для отслеживания состояния прослушивания
+  let silenceTimeout; // Таймер для обработки тишины
 
+  // Создаем и настраиваем объект распознавания речи
   const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-  recognition.interimResults = true;
-  recognition.lang = 'ru-RU';
-  recognition.continuous = true;
+  recognition.interimResults = true; // Включаем промежуточные результаты
+  recognition.lang = 'ru-RU'; // Устанавливаем язык распознавания на русский
+  recognition.continuous = true; // Включаем непрерывное прослушивание
 
+  // Функция для сброса таймера тишины
   const resetSilenceTimeout = () => {
-    if (silenceTimeout) {
-      clearTimeout(silenceTimeout);
-    }
+    if (silenceTimeout) clearTimeout(silenceTimeout);
     silenceTimeout = setTimeout(() => {
-      output.innerText = '';
-    }, 1000); // 1 секунд
+      output.innerText = ''; // Очищаем текст при отсутствии речи
+    }, 1000); // 1 секунда
   };
 
+  // Обработчик события результата распознавания речи
   recognition.onresult = (event) => {
     let transcript = '';
     for (let i = event.resultIndex; i < event.results.length; i++) {
-      transcript += event.results[i][0].transcript;
+      transcript += event.results[i][0].transcript; // Собираем полный текст из результатов
     }
     console.log(`Transcript: ${transcript}`);
-    output.innerText = transcript;
-    resetSilenceTimeout();
+    output.innerText = transcript; // Отображаем текст на странице
+    resetSilenceTimeout(); // Сбрасываем таймер тишины
   };
 
+  // Обработчик ошибок распознавания речи
   recognition.onerror = (event) => {
-    console.error('Speech recognition error:', event.error);
+    console.error('Speech recognition error:', event.error); // Выводим ошибку в консоль
   };
 
-  recognition.onend = () => {
-    console.log('Speech recognition ended');
+  // Обработчик завершения распознавания речи
+  recognition.onend = () => console.log('Speech recognition ended');
     if (isListening) {
       recognition.start();
-    }
-  };
+    } // Перезапускаем распознавание речи, если прослушивание активно
 
+  // Обработчик клика по кнопке
   startButton.addEventListener('click', () => {
     if (isListening) {
-      recognition.stop();
-      startButton.textContent = 'Начать прослушивание';
+      recognition.stop(); // Останавливаем прослушивание
+      startButton.textContent = 'Начать прослушивание'; // Меняем текст кнопки
     } else {
-      recognition.start();
-      startButton.textContent = 'Остановить прослушивание';
+      recognition.start(); // Начинаем прослушивание
+      startButton.textContent = 'Остановить прослушивание'; // Меняем текст кнопки
     }
-    isListening = !isListening;
+    isListening = !isListening; // Переключаем состояние прослушивания
   });
 </script>
 </body>
