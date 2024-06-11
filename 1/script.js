@@ -84,14 +84,12 @@
 // }
 //
 // console.log(foo('the', 'the is'))
-
 const strCounter = (str) => {
   let counter = {}
 
   for (const char of str) {
     counter[char] = (counter[char] || 0) + 1
   }
-
   return counter
 }
 
