@@ -71,11 +71,6 @@
 // Output: [1,0,2,1]
 // Explanation: 215 + 806 = 1021
 
-/**
- * @param {number[]} num
- * @param {number} k
- * @return {number[]}
- */
 const addToArrayForm = (num, k) => {
   const sum = BigInt(num.join('')) + BigInt(k)
 
