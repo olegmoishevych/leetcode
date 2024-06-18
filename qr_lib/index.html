@@ -4,19 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QR Code Generator</title>
+  <!-- Подключение библиотеки для генерации QR-кодов -->
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <style>
-    body {font-family: Arial, sans-serif;display: flex;flex-direction: column;align-items: center;
-      justify-content: center;height: 100vh;margin: 0;background: #f0f0f0;}
-    input {padding: 10px; font-size: 1em; width: 300px; border: 1px solid #ccc; border-radius: 4px; margin-top: 20px;}
+    /* Стили для body, чтобы центрировать содержимое */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+    /* Стили для input поля */
+    input {
+      padding: 10px;
+      font-size: 1em;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
+<!-- Заголовок страницы -->
 <h1>QR Code Generator</h1>
+<!-- Поле ввода текста -->
 <input id="textInput" placeholder="Enter text">
+<!-- Холст для отображения QR-кода -->
 <canvas id="qrcode"></canvas>
 <script>
-  textInput.oninput = () => QRCode.toCanvas(qrcode, textInput.value || '');
+  // Событие ввода текста в поле input
+  textInput.oninput = () => {
+    // Генерация QR-кода на основе введенного текста и отображение его в элементе canvas
+    QRCode.toCanvas(qrcode, textInput.value || '');
+  }
 </script>
 </body>
 </html>
