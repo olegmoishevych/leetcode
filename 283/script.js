@@ -7,10 +7,7 @@
 // Ввод: числа = [0]
 //  Вывод: [0]
 
-/**
- * @param {number[]} nums
- * @return {void} Do not return anything, modify nums in-place instead.
- */
+
 const moveZeroes = (nums) => {
   return nums.sort((a, b) => (a === 0) - (b === 0))
 }
