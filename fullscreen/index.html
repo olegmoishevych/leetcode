@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Mode</title>
+  <style>
+    /* Устанавливаем стили для body, чтобы центрировать контент */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    /* Стили для контейнера кнопок */
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+    /* Стили для кнопок */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<!-- Контейнер для кнопок -->
+<div class="buttons">
+  <!-- Кнопка для входа в полноэкранный режим -->
+  <button id="enter-fullscreen">Войти в полноэкранный режим</button>
+  <!-- Кнопка для выхода из полноэкранного режима -->
+  <button id="exit-fullscreen">Выйти из полноэкранного режима</button>
+</div>
+<script>
+  // Добавляем обработчик события для кнопки входа в полноэкранный режим
+  document.getElementById('enter-fullscreen').addEventListener('click', () => {
+    document.documentElement.requestFullscreen();
+  });
+  // Добавляем обработчик события для кнопки выхода из полноэкранного режима
+  document.getElementById('exit-fullscreen').addEventListener('click', () => {
+      document.exitFullscreen();
+  });
+</script>
+</body>
+</html>
