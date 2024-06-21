@@ -7,7 +7,6 @@
 // "This is another test" --> "This is rehtona test"
 
 const spinWords = (string) => {
-
   return string.split(' ').map((el) => {
 
     if(el.length >= 5){
