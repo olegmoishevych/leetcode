@@ -10,11 +10,10 @@ const spinWords = (string) => {
   return string.split(' ').map((el) => {
 
     if(el.length >= 5){
+
       return el.split('').reverse().join('')
 
-    } else {
-      return el
-    }
+    } else return el
 
   }).join(' ')
 }
