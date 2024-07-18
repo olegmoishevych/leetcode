@@ -18,5 +18,4 @@
  * @return {number}
  */
 const myPow = (x, n) => Math.pow(x, n)
-
 console.log(myPow(2.00000, 10))
