@@ -15,7 +15,6 @@
 // console.log(email);
 
 const array = [1, 2, 3, 4, 5];
-
 const [first, second, third, four] = array;
 
 console.log(first);
