@@ -34,7 +34,6 @@
  */
 const reformatNumber = (number) => {
   const digitsOnly = number.replace(/\D/g, "");
-  // Split num for group at 2 and 3 nums
   return digitsOnly.replace(/(...?(?=..))/g, "$1-");
 };
 
