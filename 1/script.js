@@ -10,4 +10,3 @@ const sumCharOrStr = (str) => {
   return obj
 }
 
-console.log(sumCharOrStr('hello'))
