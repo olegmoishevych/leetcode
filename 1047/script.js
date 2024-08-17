@@ -12,5 +12,4 @@ const removeDuplicates = (s) => {
   return stack.join('')
 }
 
-
 console.log(removeDuplicates('azxxzy'))
