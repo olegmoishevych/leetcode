@@ -7,6 +7,7 @@ const sumCharOrStr = (str) => {
     obj[char] = (obj[char] || 0) + 1
   }
 
-  return obj
+ return obj
+
 }
 
