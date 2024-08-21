@@ -16,7 +16,6 @@
 //     if(count[num] % 2 !== 0){
 //       return +num
 //     }
-//
 //   }
 // }
 const findOdd = (arr) => arr.reduce((a,b) => a ^ b)
