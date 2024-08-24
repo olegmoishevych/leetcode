@@ -10,7 +10,6 @@
 //   for (const a of A) {
 //     count[a] = (count[a] || 0) + 1
 //   }
-//
 //   for (const num in count) {
 //
 //     if(count[num] % 2 !== 0){
