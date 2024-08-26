@@ -18,7 +18,6 @@ const majorityElement = (nums) => {
 
     count += (candidate === nums[i]) ? 1 : -1
   }
-  console.log(candidate)
 
   return candidate
 }
