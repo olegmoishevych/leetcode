@@ -7,5 +7,6 @@ const sumCharOrStr = (str) => {
   }
 
  return obj
+  
 }
 
