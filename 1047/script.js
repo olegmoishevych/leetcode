@@ -4,7 +4,7 @@ const removeDuplicates = (s) => {
   for (const char of s) {
     if(stack.length === 0 || stack[stack.length - 1] !== char){
       stack.push(char)
-    }else {
+    } else {
       stack.pop()
     }
   }
