@@ -30,7 +30,6 @@ const uniqueOccurrences = (arr) => {
     }else {
       set.add(obj[key])
     }
-
   }
 
   return true
