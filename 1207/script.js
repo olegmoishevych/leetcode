@@ -34,5 +34,4 @@ const uniqueOccurrences = (arr) => {
 
   return true
 };
-
 console.log(uniqueOccurrences([1,2]))
