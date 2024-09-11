@@ -8,7 +8,6 @@
 // Return the shuffled string.
 //
 //
-//
 // Example 1:
 //
 //
