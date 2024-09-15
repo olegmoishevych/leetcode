@@ -1,4 +1,5 @@
 const removeDuplicates = (s) => {
+  
   let stack = []
 
   for (const char of s) {
