@@ -14,7 +14,6 @@
  * @param {string} str2
  * @return {string}
  */
-
 var gcdOfStrings = function(str1, str2) {
   if(str1 + str2 !== str2 + str1) return ''
 
