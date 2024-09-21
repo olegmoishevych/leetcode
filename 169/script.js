@@ -21,4 +21,5 @@ const majorityElement = (nums) => {
   return candidate
 }
 
+
 console.log(majorityElement([8,8,7,7,7,8]))
