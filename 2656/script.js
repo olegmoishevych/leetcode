@@ -3,6 +3,7 @@
 // Topics
 // Companies
 // Hint
+
 // You are given a 0-indexed array words consisting of distinct strings.
 //
 // The string words[i] can be paired with the string words[j] if:
