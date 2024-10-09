@@ -1,5 +1,5 @@
 //Example 1:
-//
+
 // Input: str1 = "ABCABC", str2 = "ABC"
 // Output: "ABC"
 // Example 2:
