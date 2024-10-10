@@ -25,7 +25,6 @@
 //     if(nums[i].toString().length % 2 === 0){
 //       count++
 //     }
-//
 //   }
 //   return count
 // };
