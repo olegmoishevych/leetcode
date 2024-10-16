@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: s = "the sky is blue"
 // Output: "blue is sky the"
 // Example 2:
