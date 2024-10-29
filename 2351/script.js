@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: s = "abccbaacz"
 // Output: "c"
 // Explanation:
