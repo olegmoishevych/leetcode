@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: number = "1-23-45 6"
 // Output: "123-456"
 // Explanation: The digits are "123456".
