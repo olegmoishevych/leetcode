@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: nums1 = [1,2,3], nums2 = [2,4,6]
 // Output: [[1,3],[4,6]]
 // Explanation:
