@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: words = ["a","b","c","ab","bc","abc"], s = "abc"
 // Output: 3
 // Explanation:
