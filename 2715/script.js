@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: fn = (x) => x * 2, args = [4], t = 35
 // Output:
 // [
