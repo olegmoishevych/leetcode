@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: nums = [3,5,2,3]
 // Output: 7
 // Explanation: The elements can be paired up into pairs (3,3) and (5,2).
