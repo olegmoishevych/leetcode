@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: num = 526
 // Output: true
 // Explanation: Reverse num to get 625, then reverse 625 to get 526, which equals num.
