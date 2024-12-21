@@ -1,5 +1,4 @@
 //2778. Sum of Squares of Special Elements
-
 // Easy
 // Topics
 // Companies
