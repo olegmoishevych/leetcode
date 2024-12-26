@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input:
 // actions = ["EventEmitter", "emit", "subscribe", "subscribe", "emit"],
 // values = [[], ["firstEvent", "function cb1() { return 5; }"],  ["firstEvent", "function cb1() { return 6; }"], ["firstEvent"]]
