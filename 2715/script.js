@@ -13,7 +13,6 @@
 // const cancelTimeMs = 7;
 // const cancelFn = cancellable((x) => x * 2, [4], 35);
 // setTimeout(cancelFn, cancelTimeMs);
-//
 // Every 35ms, fn(4) is called. Until t=190ms, then it is cancelled.
 // 1st fn call is at 0ms. fn(4) returns 8.
 // 2nd fn call is at 35ms. fn(4) returns 8.
