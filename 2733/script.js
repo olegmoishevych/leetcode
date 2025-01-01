@@ -8,7 +8,6 @@
 // Input: nums = [1,2]
 // Output: -1
 // Explanation: Since there is no number in nums that is neither the maximum nor the minimum, we cannot select a number that satisfies the given condition. Therefore, there is no answer.
-
 /**
  * @param {number[]} nums
  * @return {number}
