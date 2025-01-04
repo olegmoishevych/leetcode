@@ -10,7 +10,6 @@
 //
 // Input: num1 = "0", num2 = "0"
 // Output: "0"
-
 // /**
 //  * @param {string} num1
 //  * @param {string} num2
