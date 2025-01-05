@@ -6,7 +6,6 @@ function arrayDiff(a, b) {
 
   return a.filter((el) => !setB.has(el))
 }
-
 console.log(arrayDiff([1,2,2], [1]))
 
 //assert.deepEqual(arrayDiff([1,2], [1]), [2], "a was [1,2], b was [1]");
