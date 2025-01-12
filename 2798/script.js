@@ -15,7 +15,6 @@
 // Output: 0
 // Explanation: The company wants each employee to work for at least 6 hours.
 // There are 0 employees who met the target.
-
 /**
  * @param {number[]} hours
  * @param {number} target
