@@ -1,4 +1,5 @@
 //Return the integer denoting the number of employees who worked at least target hours.
+
 // Example 1:
 // Input: hours = [0,1,2,3,4], target = 2
 // Output: 3
