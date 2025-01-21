@@ -6,7 +6,6 @@
 // "a", "ab", and "abc".
 // Thus the number of strings in words which are a prefix of s is 3.
 // Example 2:
-//
 // Input: words = ["a","a"], s = "aa"
 // Output: 2
 // Explanation:
