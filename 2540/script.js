@@ -9,7 +9,6 @@
 // Output: 2
 // Explanation: There are two common elements in the array 2 and 3 out of which 2 is the smallest, so 2 is returned.
 //
-
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
