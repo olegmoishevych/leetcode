@@ -14,6 +14,7 @@
 // Input: words = ["def","ghi"]
 // Output: ""
 // Explanation: There are no palindromic strings, so the empty string is returned.
+
 const firstPalindrome = (words) => {
   const findPalindromeElement = words.find((word) => {
     const reversedElement = word.toLowerCase().split('').reverse().join('')
