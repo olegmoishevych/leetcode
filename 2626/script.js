@@ -1,4 +1,5 @@
 //Example 1:
+
 // Input:
 // nums = [1,2,3,4]
 // fn = function sum(accum, curr) { return accum + curr; }
