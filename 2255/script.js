@@ -16,6 +16,7 @@
  * @param {string} s
  * @return {number}
  */
+
 const countPrefixes = (words, s) => words.filter(el => s.startsWith(el)).length
 
   // let count = 0
