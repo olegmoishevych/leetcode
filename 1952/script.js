@@ -7,7 +7,6 @@
 // Input: n = 4
 // Output: true
 // Explantion: 4 has three divisors: 1, 2, and 4.
-
 /**
  * @param {number} n
  * @return {boolean}
