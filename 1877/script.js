@@ -13,6 +13,7 @@
  * @param {number[]} nums
  * @return {number}
  */
+
 const minPairSum = (nums) => {
   nums.sort((a, b) => b - a)
 
