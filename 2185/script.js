@@ -6,7 +6,6 @@
 // Input: words = ["leetcode","win","loops","success"], pref = "code"
 // Output: 0
 // Explanation: There are no strings that contain "code" as a prefix.
-
 /**
  * @param {string[]} words
  * @param {string} pref
