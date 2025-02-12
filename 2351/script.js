@@ -8,7 +8,6 @@
 // The letter 'z' appears on the index 8.
 // The letter 'c' is the first letter to appear twice, because out of all the letters the index of its second occurrence is the smallest.
 // Example 2:
-//
 // Input: s = "abcdd"
 // Output: "d"
 // Explanation:
