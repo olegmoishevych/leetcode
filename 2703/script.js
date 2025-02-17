@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: args = [5]
 // Output: 1
 // Explanation:
