@@ -13,7 +13,6 @@
 // argumentsLength({}, null, "3"); // 3
 //
 // Three values were passed to the function so it should return 3.
-
 /**
  * @param {...(null|boolean|number|string|Array|Object)} args
  * @return {number}
