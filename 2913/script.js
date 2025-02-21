@@ -2,6 +2,7 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+
 var separateDigits = (nums) => {
   return nums.map((el) => el.toString().split('')).flat()
 }
