@@ -12,6 +12,7 @@
  * @param {string[]} words2
  * @return {number}
  */
+
 var countWords = function(words1, words2) {
   let count = 0;
   let set1 = new Set(words1);
