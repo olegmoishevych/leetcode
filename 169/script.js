@@ -1,5 +1,4 @@
 // Example 2:
-
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
 /**
