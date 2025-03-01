@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: words = ["abc","car","ada","racecar","cool"]
 // Output: "ada"
 // Explanation: The first string that is palindromic is "ada".
