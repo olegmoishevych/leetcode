@@ -2,6 +2,7 @@
  * @param {string[]} strs
  * @return {number}
  */
+
 var maximumValue = function(strs) {
   let length = strs.map(item => {
     if (!isNaN(item) && !Array.isArray(item)) {
