@@ -10,6 +10,7 @@
 // Explanation: The first and only string that is palindromic is "racecar".
 // Example 3:
 //
+
 // Input: words = ["def","ghi"]
 // Output: ""
 // Explanation: There are no palindromic strings, so the empty string is returned.
