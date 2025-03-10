@@ -1,5 +1,4 @@
 //Example 1:
-//
 // Input: arr = [1,2,3], fn = function plusone(n) { return n + 1; }
 // Output: [2,3,4]
 // Explanation:
