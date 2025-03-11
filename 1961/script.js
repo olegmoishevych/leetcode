@@ -1,5 +1,4 @@
 //s.startsWith(
-
 //Example 1:
 //
 // Input: s = "iloveleetcode", words = ["i","love","leetcode","apples"]
