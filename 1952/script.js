@@ -11,6 +11,7 @@
  * @param {number} n
  * @return {boolean}
  */
+
 const isThree = (n) => {
   for (let i = 2; i < Math.sqrt(n); i++) {
 
