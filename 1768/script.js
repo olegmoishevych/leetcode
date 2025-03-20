@@ -6,7 +6,6 @@
 // word2:    p   q   r
 // merged: a p b q c r
 // Example 2:
-//
 // Input: word1 = "ab", word2 = "pqrs"
 // Output: "apbqrs"
 // Explanation: Notice that as word2 is longer, "rs" is appended to the end.
