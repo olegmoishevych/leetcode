@@ -6,6 +6,7 @@
 // - "is" appears in each of the two arrays, but there are 2 occurrences of it in words1. We do not count this string.
 // - "as" appears once in words1, but does not appear in words2. We do not count this string.
 // Thus, there are 2 strings that appear exactly once in each of the two arrays.
+
 /**
  * @param {string[]} words1
  * @param {string[]} words2
