@@ -21,12 +21,10 @@
 // The smallest number in nums is 3.
 // The largest number in nums is 3.
 // The greatest common divisor of 3 and 3 is 3.
-
 /**
  * @param {number[]} nums
  * @return {number}
  */
-
 const findGCD = (nums) => {
   let smallerNum = Math.min(...nums)
   let maxNum = Math.max(...nums)
