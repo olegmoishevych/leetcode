@@ -1,6 +1,5 @@
 // * 'abc' =>  ['ab', 'c_']
 // * 'abcdef' => ['ab', 'cd', 'ef']
-
 const solution = (str) => {
   let result = []
 
