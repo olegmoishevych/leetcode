@@ -6,11 +6,13 @@
 // Input: words = ["leetcode","win","loops","success"], pref = "code"
 // Output: 0
 // Explanation: There are no strings that contain "code" as a prefix.
+
 /**
  * @param {string[]} words
  * @param {string} pref
  * @return {number}
  */
+
 const prefixCount = (words, pref) => words.filter((el) => el.startsWith(pref)).length;
   // let count = 0
 
