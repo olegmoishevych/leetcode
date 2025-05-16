@@ -7,7 +7,6 @@
 // Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.
 //
 //
-//
 // Example 1:
 //
 // Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
