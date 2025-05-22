@@ -27,7 +27,6 @@
  * @return {boolean}
  */
 // const checkTree = (root) => root.val === root.right.val + root.left.val
-
 class Tree {
   constructor(val, right = null, left = null) {
     this.val = val
