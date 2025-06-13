@@ -9,7 +9,6 @@
 // Output: 3
 // Explanation: 1, 2 and 3 are all lucky numbers, return the largest of them.
 // Example 3:
-//
 // Input: arr = [2,2,2,3,3]
 // Output: -1
 // Explanation: There are no lucky numbers in the array.
