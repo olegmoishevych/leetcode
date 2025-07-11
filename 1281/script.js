@@ -6,7 +6,6 @@
 // // Given an integer number n, return the difference between the product of its digits and the sum of its digits.
 // //
 // // Example 1:
-// //
 // // Input: n = 234
 // // Output: 15
 // // Explanation:
