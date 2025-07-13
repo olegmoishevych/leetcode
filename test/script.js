@@ -40,4 +40,5 @@ const func = (arr) => arr.reduce((acc, cur) => {
   return acc
 }, {})
 console.log(func(arr))
+
 // {} отримати обж з айдішками,
