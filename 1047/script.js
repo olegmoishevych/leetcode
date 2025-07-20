@@ -10,6 +10,7 @@ const removeDuplicates = (s) => {
       stack.pop()
     }
   }
+  
 
   return stack.join('')
 }
