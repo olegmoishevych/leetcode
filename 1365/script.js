@@ -7,7 +7,6 @@
 //
 // Return the answer in an array.
 //
-//
 // Example 1:
 //
 // Input: nums = [8,1,2,2,3]
