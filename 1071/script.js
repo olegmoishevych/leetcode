@@ -7,6 +7,7 @@
 // Example 3:
 // Input: str1 = "LEET", str2 = "CODE"
 // Output: ""
+
 /**
  * @param {string} str1
  * @param {string} str2
