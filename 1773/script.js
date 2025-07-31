@@ -1,5 +1,4 @@
 //1816. Truncate Sentence
-
 // Easy
 // Topics
 // Companies
