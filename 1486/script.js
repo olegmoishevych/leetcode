@@ -9,7 +9,6 @@
 // Return the bitwise XOR of all elements of nums.
 //
 //
-//
 // Example 1:
 //
 // Input: n = 5, start = 0
