@@ -7,12 +7,13 @@
 // Input: nums1 = [1,2,3,6], nums2 = [2,3,4,5]
 // Output: 2
 // Explanation: There are two common elements in the array 2 and 3 out of which 2 is the smallest, so 2 is returned.
-//
+
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @return {number}
  */
+
 const getCommon = (nums1, nums2) => {
   let i = 0;
   let j = 0;
