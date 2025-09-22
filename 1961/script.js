@@ -11,7 +11,6 @@
 // Output: false
 // Explanation:
 // It is impossible to make s using a prefix of arr.
-
 /**
  * @param {string} s
  * @param {string[]} words
