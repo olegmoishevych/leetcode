@@ -7,6 +7,7 @@
 // Joining the blocks gives "123-456".
 // Example 2:
 //
+
 // Input: number = "123 4-567"
 // Output: "123-45-67"
 // Explanation: The digits are "1234567".
