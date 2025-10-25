@@ -1,5 +1,4 @@
 //Example 1:
-
 // Input: nums = [12,345,2,6,7896]
 // Output: 2
 // Explanation:
