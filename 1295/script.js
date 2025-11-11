@@ -13,7 +13,6 @@
 // Output: 1
 // Explanation:
 // Only 1771 contains an even number of digits.
-
 /**
  * @param {number[]} nums
  * @return {number}
