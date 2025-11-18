@@ -12,7 +12,6 @@
 // // Sum of digits = 2 + 3 + 4 = 9
 // // Result = 24 - 9 = 15
 // // Example 2:
-// //
 // // Input: n = 4421
 // // Output: 21
 // // Explanation:
