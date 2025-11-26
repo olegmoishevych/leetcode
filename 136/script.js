@@ -27,7 +27,6 @@
 //   })
 //
 // }
-
 const singleNumber = (nums) => nums.reduce((prev, curr) => prev ^ curr, 0)
   // let result = 0;
   //
